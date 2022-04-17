@@ -69,7 +69,7 @@ GCC/GNU Toolchain:
 
 MacOS: go to the [CS107E](http://cs107e.github.io/guides/install/mac/) page and follow their instructions (note: do not do the python stuff).
 
-Ubuntu/Linux: From CS140E [labs/0-blink/README](https://github.com/TristenSeth/CS140E/blob/master/labs/0-blink/README.md)
+Ubuntu/Linux: From CS140E [labs/0-blink/README](https://github.com/dddrrreee/cs140e-22win/tree/main/labs/0-blink)
 
 -  For [ubuntu/linux](https://askubuntu.com/questions/1243252/how-to-install-arm-none-eabi-gdb-on-ubuntu-20-04-lts-focal-fossa), ARM recently
       changed their method for distributing the tool change.   Now you
