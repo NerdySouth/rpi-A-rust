@@ -1,0 +1,5 @@
+[target.arm-none-eabihf]
+rustflags = ["-C", "link-arg=-Tmemmap.x"]
+
+[build]
+target = "arm-none-eabihf.json"
