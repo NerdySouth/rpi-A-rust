@@ -42,29 +42,65 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
+- Rust nightly v1.60.0
+- GCC
+- GNU Arm Embedded Toolchain
 
-```
-Give examples
-```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+[Rust:](https://www.rust-lang.org/tools/install)
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+To install rust, follow the general instructions for installing the rust toolchain above.
+Once you have rust installed, you will want to make sure you are on the right compiler version, and that you are using the nightly build, since some features we use in rust are not stable yet.
 
 ```
-until finished
+$ rustc --version
+rustc 1.60.0-nightly (e789f3a3a 2022-02-11)
 ```
 
-End with an example of getting some data out of the system or using it for a little demo.
+To set the default compiler version for a single project, navigate to the project directory and run the following
+
+```
+$ rustup override set nightly
+```
+
+GCC/GNU Toolchain:
+
+MacOS: go to the [CS107E](http://cs107e.github.io/guides/install/mac/) page and follow their instructions (note: do not do the python stuff).
+
+Ubuntu/Linux: From CS140E [labs/0-blink/README](https://github.com/TristenSeth/CS140E/blob/master/labs/0-blink/README.md)
+
+-  For [ubuntu/linux](https://askubuntu.com/questions/1243252/how-to-install-arm-none-eabi-gdb-on-ubuntu-20-04-lts-focal-fossa), ARM recently
+      changed their method for distributing the tool change.   Now you
+      must manually install.  As of this lab, the following works:
+
+            wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2
+
+            sudo tar xjf gcc-arm-none-eabi-10.3-2021.10-x86_64-linux.tar.bz2 -C /usr/opt/
+
+      Then either add symlinks to these:
+
+            sudo ln -s /usr/opt/gcc-arm-none-eabi-10.3-2021.10/bin/* /usr/bin/
+
+      Or, cleaner, add `/usr/opt/gcc-arm-none-eabi-10.3-2021.10/bin` to your
+      `path` variable in your shell configuration file (e.g., `.tchsrc`
+       or `.bashrc`), save it, and `source` the configuration.  When you run:
+
+
+            arm-none-eabi-gcc
+            arm-none-eabi-ar
+            arm-none-eabi-objdump 
+
+      You should not get a "Command not found" error.
+
+
+      You may also have to add your username to the `dialout` group.
+
+      If gcc can't find header files, try:
+
+           sudo apt-get install libnewlib-arm-none-eabi
+
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
