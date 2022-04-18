@@ -1,7 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
-![Fancy logo](./img/logo_size_invert.jpg#gh-dark-mode-only)
-![Fancy logo](./img/logo_size.jpg#gh-light-mode-only)
+ <img width=200px height=252px src="./img/logo_size.jpg#gh-light-mode-only" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Nox</h3>
