@@ -1,7 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=252px src="https://github.com/TristenSeth/Nox/blob/main/img/logo_size_invert.jpg#gh-dark-mode-only" alt="Project logo">
- <img width=200px height=252px src="https://github.com/TristenSeth/Nox/blob/main/img/logo_size.jpg#gh-light-mode-only" alt="Project logo"></a>
+ <img width=200px height=252px src="./img/logo_size.jpg" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Nox</h3>
