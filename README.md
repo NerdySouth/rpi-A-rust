@@ -1,6 +1,7 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=252px src="./img/logo_size.jpg" alt="Project logo"></a>
+![Fancy logo](./img/logo_size_invert.jpg#gh-dark-mode-only)
+![Fancy logo](./img/logo_size.jpg#gh-light-mode-only)
 </p>
 
 <h3 align="center">Nox</h3>
@@ -49,7 +50,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-[Rust:](https://www.rust-lang.org/tools/install)
+#### [__Rust:__](https://www.rust-lang.org/tools/install)
 
 To install rust, follow the general instructions for installing the rust toolchain above.
 Once you have rust installed, you will want to make sure you are on the right compiler version, and that you are using the nightly build, since some features we use in rust are not stable yet.
@@ -65,7 +66,7 @@ To set the default compiler version for a single project, navigate to the projec
 $ rustup override set nightly
 ```
 
-GCC/GNU Toolchain:
+#### __GCC/GNU Toolchain:__
 
 MacOS: go to the [CS107E](http://cs107e.github.io/guides/install/mac/) page and follow their instructions (note: do not do the python stuff).
 
