@@ -1,0 +1,2843 @@
+
+./target/arm-none-eabihf/debug/nox:	file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00008000 <_start>:
+    8000: 13 10 a0 e3  	mov	r1, #19
+    8004: 80 10 81 e3  	orr	r1, r1, #128
+    8008: 01 f0 29 e1  	msr	CPSR_fc, r1
+    800c: 95 2f 07 ee  	mcr	p15, #0, r2, c7, c5, #4
+    8010: 02 d3 a0 e3  	mov	sp, #134217728
+    8014: 00 b0 a0 e3  	mov	r11, #0
+    8018: 0a 00 00 eb  	bl	#40 <_rmain>
+
+0000801c <_ZN4core3ptr68drop_in_place$LT$core..array..iter..IntoIter$LT$u8$C$7_usize$GT$$GT$17hc90f417e75d1eeb2E>:
+    801c: 00 48 2d e9  	push	{r11, lr}
+    8020: 08 d0 4d e2  	sub	sp, sp, #8
+    8024: 04 00 8d e5  	str	r0, [sp, #4]
+    8028: e8 02 00 eb  	bl	#2976 <_ZN82_$LT$core..array..iter..IntoIter$LT$T$C$_$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h80c02c6e6896a21bE>
+    802c: ff ff ff ea  	b	#-4 <_ZN4core3ptr68drop_in_place$LT$core..array..iter..IntoIter$LT$u8$C$7_usize$GT$$GT$17hc90f417e75d1eeb2E+0x14>
+    8030: 08 d0 8d e2  	add	sp, sp, #8
+    8034: 00 88 bd e8  	pop	{r11, pc}
+
+00008038 <rust_begin_unwind>:
+    8038: 04 d0 4d e2  	sub	sp, sp, #4
+    803c: 00 00 8d e5  	str	r0, [sp]
+    8040: ff ff ff ea  	b	#-4 <rust_begin_unwind+0xc>
+    8044: fe ff ff ea  	b	#-8 <rust_begin_unwind+0xc>
+
+00008048 <_rmain>:
+    8048: 70 d0 4d e2  	sub	sp, sp, #112
+    804c: 4d 04 00 eb  	bl	#4404 <_ZN3nox3rpi11dev_barrier17h6ed8f2a19105aeb1E>
+    8050: ff ff ff ea  	b	#-4 <_rmain+0xc>
+    8054: 8c 02 9f e5  	ldr	r0, [pc, #652]
+    8058: 00 10 a0 e3  	mov	r1, #0
+    805c: 69 03 00 eb  	bl	#3492 <put32>
+    8060: ff ff ff ea  	b	#-4 <_rmain+0x1c>
+    8064: 47 04 00 eb  	bl	#4380 <_ZN3nox3rpi11dev_barrier17h6ed8f2a19105aeb1E>
+    8068: ff ff ff ea  	b	#-4 <_rmain+0x24>
+    806c: 14 00 a0 e3  	mov	r0, #20
+    8070: 6d 00 cd e5  	strb	r0, [sp, #109]
+    8074: f7 03 00 eb  	bl	#4060 <gpio_set_output>
+    8078: ff ff ff ea  	b	#-4 <_rmain+0x34>
+    807c: 45 04 00 eb  	bl	#4372 <uart_init>
+    8080: ff ff ff ea  	b	#-4 <_rmain+0x3c>
+    8084: 3f 04 00 eb  	bl	#4348 <_ZN3nox3rpi11dev_barrier17h6ed8f2a19105aeb1E>
+    8088: ff ff ff ea  	b	#-4 <_rmain+0x44>
+    808c: c8 00 a0 e3  	mov	r0, #200
+    8090: ed 04 00 eb  	bl	#5044 <_ZN3nox5timer8delay_ms17h3f3a47e31b8cccedE>
+    8094: ff ff ff ea  	b	#-4 <_rmain+0x50>
+    8098: ab 00 a0 e3  	mov	r0, #171
+    809c: 9f 04 00 eb  	bl	#4732 <write_byte>
+    80a0: ff ff ff ea  	b	#-4 <_rmain+0x5c>
+    80a4: ab 00 a0 e3  	mov	r0, #171
+    80a8: 9c 04 00 eb  	bl	#4720 <write_byte>
+    80ac: ff ff ff ea  	b	#-4 <_rmain+0x68>
+    80b0: 68 00 a0 e3  	mov	r0, #104
+    80b4: 0d 00 cd e5  	strb	r0, [sp, #13]
+    80b8: 65 00 a0 e3  	mov	r0, #101
+    80bc: 0e 00 cd e5  	strb	r0, [sp, #14]
+    80c0: 6c 00 a0 e3  	mov	r0, #108
+    80c4: 0f 00 cd e5  	strb	r0, [sp, #15]
+    80c8: 10 00 cd e5  	strb	r0, [sp, #16]
+    80cc: 6f 00 a0 e3  	mov	r0, #111
+    80d0: 11 00 cd e5  	strb	r0, [sp, #17]
+    80d4: 12 00 cd e5  	strb	r0, [sp, #18]
+    80d8: 0a 00 a0 e3  	mov	r0, #10
+    80dc: 13 00 cd e5  	strb	r0, [sp, #19]
+    80e0: 13 00 dd e5  	ldrb	r0, [sp, #19]
+    80e4: 2a 00 cd e5  	strb	r0, [sp, #42]
+    80e8: 12 10 dd e5  	ldrb	r1, [sp, #18]
+    80ec: 11 00 dd e5  	ldrb	r0, [sp, #17]
+    80f0: 01 04 80 e1  	orr	r0, r0, r1, lsl #8
+    80f4: b8 02 cd e1  	strh	r0, [sp, #40]
+    80f8: 0d 00 dd e5  	ldrb	r0, [sp, #13]
+    80fc: 0e 20 dd e5  	ldrb	r2, [sp, #14]
+    8100: 0f 10 dd e5  	ldrb	r1, [sp, #15]
+    8104: 10 30 dd e5  	ldrb	r3, [sp, #16]
+    8108: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    810c: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    8110: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    8114: 24 00 8d e5  	str	r0, [sp, #36]
+    8118: 24 00 dd e5  	ldrb	r0, [sp, #36]
+    811c: 25 20 dd e5  	ldrb	r2, [sp, #37]
+    8120: 26 10 dd e5  	ldrb	r1, [sp, #38]
+    8124: 27 30 dd e5  	ldrb	r3, [sp, #39]
+    8128: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    812c: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    8130: 01 28 80 e1  	orr	r2, r0, r1, lsl #16
+    8134: 29 10 dd e5  	ldrb	r1, [sp, #41]
+    8138: 28 00 dd e5  	ldrb	r0, [sp, #40]
+    813c: 01 04 80 e1  	orr	r0, r0, r1, lsl #8
+    8140: 2a 10 dd e5  	ldrb	r1, [sp, #42]
+    8144: 01 38 80 e1  	orr	r3, r0, r1, lsl #16
+    8148: 14 00 8d e2  	add	r0, sp, #20
+    814c: 13 02 00 eb  	bl	#2124 <_ZN4core5array4iter94_$LT$impl$u20$core..iter..traits..collect..IntoIterator$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$9into_iter17h845a3f49e25a6565E>
+    8150: ff ff ff ea  	b	#-4 <_rmain+0x10c>
+    8154: 14 00 9d e5  	ldr	r0, [sp, #20]
+    8158: 18 10 9d e5  	ldr	r1, [sp, #24]
+    815c: 1c 20 9d e5  	ldr	r2, [sp, #28]
+    8160: 20 30 9d e5  	ldr	r3, [sp, #32]
+    8164: 38 30 8d e5  	str	r3, [sp, #56]
+    8168: 34 20 8d e5  	str	r2, [sp, #52]
+    816c: 30 10 8d e5  	str	r1, [sp, #48]
+    8170: 2c 00 8d e5  	str	r0, [sp, #44]
+    8174: ff ff ff ea  	b	#-4 <_rmain+0x130>
+    8178: 2c 00 8d e2  	add	r0, sp, #44
+    817c: 6a 02 00 eb  	bl	#2472 <_ZN99_$LT$core..array..iter..IntoIter$LT$T$C$_$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17hd2cc86de6022d2f4E>
+    8180: 3d 10 cd e5  	strb	r1, [sp, #61]
+    8184: 3c 00 cd e5  	strb	r0, [sp, #60]
+    8188: ff ff ff ea  	b	#-4 <_rmain+0x144>
+    818c: 3c 00 dd e5  	ldrb	r0, [sp, #60]
+    8190: 01 00 10 e3  	tst	r0, #1
+    8194: 02 00 00 0a  	beq	#8 <_rmain+0x15c>
+    8198: ff ff ff ea  	b	#-4 <_rmain+0x154>
+    819c: 03 00 00 ea  	b	#12 <_rmain+0x168>
+    81a0: fe de ff e7  	trap
+    81a4: 2c 00 8d e2  	add	r0, sp, #44
+    81a8: 9b ff ff eb  	bl	#-404 <_ZN4core3ptr68drop_in_place$LT$core..array..iter..IntoIter$LT$u8$C$7_usize$GT$$GT$17hc90f417e75d1eeb2E>
+    81ac: 0b 00 00 ea  	b	#44 <_rmain+0x198>
+    81b0: 3d 00 dd e5  	ldrb	r0, [sp, #61]
+    81b4: 00 10 a0 e1  	mov	r1, r0
+    81b8: 08 10 8d e5  	str	r1, [sp, #8]
+    81bc: 6e 00 cd e5  	strb	r0, [sp, #110]
+    81c0: 14 00 a0 e3  	mov	r0, #20
+    81c4: 7d 1f a0 e3  	mov	r1, #500
+    81c8: b4 04 00 eb  	bl	#4816 <blink>
+    81cc: ff ff ff ea  	b	#-4 <_rmain+0x188>
+    81d0: 08 00 9d e5  	ldr	r0, [sp, #8]
+    81d4: 70 00 ef e6  	uxtb	r0, r0
+    81d8: 50 04 00 eb  	bl	#4416 <write_byte>
+    81dc: e5 ff ff ea  	b	#-108 <_rmain+0x130>
+    81e0: 13 00 dd e5  	ldrb	r0, [sp, #19]
+    81e4: 56 00 cd e5  	strb	r0, [sp, #86]
+    81e8: 12 10 dd e5  	ldrb	r1, [sp, #18]
+    81ec: 11 00 dd e5  	ldrb	r0, [sp, #17]
+    81f0: 01 04 80 e1  	orr	r0, r0, r1, lsl #8
+    81f4: b4 05 cd e1  	strh	r0, [sp, #84]
+    81f8: 0d 00 dd e5  	ldrb	r0, [sp, #13]
+    81fc: 0e 20 dd e5  	ldrb	r2, [sp, #14]
+    8200: 0f 10 dd e5  	ldrb	r1, [sp, #15]
+    8204: 10 30 dd e5  	ldrb	r3, [sp, #16]
+    8208: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    820c: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    8210: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    8214: 50 00 8d e5  	str	r0, [sp, #80]
+    8218: 50 00 dd e5  	ldrb	r0, [sp, #80]
+    821c: 51 20 dd e5  	ldrb	r2, [sp, #81]
+    8220: 52 10 dd e5  	ldrb	r1, [sp, #82]
+    8224: 53 30 dd e5  	ldrb	r3, [sp, #83]
+    8228: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    822c: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    8230: 01 28 80 e1  	orr	r2, r0, r1, lsl #16
+    8234: 55 10 dd e5  	ldrb	r1, [sp, #85]
+    8238: 54 00 dd e5  	ldrb	r0, [sp, #84]
+    823c: 01 04 80 e1  	orr	r0, r0, r1, lsl #8
+    8240: 56 10 dd e5  	ldrb	r1, [sp, #86]
+    8244: 01 38 80 e1  	orr	r3, r0, r1, lsl #16
+    8248: 40 00 8d e2  	add	r0, sp, #64
+    824c: d3 01 00 eb  	bl	#1868 <_ZN4core5array4iter94_$LT$impl$u20$core..iter..traits..collect..IntoIterator$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$9into_iter17h845a3f49e25a6565E>
+    8250: ff ff ff ea  	b	#-4 <_rmain+0x20c>
+    8254: 40 00 9d e5  	ldr	r0, [sp, #64]
+    8258: 44 10 9d e5  	ldr	r1, [sp, #68]
+    825c: 48 20 9d e5  	ldr	r2, [sp, #72]
+    8260: 4c 30 9d e5  	ldr	r3, [sp, #76]
+    8264: 64 30 8d e5  	str	r3, [sp, #100]
+    8268: 60 20 8d e5  	str	r2, [sp, #96]
+    826c: 5c 10 8d e5  	str	r1, [sp, #92]
+    8270: 58 00 8d e5  	str	r0, [sp, #88]
+    8274: ff ff ff ea  	b	#-4 <_rmain+0x230>
+    8278: 58 00 8d e2  	add	r0, sp, #88
+    827c: 2a 02 00 eb  	bl	#2216 <_ZN99_$LT$core..array..iter..IntoIter$LT$T$C$_$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17hd2cc86de6022d2f4E>
+    8280: 69 10 cd e5  	strb	r1, [sp, #105]
+    8284: 68 00 cd e5  	strb	r0, [sp, #104]
+    8288: ff ff ff ea  	b	#-4 <_rmain+0x244>
+    828c: 68 00 dd e5  	ldrb	r0, [sp, #104]
+    8290: 01 00 10 e3  	tst	r0, #1
+    8294: 02 00 00 0a  	beq	#8 <_rmain+0x25c>
+    8298: ff ff ff ea  	b	#-4 <_rmain+0x254>
+    829c: 03 00 00 ea  	b	#12 <_rmain+0x268>
+    82a0: fe de ff e7  	trap
+    82a4: 58 00 8d e2  	add	r0, sp, #88
+    82a8: 5b ff ff eb  	bl	#-660 <_ZN4core3ptr68drop_in_place$LT$core..array..iter..IntoIter$LT$u8$C$7_usize$GT$$GT$17hc90f417e75d1eeb2E>
+    82ac: 0b 00 00 ea  	b	#44 <_rmain+0x298>
+    82b0: 69 00 dd e5  	ldrb	r0, [sp, #105]
+    82b4: 00 10 a0 e1  	mov	r1, r0
+    82b8: 04 10 8d e5  	str	r1, [sp, #4]
+    82bc: 6f 00 cd e5  	strb	r0, [sp, #111]
+    82c0: 14 00 a0 e3  	mov	r0, #20
+    82c4: 7d 1f a0 e3  	mov	r1, #500
+    82c8: 74 04 00 eb  	bl	#4560 <blink>
+    82cc: ff ff ff ea  	b	#-4 <_rmain+0x288>
+    82d0: 04 00 9d e5  	ldr	r0, [sp, #4]
+    82d4: 70 00 ef e6  	uxtb	r0, r0
+    82d8: 10 04 00 eb  	bl	#4160 <write_byte>
+    82dc: e5 ff ff ea  	b	#-108 <_rmain+0x230>
+    82e0: 84 04 00 eb  	bl	#4624 <reboot>
+    82e4: fe de ff e7  	trap
+
+000082e8 <$d.4>:
+    82e8:	04 50 21 20	.word	0x20215004
+
+000082ec <_ZN4core3mem6forget17hf4ee719807b9df00E>:
+    82ec: 48 d0 4d e2  	sub	sp, sp, #72
+    82f0: bc 10 cd e1  	strh	r1, [sp, #12]
+    82f4: 21 18 a0 e1  	lsr	r1, r1, #16
+    82f8: 0e 10 cd e5  	strb	r1, [sp, #14]
+    82fc: 08 00 8d e5  	str	r0, [sp, #8]
+    8300: 0e 00 dd e5  	ldrb	r0, [sp, #14]
+    8304: 06 00 cd e5  	strb	r0, [sp, #6]
+    8308: bc 00 dd e1  	ldrh	r0, [sp, #12]
+    830c: b4 00 cd e1  	strh	r0, [sp, #4]
+    8310: 08 00 9d e5  	ldr	r0, [sp, #8]
+    8314: 00 00 8d e5  	str	r0, [sp]
+    8318: 06 00 dd e5  	ldrb	r0, [sp, #6]
+    831c: 1e 00 cd e5  	strb	r0, [sp, #30]
+    8320: b4 00 dd e1  	ldrh	r0, [sp, #4]
+    8324: bc 01 cd e1  	strh	r0, [sp, #28]
+    8328: 00 00 9d e5  	ldr	r0, [sp]
+    832c: 18 00 8d e5  	str	r0, [sp, #24]
+    8330: 18 00 dd e5  	ldrb	r0, [sp, #24]
+    8334: 19 20 dd e5  	ldrb	r2, [sp, #25]
+    8338: 1a 10 dd e5  	ldrb	r1, [sp, #26]
+    833c: 1b 30 dd e5  	ldrb	r3, [sp, #27]
+    8340: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    8344: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    8348: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    834c: 1d 20 dd e5  	ldrb	r2, [sp, #29]
+    8350: 1c 10 dd e5  	ldrb	r1, [sp, #28]
+    8354: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    8358: 1e 20 dd e5  	ldrb	r2, [sp, #30]
+    835c: 36 20 cd e5  	strb	r2, [sp, #54]
+    8360: b4 13 cd e1  	strh	r1, [sp, #52]
+    8364: 30 00 8d e5  	str	r0, [sp, #48]
+    8368: 36 00 dd e5  	ldrb	r0, [sp, #54]
+    836c: 2e 00 cd e5  	strb	r0, [sp, #46]
+    8370: b4 03 dd e1  	ldrh	r0, [sp, #52]
+    8374: bc 02 cd e1  	strh	r0, [sp, #44]
+    8378: 30 00 9d e5  	ldr	r0, [sp, #48]
+    837c: 28 00 8d e5  	str	r0, [sp, #40]
+    8380: 2e 00 dd e5  	ldrb	r0, [sp, #46]
+    8384: 46 00 cd e5  	strb	r0, [sp, #70]
+    8388: bc 02 dd e1  	ldrh	r0, [sp, #44]
+    838c: b4 04 cd e1  	strh	r0, [sp, #68]
+    8390: 28 00 9d e5  	ldr	r0, [sp, #40]
+    8394: 40 00 8d e5  	str	r0, [sp, #64]
+    8398: 46 00 dd e5  	ldrb	r0, [sp, #70]
+    839c: 3e 00 cd e5  	strb	r0, [sp, #62]
+    83a0: b4 04 dd e1  	ldrh	r0, [sp, #68]
+    83a4: bc 03 cd e1  	strh	r0, [sp, #60]
+    83a8: 40 00 9d e5  	ldr	r0, [sp, #64]
+    83ac: 38 00 8d e5  	str	r0, [sp, #56]
+    83b0: 38 00 dd e5  	ldrb	r0, [sp, #56]
+    83b4: 39 20 dd e5  	ldrb	r2, [sp, #57]
+    83b8: 3a 10 dd e5  	ldrb	r1, [sp, #58]
+    83bc: 3b 30 dd e5  	ldrb	r3, [sp, #59]
+    83c0: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    83c4: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    83c8: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    83cc: 3d 20 dd e5  	ldrb	r2, [sp, #61]
+    83d0: 3c 10 dd e5  	ldrb	r1, [sp, #60]
+    83d4: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    83d8: 3e 20 dd e5  	ldrb	r2, [sp, #62]
+    83dc: 26 20 cd e5  	strb	r2, [sp, #38]
+    83e0: b4 12 cd e1  	strh	r1, [sp, #36]
+    83e4: 20 00 8d e5  	str	r0, [sp, #32]
+    83e8: 26 00 dd e5  	ldrb	r0, [sp, #38]
+    83ec: 16 00 cd e5  	strb	r0, [sp, #22]
+    83f0: b4 02 dd e1  	ldrh	r0, [sp, #36]
+    83f4: b4 01 cd e1  	strh	r0, [sp, #20]
+    83f8: 20 00 9d e5  	ldr	r0, [sp, #32]
+    83fc: 10 00 8d e5  	str	r0, [sp, #16]
+    8400: ff ff ff ea  	b	#-4 <_ZN4core3mem6forget17hf4ee719807b9df00E+0x118>
+    8404: 48 d0 8d e2  	add	sp, sp, #72
+    8408: 1e ff 2f e1  	bx	lr
+
+0000840c <_ZN4core3mem14transmute_copy17hbecdead1c244bb91E>:
+    840c: 00 48 2d e9  	push	{r11, lr}
+    8410: 20 d0 4d e2  	sub	sp, sp, #32
+    8414: 00 00 8d e5  	str	r0, [sp]
+    8418: 0c 00 8d e5  	str	r0, [sp, #12]
+    841c: ff ff ff ea  	b	#-4 <_ZN4core3mem14transmute_copy17hbecdead1c244bb91E+0x14>
+    8420: ff ff ff ea  	b	#-4 <_ZN4core3mem14transmute_copy17hbecdead1c244bb91E+0x18>
+    8424: 00 00 a0 e3  	mov	r0, #0
+    8428: 00 00 50 e3  	cmp	r0, #0
+    842c: 0d 00 00 1a  	bne	#52 <_ZN4core3mem14transmute_copy17hbecdead1c244bb91E+0x5c>
+    8430: ff ff ff ea  	b	#-4 <_ZN4core3mem14transmute_copy17hbecdead1c244bb91E+0x28>
+    8434: 00 00 9d e5  	ldr	r0, [sp]
+    8438: 2e 00 00 eb  	bl	#184 <_ZN4core3ptr4read17h37f883ae7a8fd8f6E>
+    843c: bc 11 cd e1  	strh	r1, [sp, #28]
+    8440: 21 18 a0 e1  	lsr	r1, r1, #16
+    8444: 1e 10 cd e5  	strb	r1, [sp, #30]
+    8448: 18 00 8d e5  	str	r0, [sp, #24]
+    844c: 1e 00 dd e5  	ldrb	r0, [sp, #30]
+    8450: 0a 00 cd e5  	strb	r0, [sp, #10]
+    8454: bc 01 dd e1  	ldrh	r0, [sp, #28]
+    8458: b8 00 cd e1  	strh	r0, [sp, #8]
+    845c: 18 00 9d e5  	ldr	r0, [sp, #24]
+    8460: 04 00 8d e5  	str	r0, [sp, #4]
+    8464: 0c 00 00 ea  	b	#48 <_ZN4core3mem14transmute_copy17hbecdead1c244bb91E+0x90>
+    8468: 00 00 9d e5  	ldr	r0, [sp]
+    846c: b3 00 00 eb  	bl	#716 <_ZN4core3ptr14read_unaligned17h505a6bafcf92b10bE>
+    8470: b4 11 cd e1  	strh	r1, [sp, #20]
+    8474: 21 18 a0 e1  	lsr	r1, r1, #16
+    8478: 16 10 cd e5  	strb	r1, [sp, #22]
+    847c: 10 00 8d e5  	str	r0, [sp, #16]
+    8480: 16 00 dd e5  	ldrb	r0, [sp, #22]
+    8484: 0a 00 cd e5  	strb	r0, [sp, #10]
+    8488: b4 01 dd e1  	ldrh	r0, [sp, #20]
+    848c: b8 00 cd e1  	strh	r0, [sp, #8]
+    8490: 10 00 9d e5  	ldr	r0, [sp, #16]
+    8494: 04 00 8d e5  	str	r0, [sp, #4]
+    8498: ff ff ff ea  	b	#-4 <_ZN4core3mem14transmute_copy17hbecdead1c244bb91E+0x90>
+    849c: 04 00 dd e5  	ldrb	r0, [sp, #4]
+    84a0: 05 20 dd e5  	ldrb	r2, [sp, #5]
+    84a4: 06 10 dd e5  	ldrb	r1, [sp, #6]
+    84a8: 07 30 dd e5  	ldrb	r3, [sp, #7]
+    84ac: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    84b0: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    84b4: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    84b8: 09 20 dd e5  	ldrb	r2, [sp, #9]
+    84bc: 08 10 dd e5  	ldrb	r1, [sp, #8]
+    84c0: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    84c4: 0a 20 dd e5  	ldrb	r2, [sp, #10]
+    84c8: 02 18 81 e1  	orr	r1, r1, r2, lsl #16
+    84cc: 20 d0 8d e2  	add	sp, sp, #32
+    84d0: 00 88 bd e8  	pop	{r11, pc}
+
+000084d4 <_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4read17h6a97c3206fc50747E>:
+    84d4: 00 48 2d e9  	push	{r11, lr}
+    84d8: 08 d0 4d e2  	sub	sp, sp, #8
+    84dc: 04 00 8d e5  	str	r0, [sp, #4]
+    84e0: ec 05 00 eb  	bl	#6064 <_ZN4core3ptr4read17h5ae3eeb13a4f9974E>
+    84e4: 00 00 8d e5  	str	r0, [sp]
+    84e8: ff ff ff ea  	b	#-4 <_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4read17h6a97c3206fc50747E+0x18>
+    84ec: 00 00 9d e5  	ldr	r0, [sp]
+    84f0: 08 d0 8d e2  	add	sp, sp, #8
+    84f4: 00 88 bd e8  	pop	{r11, pc}
+
+000084f8 <_ZN4core3ptr4read17h37f883ae7a8fd8f6E>:
+    84f8: 00 48 2d e9  	push	{r11, lr}
+    84fc: 88 d0 4d e2  	sub	sp, sp, #136
+    8500: 08 00 8d e5  	str	r0, [sp, #8]
+    8504: 24 00 8d e5  	str	r0, [sp, #36]
+    8508: 3c 00 dd e5  	ldrb	r0, [sp, #60]
+    850c: 3d 20 dd e5  	ldrb	r2, [sp, #61]
+    8510: 3e 10 dd e5  	ldrb	r1, [sp, #62]
+    8514: 3f 30 dd e5  	ldrb	r3, [sp, #63]
+    8518: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    851c: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    8520: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    8524: 41 20 dd e5  	ldrb	r2, [sp, #65]
+    8528: 40 10 dd e5  	ldrb	r1, [sp, #64]
+    852c: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    8530: 42 20 dd e5  	ldrb	r2, [sp, #66]
+    8534: 2e 20 cd e5  	strb	r2, [sp, #46]
+    8538: bc 12 cd e1  	strh	r1, [sp, #44]
+    853c: 28 00 8d e5  	str	r0, [sp, #40]
+    8540: 2e 00 dd e5  	ldrb	r0, [sp, #46]
+    8544: 1a 00 cd e5  	strb	r0, [sp, #26]
+    8548: bc 02 dd e1  	ldrh	r0, [sp, #44]
+    854c: b8 01 cd e1  	strh	r0, [sp, #24]
+    8550: 28 00 9d e5  	ldr	r0, [sp, #40]
+    8554: 14 00 8d e5  	str	r0, [sp, #20]
+    8558: ff ff ff ea  	b	#-4 <_ZN4core3ptr4read17h37f883ae7a8fd8f6E+0x64>
+    855c: 14 00 8d e2  	add	r0, sp, #20
+    8560: 04 00 8d e5  	str	r0, [sp, #4]
+    8564: 44 00 8d e5  	str	r0, [sp, #68]
+    8568: ff ff ff ea  	b	#-4 <_ZN4core3ptr4read17h37f883ae7a8fd8f6E+0x74>
+    856c: 08 10 9d e5  	ldr	r1, [sp, #8]
+    8570: 04 00 9d e5  	ldr	r0, [sp, #4]
+    8574: 07 20 a0 e3  	mov	r2, #7
+    8578: d7 08 00 eb  	bl	#9052 <__aeabi_memcpy>
+    857c: 1a 00 dd e5  	ldrb	r0, [sp, #26]
+    8580: 22 00 cd e5  	strb	r0, [sp, #34]
+    8584: b8 01 dd e1  	ldrh	r0, [sp, #24]
+    8588: b0 02 cd e1  	strh	r0, [sp, #32]
+    858c: 14 00 9d e5  	ldr	r0, [sp, #20]
+    8590: 1c 00 8d e5  	str	r0, [sp, #28]
+    8594: 1c 00 dd e5  	ldrb	r0, [sp, #28]
+    8598: 1d 20 dd e5  	ldrb	r2, [sp, #29]
+    859c: 1e 10 dd e5  	ldrb	r1, [sp, #30]
+    85a0: 1f 30 dd e5  	ldrb	r3, [sp, #31]
+    85a4: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    85a8: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    85ac: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    85b0: 21 20 dd e5  	ldrb	r2, [sp, #33]
+    85b4: 20 10 dd e5  	ldrb	r1, [sp, #32]
+    85b8: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    85bc: 22 20 dd e5  	ldrb	r2, [sp, #34]
+    85c0: 56 20 cd e5  	strb	r2, [sp, #86]
+    85c4: b4 15 cd e1  	strh	r1, [sp, #84]
+    85c8: 50 00 8d e5  	str	r0, [sp, #80]
+    85cc: 56 00 dd e5  	ldrb	r0, [sp, #86]
+    85d0: 4e 00 cd e5  	strb	r0, [sp, #78]
+    85d4: b4 05 dd e1  	ldrh	r0, [sp, #84]
+    85d8: bc 04 cd e1  	strh	r0, [sp, #76]
+    85dc: 50 00 9d e5  	ldr	r0, [sp, #80]
+    85e0: 48 00 8d e5  	str	r0, [sp, #72]
+    85e4: 4e 00 dd e5  	ldrb	r0, [sp, #78]
+    85e8: 66 00 cd e5  	strb	r0, [sp, #102]
+    85ec: bc 04 dd e1  	ldrh	r0, [sp, #76]
+    85f0: b4 06 cd e1  	strh	r0, [sp, #100]
+    85f4: 48 00 9d e5  	ldr	r0, [sp, #72]
+    85f8: 60 00 8d e5  	str	r0, [sp, #96]
+    85fc: 60 00 dd e5  	ldrb	r0, [sp, #96]
+    8600: 61 20 dd e5  	ldrb	r2, [sp, #97]
+    8604: 62 10 dd e5  	ldrb	r1, [sp, #98]
+    8608: 63 30 dd e5  	ldrb	r3, [sp, #99]
+    860c: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    8610: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    8614: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    8618: 65 20 dd e5  	ldrb	r2, [sp, #101]
+    861c: 64 10 dd e5  	ldrb	r1, [sp, #100]
+    8620: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    8624: 66 20 dd e5  	ldrb	r2, [sp, #102]
+    8628: 7e 20 cd e5  	strb	r2, [sp, #126]
+    862c: bc 17 cd e1  	strh	r1, [sp, #124]
+    8630: 78 00 8d e5  	str	r0, [sp, #120]
+    8634: 7e 00 dd e5  	ldrb	r0, [sp, #126]
+    8638: 76 00 cd e5  	strb	r0, [sp, #118]
+    863c: bc 07 dd e1  	ldrh	r0, [sp, #124]
+    8640: b4 07 cd e1  	strh	r0, [sp, #116]
+    8644: 78 00 9d e5  	ldr	r0, [sp, #120]
+    8648: 70 00 8d e5  	str	r0, [sp, #112]
+    864c: 76 00 dd e5  	ldrb	r0, [sp, #118]
+    8650: 86 00 cd e5  	strb	r0, [sp, #134]
+    8654: b4 07 dd e1  	ldrh	r0, [sp, #116]
+    8658: b4 08 cd e1  	strh	r0, [sp, #132]
+    865c: 70 00 9d e5  	ldr	r0, [sp, #112]
+    8660: 80 00 8d e5  	str	r0, [sp, #128]
+    8664: 80 00 dd e5  	ldrb	r0, [sp, #128]
+    8668: 81 20 dd e5  	ldrb	r2, [sp, #129]
+    866c: 82 10 dd e5  	ldrb	r1, [sp, #130]
+    8670: 83 30 dd e5  	ldrb	r3, [sp, #131]
+    8674: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    8678: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    867c: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    8680: 85 20 dd e5  	ldrb	r2, [sp, #133]
+    8684: 84 10 dd e5  	ldrb	r1, [sp, #132]
+    8688: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    868c: 86 20 dd e5  	ldrb	r2, [sp, #134]
+    8690: 6e 20 cd e5  	strb	r2, [sp, #110]
+    8694: bc 16 cd e1  	strh	r1, [sp, #108]
+    8698: 68 00 8d e5  	str	r0, [sp, #104]
+    869c: 6e 00 dd e5  	ldrb	r0, [sp, #110]
+    86a0: 5e 00 cd e5  	strb	r0, [sp, #94]
+    86a4: bc 06 dd e1  	ldrh	r0, [sp, #108]
+    86a8: bc 05 cd e1  	strh	r0, [sp, #92]
+    86ac: 68 00 9d e5  	ldr	r0, [sp, #104]
+    86b0: 58 00 8d e5  	str	r0, [sp, #88]
+    86b4: 58 00 dd e5  	ldrb	r0, [sp, #88]
+    86b8: 59 20 dd e5  	ldrb	r2, [sp, #89]
+    86bc: 5a 10 dd e5  	ldrb	r1, [sp, #90]
+    86c0: 5b 30 dd e5  	ldrb	r3, [sp, #91]
+    86c4: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    86c8: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    86cc: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    86d0: 5d 20 dd e5  	ldrb	r2, [sp, #93]
+    86d4: 5c 10 dd e5  	ldrb	r1, [sp, #92]
+    86d8: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    86dc: 5e 20 dd e5  	ldrb	r2, [sp, #94]
+    86e0: 36 20 cd e5  	strb	r2, [sp, #54]
+    86e4: b4 13 cd e1  	strh	r1, [sp, #52]
+    86e8: 30 00 8d e5  	str	r0, [sp, #48]
+    86ec: 36 00 dd e5  	ldrb	r0, [sp, #54]
+    86f0: 12 00 cd e5  	strb	r0, [sp, #18]
+    86f4: b4 03 dd e1  	ldrh	r0, [sp, #52]
+    86f8: b0 01 cd e1  	strh	r0, [sp, #16]
+    86fc: 30 00 9d e5  	ldr	r0, [sp, #48]
+    8700: 0c 00 8d e5  	str	r0, [sp, #12]
+    8704: ff ff ff ea  	b	#-4 <_ZN4core3ptr4read17h37f883ae7a8fd8f6E+0x210>
+    8708: 0c 00 dd e5  	ldrb	r0, [sp, #12]
+    870c: 0d 20 dd e5  	ldrb	r2, [sp, #13]
+    8710: 0e 10 dd e5  	ldrb	r1, [sp, #14]
+    8714: 0f 30 dd e5  	ldrb	r3, [sp, #15]
+    8718: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    871c: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    8720: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    8724: 11 20 dd e5  	ldrb	r2, [sp, #17]
+    8728: 10 10 dd e5  	ldrb	r1, [sp, #16]
+    872c: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    8730: 12 20 dd e5  	ldrb	r2, [sp, #18]
+    8734: 02 18 81 e1  	orr	r1, r1, r2, lsl #16
+    8738: 88 d0 8d e2  	add	sp, sp, #136
+    873c: 00 88 bd e8  	pop	{r11, pc}
+
+00008740 <_ZN4core3ptr14read_unaligned17h505a6bafcf92b10bE>:
+    8740: 00 48 2d e9  	push	{r11, lr}
+    8744: 90 d0 4d e2  	sub	sp, sp, #144
+    8748: 10 00 8d e5  	str	r0, [sp, #16]
+    874c: 2c 00 8d e5  	str	r0, [sp, #44]
+    8750: 44 00 dd e5  	ldrb	r0, [sp, #68]
+    8754: 45 20 dd e5  	ldrb	r2, [sp, #69]
+    8758: 46 10 dd e5  	ldrb	r1, [sp, #70]
+    875c: 47 30 dd e5  	ldrb	r3, [sp, #71]
+    8760: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    8764: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    8768: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    876c: 49 20 dd e5  	ldrb	r2, [sp, #73]
+    8770: 48 10 dd e5  	ldrb	r1, [sp, #72]
+    8774: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    8778: 4a 20 dd e5  	ldrb	r2, [sp, #74]
+    877c: 36 20 cd e5  	strb	r2, [sp, #54]
+    8780: b4 13 cd e1  	strh	r1, [sp, #52]
+    8784: 30 00 8d e5  	str	r0, [sp, #48]
+    8788: 36 00 dd e5  	ldrb	r0, [sp, #54]
+    878c: 22 00 cd e5  	strb	r0, [sp, #34]
+    8790: b4 03 dd e1  	ldrh	r0, [sp, #52]
+    8794: b0 02 cd e1  	strh	r0, [sp, #32]
+    8798: 30 00 9d e5  	ldr	r0, [sp, #48]
+    879c: 1c 00 8d e5  	str	r0, [sp, #28]
+    87a0: ff ff ff ea  	b	#-4 <_ZN4core3ptr14read_unaligned17h505a6bafcf92b10bE+0x64>
+    87a4: 10 00 9d e5  	ldr	r0, [sp, #16]
+    87a8: 08 00 8d e5  	str	r0, [sp, #8]
+    87ac: 1c 00 8d e2  	add	r0, sp, #28
+    87b0: 0c 00 8d e5  	str	r0, [sp, #12]
+    87b4: 4c 00 8d e5  	str	r0, [sp, #76]
+    87b8: ff ff ff ea  	b	#-4 <_ZN4core3ptr14read_unaligned17h505a6bafcf92b10bE+0x7c>
+    87bc: 0c 00 9d e5  	ldr	r0, [sp, #12]
+    87c0: 04 00 8d e5  	str	r0, [sp, #4]
+    87c4: ff ff ff ea  	b	#-4 <_ZN4core3ptr14read_unaligned17h505a6bafcf92b10bE+0x88>
+    87c8: 04 10 9d e5  	ldr	r1, [sp, #4]
+    87cc: 08 00 9d e5  	ldr	r0, [sp, #8]
+    87d0: 07 20 a0 e3  	mov	r2, #7
+    87d4: 83 04 00 eb  	bl	#4620 <_ZN4core10intrinsics19copy_nonoverlapping17h09302005f622a709E>
+    87d8: ff ff ff ea  	b	#-4 <_ZN4core3ptr14read_unaligned17h505a6bafcf92b10bE+0x9c>
+    87dc: 22 00 dd e5  	ldrb	r0, [sp, #34]
+    87e0: 2a 00 cd e5  	strb	r0, [sp, #42]
+    87e4: b0 02 dd e1  	ldrh	r0, [sp, #32]
+    87e8: b8 02 cd e1  	strh	r0, [sp, #40]
+    87ec: 1c 00 9d e5  	ldr	r0, [sp, #28]
+    87f0: 24 00 8d e5  	str	r0, [sp, #36]
+    87f4: 24 00 dd e5  	ldrb	r0, [sp, #36]
+    87f8: 25 20 dd e5  	ldrb	r2, [sp, #37]
+    87fc: 26 10 dd e5  	ldrb	r1, [sp, #38]
+    8800: 27 30 dd e5  	ldrb	r3, [sp, #39]
+    8804: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    8808: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    880c: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    8810: 29 20 dd e5  	ldrb	r2, [sp, #41]
+    8814: 28 10 dd e5  	ldrb	r1, [sp, #40]
+    8818: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    881c: 2a 20 dd e5  	ldrb	r2, [sp, #42]
+    8820: 5e 20 cd e5  	strb	r2, [sp, #94]
+    8824: bc 15 cd e1  	strh	r1, [sp, #92]
+    8828: 58 00 8d e5  	str	r0, [sp, #88]
+    882c: 5e 00 dd e5  	ldrb	r0, [sp, #94]
+    8830: 56 00 cd e5  	strb	r0, [sp, #86]
+    8834: bc 05 dd e1  	ldrh	r0, [sp, #92]
+    8838: b4 05 cd e1  	strh	r0, [sp, #84]
+    883c: 58 00 9d e5  	ldr	r0, [sp, #88]
+    8840: 50 00 8d e5  	str	r0, [sp, #80]
+    8844: 56 00 dd e5  	ldrb	r0, [sp, #86]
+    8848: 6e 00 cd e5  	strb	r0, [sp, #110]
+    884c: b4 05 dd e1  	ldrh	r0, [sp, #84]
+    8850: bc 06 cd e1  	strh	r0, [sp, #108]
+    8854: 50 00 9d e5  	ldr	r0, [sp, #80]
+    8858: 68 00 8d e5  	str	r0, [sp, #104]
+    885c: 68 00 dd e5  	ldrb	r0, [sp, #104]
+    8860: 69 20 dd e5  	ldrb	r2, [sp, #105]
+    8864: 6a 10 dd e5  	ldrb	r1, [sp, #106]
+    8868: 6b 30 dd e5  	ldrb	r3, [sp, #107]
+    886c: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    8870: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    8874: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    8878: 6d 20 dd e5  	ldrb	r2, [sp, #109]
+    887c: 6c 10 dd e5  	ldrb	r1, [sp, #108]
+    8880: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    8884: 6e 20 dd e5  	ldrb	r2, [sp, #110]
+    8888: 86 20 cd e5  	strb	r2, [sp, #134]
+    888c: b4 18 cd e1  	strh	r1, [sp, #132]
+    8890: 80 00 8d e5  	str	r0, [sp, #128]
+    8894: 86 00 dd e5  	ldrb	r0, [sp, #134]
+    8898: 7e 00 cd e5  	strb	r0, [sp, #126]
+    889c: b4 08 dd e1  	ldrh	r0, [sp, #132]
+    88a0: bc 07 cd e1  	strh	r0, [sp, #124]
+    88a4: 80 00 9d e5  	ldr	r0, [sp, #128]
+    88a8: 78 00 8d e5  	str	r0, [sp, #120]
+    88ac: 7e 00 dd e5  	ldrb	r0, [sp, #126]
+    88b0: 8e 00 cd e5  	strb	r0, [sp, #142]
+    88b4: bc 07 dd e1  	ldrh	r0, [sp, #124]
+    88b8: bc 08 cd e1  	strh	r0, [sp, #140]
+    88bc: 78 00 9d e5  	ldr	r0, [sp, #120]
+    88c0: 88 00 8d e5  	str	r0, [sp, #136]
+    88c4: 88 00 dd e5  	ldrb	r0, [sp, #136]
+    88c8: 89 20 dd e5  	ldrb	r2, [sp, #137]
+    88cc: 8a 10 dd e5  	ldrb	r1, [sp, #138]
+    88d0: 8b 30 dd e5  	ldrb	r3, [sp, #139]
+    88d4: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    88d8: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    88dc: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    88e0: 8d 20 dd e5  	ldrb	r2, [sp, #141]
+    88e4: 8c 10 dd e5  	ldrb	r1, [sp, #140]
+    88e8: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    88ec: 8e 20 dd e5  	ldrb	r2, [sp, #142]
+    88f0: 76 20 cd e5  	strb	r2, [sp, #118]
+    88f4: b4 17 cd e1  	strh	r1, [sp, #116]
+    88f8: 70 00 8d e5  	str	r0, [sp, #112]
+    88fc: 76 00 dd e5  	ldrb	r0, [sp, #118]
+    8900: 66 00 cd e5  	strb	r0, [sp, #102]
+    8904: b4 07 dd e1  	ldrh	r0, [sp, #116]
+    8908: b4 06 cd e1  	strh	r0, [sp, #100]
+    890c: 70 00 9d e5  	ldr	r0, [sp, #112]
+    8910: 60 00 8d e5  	str	r0, [sp, #96]
+    8914: 60 00 dd e5  	ldrb	r0, [sp, #96]
+    8918: 61 20 dd e5  	ldrb	r2, [sp, #97]
+    891c: 62 10 dd e5  	ldrb	r1, [sp, #98]
+    8920: 63 30 dd e5  	ldrb	r3, [sp, #99]
+    8924: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    8928: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    892c: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    8930: 65 20 dd e5  	ldrb	r2, [sp, #101]
+    8934: 64 10 dd e5  	ldrb	r1, [sp, #100]
+    8938: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    893c: 66 20 dd e5  	ldrb	r2, [sp, #102]
+    8940: 3e 20 cd e5  	strb	r2, [sp, #62]
+    8944: bc 13 cd e1  	strh	r1, [sp, #60]
+    8948: 38 00 8d e5  	str	r0, [sp, #56]
+    894c: 3e 00 dd e5  	ldrb	r0, [sp, #62]
+    8950: 1a 00 cd e5  	strb	r0, [sp, #26]
+    8954: bc 03 dd e1  	ldrh	r0, [sp, #60]
+    8958: b8 01 cd e1  	strh	r0, [sp, #24]
+    895c: 38 00 9d e5  	ldr	r0, [sp, #56]
+    8960: 14 00 8d e5  	str	r0, [sp, #20]
+    8964: ff ff ff ea  	b	#-4 <_ZN4core3ptr14read_unaligned17h505a6bafcf92b10bE+0x228>
+    8968: 14 00 dd e5  	ldrb	r0, [sp, #20]
+    896c: 15 20 dd e5  	ldrb	r2, [sp, #21]
+    8970: 16 10 dd e5  	ldrb	r1, [sp, #22]
+    8974: 17 30 dd e5  	ldrb	r3, [sp, #23]
+    8978: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    897c: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    8980: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    8984: 19 20 dd e5  	ldrb	r2, [sp, #25]
+    8988: 18 10 dd e5  	ldrb	r1, [sp, #24]
+    898c: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    8990: 1a 20 dd e5  	ldrb	r2, [sp, #26]
+    8994: 02 18 81 e1  	orr	r1, r1, r2, lsl #16
+    8998: 90 d0 8d e2  	add	sp, sp, #144
+    899c: 00 88 bd e8  	pop	{r11, pc}
+
+000089a0 <_ZN4core5array4iter94_$LT$impl$u20$core..iter..traits..collect..IntoIterator$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$9into_iter17h845a3f49e25a6565E>:
+    89a0: 00 48 2d e9  	push	{r11, lr}
+    89a4: 38 d0 4d e2  	sub	sp, sp, #56
+    89a8: 04 00 8d e5  	str	r0, [sp, #4]
+    89ac: b4 31 cd e1  	strh	r3, [sp, #20]
+    89b0: 23 08 a0 e1  	lsr	r0, r3, #16
+    89b4: 16 00 cd e5  	strb	r0, [sp, #22]
+    89b8: 10 20 8d e5  	str	r2, [sp, #16]
+    89bc: 16 00 dd e5  	ldrb	r0, [sp, #22]
+    89c0: 0e 00 cd e5  	strb	r0, [sp, #14]
+    89c4: b4 01 dd e1  	ldrh	r0, [sp, #20]
+    89c8: bc 00 cd e1  	strh	r0, [sp, #12]
+    89cc: 10 00 9d e5  	ldr	r0, [sp, #16]
+    89d0: 08 00 8d e5  	str	r0, [sp, #8]
+    89d4: 08 00 8d e2  	add	r0, sp, #8
+    89d8: 8b fe ff eb  	bl	#-1492 <_ZN4core3mem14transmute_copy17hbecdead1c244bb91E>
+    89dc: b4 13 cd e1  	strh	r1, [sp, #52]
+    89e0: 21 18 a0 e1  	lsr	r1, r1, #16
+    89e4: 36 10 cd e5  	strb	r1, [sp, #54]
+    89e8: 30 00 8d e5  	str	r0, [sp, #48]
+    89ec: 36 00 dd e5  	ldrb	r0, [sp, #54]
+    89f0: 1e 00 cd e5  	strb	r0, [sp, #30]
+    89f4: b4 03 dd e1  	ldrh	r0, [sp, #52]
+    89f8: bc 01 cd e1  	strh	r0, [sp, #28]
+    89fc: 30 00 9d e5  	ldr	r0, [sp, #48]
+    8a00: 18 00 8d e5  	str	r0, [sp, #24]
+    8a04: ff ff ff ea  	b	#-4 <_ZN4core5array4iter94_$LT$impl$u20$core..iter..traits..collect..IntoIterator$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$9into_iter17h845a3f49e25a6565E+0x68>
+    8a08: 04 00 9d e5  	ldr	r0, [sp, #4]
+    8a0c: 00 10 a0 e3  	mov	r1, #0
+    8a10: 20 10 8d e5  	str	r1, [sp, #32]
+    8a14: 07 20 a0 e3  	mov	r2, #7
+    8a18: 24 20 8d e5  	str	r2, [sp, #36]
+    8a1c: 08 00 80 e2  	add	r0, r0, #8
+    8a20: 18 10 8d e2  	add	r1, sp, #24
+    8a24: ac 07 00 eb  	bl	#7856 <__aeabi_memcpy>
+    8a28: 04 10 9d e5  	ldr	r1, [sp, #4]
+    8a2c: 20 20 9d e5  	ldr	r2, [sp, #32]
+    8a30: 24 00 9d e5  	ldr	r0, [sp, #36]
+    8a34: 00 20 81 e5  	str	r2, [r1]
+    8a38: 04 00 81 e5  	str	r0, [r1, #4]
+    8a3c: 0e 00 dd e5  	ldrb	r0, [sp, #14]
+    8a40: 2e 00 cd e5  	strb	r0, [sp, #46]
+    8a44: bc 00 dd e1  	ldrh	r0, [sp, #12]
+    8a48: bc 02 cd e1  	strh	r0, [sp, #44]
+    8a4c: 08 00 9d e5  	ldr	r0, [sp, #8]
+    8a50: 28 00 8d e5  	str	r0, [sp, #40]
+    8a54: 28 00 dd e5  	ldrb	r0, [sp, #40]
+    8a58: 29 20 dd e5  	ldrb	r2, [sp, #41]
+    8a5c: 2a 10 dd e5  	ldrb	r1, [sp, #42]
+    8a60: 2b 30 dd e5  	ldrb	r3, [sp, #43]
+    8a64: 03 14 81 e1  	orr	r1, r1, r3, lsl #8
+    8a68: 02 04 80 e1  	orr	r0, r0, r2, lsl #8
+    8a6c: 01 08 80 e1  	orr	r0, r0, r1, lsl #16
+    8a70: 2d 20 dd e5  	ldrb	r2, [sp, #45]
+    8a74: 2c 10 dd e5  	ldrb	r1, [sp, #44]
+    8a78: 02 14 81 e1  	orr	r1, r1, r2, lsl #8
+    8a7c: 2e 20 dd e5  	ldrb	r2, [sp, #46]
+    8a80: 02 18 81 e1  	orr	r1, r1, r2, lsl #16
+    8a84: 18 fe ff eb  	bl	#-1952 <_ZN4core3mem6forget17hf4ee719807b9df00E>
+    8a88: ff ff ff ea  	b	#-4 <_ZN4core5array4iter94_$LT$impl$u20$core..iter..traits..collect..IntoIterator$u20$for$u20$$u5b$T$u3b$$u20$N$u5d$$GT$9into_iter17h845a3f49e25a6565E+0xec>
+    8a8c: 38 d0 8d e2  	add	sp, sp, #56
+    8a90: 00 88 bd e8  	pop	{r11, pc}
+
+00008a94 <_ZN4core5array4iter21IntoIter$LT$T$C$_$GT$12as_mut_slice17h6056ca54289c58b2E>:
+    8a94: 00 48 2d e9  	push	{r11, lr}
+    8a98: 38 d0 4d e2  	sub	sp, sp, #56
+    8a9c: 24 00 8d e5  	str	r0, [sp, #36]
+    8aa0: 08 10 80 e2  	add	r1, r0, #8
+    8aa4: 18 10 8d e5  	str	r1, [sp, #24]
+    8aa8: c0 00 00 eb  	bl	#768 <_ZN73_$LT$core..ops..range..Range$LT$Idx$GT$$u20$as$u20$core..clone..Clone$GT$5clone17hf66be93d19cf4de9E>
+    8aac: 1c 00 8d e5  	str	r0, [sp, #28]
+    8ab0: 20 10 8d e5  	str	r1, [sp, #32]
+    8ab4: ff ff ff ea  	b	#-4 <_ZN4core5array4iter21IntoIter$LT$T$C$_$GT$12as_mut_slice17h6056ca54289c58b2E+0x24>
+    8ab8: 20 30 9d e5  	ldr	r3, [sp, #32]
+    8abc: 1c 20 9d e5  	ldr	r2, [sp, #28]
+    8ac0: 18 00 9d e5  	ldr	r0, [sp, #24]
+    8ac4: 07 10 a0 e3  	mov	r1, #7
+    8ac8: 9f 00 00 eb  	bl	#636 <_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$17get_unchecked_mut17h22965eaea67e1f58E>
+    8acc: 01 20 a0 e1  	mov	r2, r1
+    8ad0: 08 20 8d e5  	str	r2, [sp, #8]
+    8ad4: 00 20 a0 e1  	mov	r2, r0
+    8ad8: 0c 20 8d e5  	str	r2, [sp, #12]
+    8adc: 00 20 a0 e1  	mov	r2, r0
+    8ae0: 10 20 8d e5  	str	r2, [sp, #16]
+    8ae4: 01 20 a0 e1  	mov	r2, r1
+    8ae8: 14 20 8d e5  	str	r2, [sp, #20]
+    8aec: 28 00 8d e5  	str	r0, [sp, #40]
+    8af0: 2c 10 8d e5  	str	r1, [sp, #44]
+    8af4: ff ff ff ea  	b	#-4 <_ZN4core5array4iter21IntoIter$LT$T$C$_$GT$12as_mut_slice17h6056ca54289c58b2E+0x64>
+    8af8: 08 00 9d e5  	ldr	r0, [sp, #8]
+    8afc: 0c 10 9d e5  	ldr	r1, [sp, #12]
+    8b00: 14 20 9d e5  	ldr	r2, [sp, #20]
+    8b04: 10 30 9d e5  	ldr	r3, [sp, #16]
+    8b08: 30 30 8d e5  	str	r3, [sp, #48]
+    8b0c: 34 20 8d e5  	str	r2, [sp, #52]
+    8b10: 00 10 8d e5  	str	r1, [sp]
+    8b14: 04 00 8d e5  	str	r0, [sp, #4]
+    8b18: ff ff ff ea  	b	#-4 <_ZN4core5array4iter21IntoIter$LT$T$C$_$GT$12as_mut_slice17h6056ca54289c58b2E+0x88>
+    8b1c: 04 10 9d e5  	ldr	r1, [sp, #4]
+    8b20: 00 00 9d e5  	ldr	r0, [sp]
+    8b24: 38 d0 8d e2  	add	sp, sp, #56
+    8b28: 00 88 bd e8  	pop	{r11, pc}
+
+00008b2c <_ZN99_$LT$core..array..iter..IntoIter$LT$T$C$_$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17hd2cc86de6022d2f4E>:
+    8b2c: 00 48 2d e9  	push	{r11, lr}
+    8b30: 20 d0 4d e2  	sub	sp, sp, #32
+    8b34: 0c 00 8d e5  	str	r0, [sp, #12]
+    8b38: 1c 00 8d e5  	str	r0, [sp, #28]
+    8b3c: cf 04 00 eb  	bl	#4924 <_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h284af6683574996dE>
+    8b40: 10 00 8d e5  	str	r0, [sp, #16]
+    8b44: 14 10 8d e5  	str	r1, [sp, #20]
+    8b48: ff ff ff ea  	b	#-4 <_ZN99_$LT$core..array..iter..IntoIter$LT$T$C$_$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17hd2cc86de6022d2f4E+0x20>
+    8b4c: 14 10 9d e5  	ldr	r1, [sp, #20]
+    8b50: 10 00 9d e5  	ldr	r0, [sp, #16]
+    8b54: 0c 20 9d e5  	ldr	r2, [sp, #12]
+    8b58: 08 20 82 e2  	add	r2, r2, #8
+    8b5c: 18 20 8d e5  	str	r2, [sp, #24]
+    8b60: 18 20 9d e5  	ldr	r2, [sp, #24]
+    8b64: 21 00 00 eb  	bl	#132 <_ZN4core6option15Option$LT$T$GT$3map17hf352d63ae5c7c007E>
+    8b68: 04 00 8d e5  	str	r0, [sp, #4]
+    8b6c: 08 10 8d e5  	str	r1, [sp, #8]
+    8b70: ff ff ff ea  	b	#-4 <_ZN99_$LT$core..array..iter..IntoIter$LT$T$C$_$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next17hd2cc86de6022d2f4E+0x48>
+    8b74: 08 10 9d e5  	ldr	r1, [sp, #8]
+    8b78: 04 00 9d e5  	ldr	r0, [sp, #4]
+    8b7c: 01 00 00 e2  	and	r0, r0, #1
+    8b80: 20 d0 8d e2  	add	sp, sp, #32
+    8b84: 00 88 bd e8  	pop	{r11, pc}
+
+00008b88 <_ZN99_$LT$core..array..iter..IntoIter$LT$T$C$_$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next28_$u7b$$u7b$closure$u7d$$u7d$17h28198fff9819cc04E>:
+    8b88: 00 48 2d e9  	push	{r11, lr}
+    8b8c: 18 d0 4d e2  	sub	sp, sp, #24
+    8b90: 01 20 a0 e1  	mov	r2, r1
+    8b94: 08 00 8d e5  	str	r0, [sp, #8]
+    8b98: 0c 20 8d e5  	str	r2, [sp, #12]
+    8b9c: 07 10 a0 e3  	mov	r1, #7
+    8ba0: 5a 00 00 eb  	bl	#360 <_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h8fee0c38b4c17d87E>
+    8ba4: 04 00 8d e5  	str	r0, [sp, #4]
+    8ba8: ff ff ff ea  	b	#-4 <_ZN99_$LT$core..array..iter..IntoIter$LT$T$C$_$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next28_$u7b$$u7b$closure$u7d$$u7d$17h28198fff9819cc04E+0x24>
+    8bac: 04 00 9d e5  	ldr	r0, [sp, #4]
+    8bb0: 10 00 8d e5  	str	r0, [sp, #16]
+    8bb4: 14 00 8d e5  	str	r0, [sp, #20]
+    8bb8: 45 fe ff eb  	bl	#-1772 <_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$4read17h6a97c3206fc50747E>
+    8bbc: 00 00 8d e5  	str	r0, [sp]
+    8bc0: ff ff ff ea  	b	#-4 <_ZN99_$LT$core..array..iter..IntoIter$LT$T$C$_$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next28_$u7b$$u7b$closure$u7d$$u7d$17h28198fff9819cc04E+0x3c>
+    8bc4: 00 00 9d e5  	ldr	r0, [sp]
+    8bc8: 18 d0 8d e2  	add	sp, sp, #24
+    8bcc: 00 88 bd e8  	pop	{r11, pc}
+
+00008bd0 <_ZN82_$LT$core..array..iter..IntoIter$LT$T$C$_$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h80c02c6e6896a21bE>:
+    8bd0: 00 48 2d e9  	push	{r11, lr}
+    8bd4: 08 d0 4d e2  	sub	sp, sp, #8
+    8bd8: 04 00 8d e5  	str	r0, [sp, #4]
+    8bdc: ac ff ff eb  	bl	#-336 <_ZN4core5array4iter21IntoIter$LT$T$C$_$GT$12as_mut_slice17h6056ca54289c58b2E>
+    8be0: ff ff ff ea  	b	#-4 <_ZN82_$LT$core..array..iter..IntoIter$LT$T$C$_$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h80c02c6e6896a21bE+0x14>
+    8be4: ff ff ff ea  	b	#-4 <_ZN82_$LT$core..array..iter..IntoIter$LT$T$C$_$GT$$u20$as$u20$core..ops..drop..Drop$GT$4drop17h80c02c6e6896a21bE+0x18>
+    8be8: 08 d0 8d e2  	add	sp, sp, #8
+    8bec: 00 88 bd e8  	pop	{r11, pc}
+
+00008bf0 <_ZN4core6option15Option$LT$T$GT$3map17hf352d63ae5c7c007E>:
+    8bf0: 00 48 2d e9  	push	{r11, lr}
+    8bf4: 28 d0 4d e2  	sub	sp, sp, #40
+    8bf8: 08 20 8d e5  	str	r2, [sp, #8]
+    8bfc: 0c 00 8d e5  	str	r0, [sp, #12]
+    8c00: 10 10 8d e5  	str	r1, [sp, #16]
+    8c04: 20 20 8d e5  	str	r2, [sp, #32]
+    8c08: 00 00 a0 e3  	mov	r0, #0
+    8c0c: 1f 00 cd e5  	strb	r0, [sp, #31]
+    8c10: 01 00 a0 e3  	mov	r0, #1
+    8c14: 1f 00 cd e5  	strb	r0, [sp, #31]
+    8c18: 0c 00 9d e5  	ldr	r0, [sp, #12]
+    8c1c: 00 00 50 e3  	cmp	r0, #0
+    8c20: 02 00 00 0a  	beq	#8 <_ZN4core6option15Option$LT$T$GT$3map17hf352d63ae5c7c007E+0x40>
+    8c24: ff ff ff ea  	b	#-4 <_ZN4core6option15Option$LT$T$GT$3map17hf352d63ae5c7c007E+0x38>
+    8c28: 03 00 00 ea  	b	#12 <_ZN4core6option15Option$LT$T$GT$3map17hf352d63ae5c7c007E+0x4c>
+    8c2c: fe de ff e7  	trap
+    8c30: 00 00 a0 e3  	mov	r0, #0
+    8c34: 14 00 cd e5  	strb	r0, [sp, #20]
+    8c38: 0e 00 00 ea  	b	#56 <_ZN4core6option15Option$LT$T$GT$3map17hf352d63ae5c7c007E+0x88>
+    8c3c: 08 00 9d e5  	ldr	r0, [sp, #8]
+    8c40: 10 10 9d e5  	ldr	r1, [sp, #16]
+    8c44: 24 10 8d e5  	str	r1, [sp, #36]
+    8c48: 00 20 a0 e3  	mov	r2, #0
+    8c4c: 1f 20 cd e5  	strb	r2, [sp, #31]
+    8c50: 18 10 8d e5  	str	r1, [sp, #24]
+    8c54: 18 10 9d e5  	ldr	r1, [sp, #24]
+    8c58: ca ff ff eb  	bl	#-216 <_ZN99_$LT$core..array..iter..IntoIter$LT$T$C$_$GT$$u20$as$u20$core..iter..traits..iterator..Iterator$GT$4next28_$u7b$$u7b$closure$u7d$$u7d$17h28198fff9819cc04E>
+    8c5c: 04 00 8d e5  	str	r0, [sp, #4]
+    8c60: ff ff ff ea  	b	#-4 <_ZN4core6option15Option$LT$T$GT$3map17hf352d63ae5c7c007E+0x74>
+    8c64: 04 00 9d e5  	ldr	r0, [sp, #4]
+    8c68: 15 00 cd e5  	strb	r0, [sp, #21]
+    8c6c: 01 00 a0 e3  	mov	r0, #1
+    8c70: 14 00 cd e5  	strb	r0, [sp, #20]
+    8c74: ff ff ff ea  	b	#-4 <_ZN4core6option15Option$LT$T$GT$3map17hf352d63ae5c7c007E+0x88>
+    8c78: 1f 00 dd e5  	ldrb	r0, [sp, #31]
+    8c7c: 01 00 10 e3  	tst	r0, #1
+    8c80: 04 00 00 1a  	bne	#16 <_ZN4core6option15Option$LT$T$GT$3map17hf352d63ae5c7c007E+0xa8>
+    8c84: ff ff ff ea  	b	#-4 <_ZN4core6option15Option$LT$T$GT$3map17hf352d63ae5c7c007E+0x98>
+    8c88: 14 00 dd e5  	ldrb	r0, [sp, #20]
+    8c8c: 15 10 dd e5  	ldrb	r1, [sp, #21]
+    8c90: 28 d0 8d e2  	add	sp, sp, #40
+    8c94: 00 88 bd e8  	pop	{r11, pc}
+    8c98: fa ff ff ea  	b	#-24 <_ZN4core6option15Option$LT$T$GT$3map17hf352d63ae5c7c007E+0x98>
+
+00008c9c <_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17h16994c97038451bcE>:
+    8c9c: 00 48 2d e9  	push	{r11, lr}
+    8ca0: 38 d0 4d e2  	sub	sp, sp, #56
+    8ca4: 08 20 8d e5  	str	r2, [sp, #8]
+    8ca8: 01 20 a0 e1  	mov	r2, r1
+    8cac: 08 10 9d e5  	ldr	r1, [sp, #8]
+    8cb0: 0c 20 8d e5  	str	r2, [sp, #12]
+    8cb4: 00 20 a0 e1  	mov	r2, r0
+    8cb8: 0c 00 9d e5  	ldr	r0, [sp, #12]
+    8cbc: 10 20 8d e5  	str	r2, [sp, #16]
+    8cc0: 18 20 8d e5  	str	r2, [sp, #24]
+    8cc4: 1c 00 8d e5  	str	r0, [sp, #28]
+    8cc8: 20 10 8d e5  	str	r1, [sp, #32]
+    8ccc: da 03 00 eb  	bl	#3944 <_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$6as_ptr17h5d4162422173c74aE>
+    8cd0: 14 00 8d e5  	str	r0, [sp, #20]
+    8cd4: ff ff ff ea  	b	#-4 <_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17h16994c97038451bcE+0x3c>
+    8cd8: 14 00 9d e5  	ldr	r0, [sp, #20]
+    8cdc: 10 10 9d e5  	ldr	r1, [sp, #16]
+    8ce0: 24 00 8d e5  	str	r0, [sp, #36]
+    8ce4: 28 10 8d e5  	str	r1, [sp, #40]
+    8ce8: 2c 00 8d e5  	str	r0, [sp, #44]
+    8cec: 30 10 8d e5  	str	r1, [sp, #48]
+    8cf0: 01 00 80 e0  	add	r0, r0, r1
+    8cf4: 34 00 8d e5  	str	r0, [sp, #52]
+    8cf8: 34 00 9d e5  	ldr	r0, [sp, #52]
+    8cfc: 04 00 8d e5  	str	r0, [sp, #4]
+    8d00: ff ff ff ea  	b	#-4 <_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17h16994c97038451bcE+0x68>
+    8d04: 04 00 9d e5  	ldr	r0, [sp, #4]
+    8d08: 38 d0 8d e2  	add	sp, sp, #56
+    8d0c: 00 88 bd e8  	pop	{r11, pc}
+
+00008d10 <_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h8fee0c38b4c17d87E>:
+    8d10: 00 48 2d e9  	push	{r11, lr}
+    8d14: 18 d0 4d e2  	sub	sp, sp, #24
+    8d18: 04 20 8d e5  	str	r2, [sp, #4]
+    8d1c: 01 20 a0 e1  	mov	r2, r1
+    8d20: 00 10 a0 e1  	mov	r1, r0
+    8d24: 04 00 9d e5  	ldr	r0, [sp, #4]
+    8d28: 0c 10 8d e5  	str	r1, [sp, #12]
+    8d2c: 10 20 8d e5  	str	r2, [sp, #16]
+    8d30: 14 00 8d e5  	str	r0, [sp, #20]
+    8d34: d8 ff ff eb  	bl	#-160 <_ZN75_$LT$usize$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$13get_unchecked17h16994c97038451bcE>
+    8d38: 08 00 8d e5  	str	r0, [sp, #8]
+    8d3c: ff ff ff ea  	b	#-4 <_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$13get_unchecked17h8fee0c38b4c17d87E+0x30>
+    8d40: 08 00 9d e5  	ldr	r0, [sp, #8]
+    8d44: 18 d0 8d e2  	add	sp, sp, #24
+    8d48: 00 88 bd e8  	pop	{r11, pc}
+
+00008d4c <_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$17get_unchecked_mut17h22965eaea67e1f58E>:
+    8d4c: 00 48 2d e9  	push	{r11, lr}
+    8d50: 20 d0 4d e2  	sub	sp, sp, #32
+    8d54: 00 30 8d e5  	str	r3, [sp]
+    8d58: 04 20 8d e5  	str	r2, [sp, #4]
+    8d5c: 01 30 a0 e1  	mov	r3, r1
+    8d60: 00 10 9d e5  	ldr	r1, [sp]
+    8d64: 00 20 a0 e1  	mov	r2, r0
+    8d68: 04 00 9d e5  	ldr	r0, [sp, #4]
+    8d6c: 10 20 8d e5  	str	r2, [sp, #16]
+    8d70: 14 30 8d e5  	str	r3, [sp, #20]
+    8d74: 18 00 8d e5  	str	r0, [sp, #24]
+    8d78: 1c 10 8d e5  	str	r1, [sp, #28]
+    8d7c: e7 04 00 eb  	bl	#5020 <_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h8c956cd257ce1a29E>
+    8d80: 08 00 8d e5  	str	r0, [sp, #8]
+    8d84: 0c 10 8d e5  	str	r1, [sp, #12]
+    8d88: ff ff ff ea  	b	#-4 <_ZN4core5slice29_$LT$impl$u20$$u5b$T$u5d$$GT$17get_unchecked_mut17h22965eaea67e1f58E+0x40>
+    8d8c: 0c 10 9d e5  	ldr	r1, [sp, #12]
+    8d90: 08 00 9d e5  	ldr	r0, [sp, #8]
+    8d94: 20 d0 8d e2  	add	sp, sp, #32
+    8d98: 00 88 bd e8  	pop	{r11, pc}
+
+00008d9c <_ZN4core5clone5impls54_$LT$impl$u20$core..clone..Clone$u20$for$u20$usize$GT$5clone17h5ff6c265a4247badE>:
+    8d9c: 04 d0 4d e2  	sub	sp, sp, #4
+    8da0: 00 00 8d e5  	str	r0, [sp]
+    8da4: 00 00 90 e5  	ldr	r0, [r0]
+    8da8: 04 d0 8d e2  	add	sp, sp, #4
+    8dac: 1e ff 2f e1  	bx	lr
+
+00008db0 <_ZN73_$LT$core..ops..range..Range$LT$Idx$GT$$u20$as$u20$core..clone..Clone$GT$5clone17hf66be93d19cf4de9E>:
+    8db0: 00 48 2d e9  	push	{r11, lr}
+    8db4: 20 d0 4d e2  	sub	sp, sp, #32
+    8db8: 14 00 8d e5  	str	r0, [sp, #20]
+    8dbc: 18 00 8d e5  	str	r0, [sp, #24]
+    8dc0: 04 10 80 e2  	add	r1, r0, #4
+    8dc4: 04 10 8d e5  	str	r1, [sp, #4]
+    8dc8: 1c 10 8d e5  	str	r1, [sp, #28]
+    8dcc: f2 ff ff eb  	bl	#-56 <_ZN4core5clone5impls54_$LT$impl$u20$core..clone..Clone$u20$for$u20$usize$GT$5clone17h5ff6c265a4247badE>
+    8dd0: 08 00 8d e5  	str	r0, [sp, #8]
+    8dd4: ff ff ff ea  	b	#-4 <_ZN73_$LT$core..ops..range..Range$LT$Idx$GT$$u20$as$u20$core..clone..Clone$GT$5clone17hf66be93d19cf4de9E+0x28>
+    8dd8: 04 00 9d e5  	ldr	r0, [sp, #4]
+    8ddc: ee ff ff eb  	bl	#-72 <_ZN4core5clone5impls54_$LT$impl$u20$core..clone..Clone$u20$for$u20$usize$GT$5clone17h5ff6c265a4247badE>
+    8de0: 00 00 8d e5  	str	r0, [sp]
+    8de4: ff ff ff ea  	b	#-4 <_ZN73_$LT$core..ops..range..Range$LT$Idx$GT$$u20$as$u20$core..clone..Clone$GT$5clone17hf66be93d19cf4de9E+0x38>
+    8de8: 00 00 9d e5  	ldr	r0, [sp]
+    8dec: 08 10 9d e5  	ldr	r1, [sp, #8]
+    8df0: 0c 10 8d e5  	str	r1, [sp, #12]
+    8df4: 10 00 8d e5  	str	r0, [sp, #16]
+    8df8: 0c 00 9d e5  	ldr	r0, [sp, #12]
+    8dfc: 10 10 9d e5  	ldr	r1, [sp, #16]
+    8e00: 20 d0 8d e2  	add	sp, sp, #32
+    8e04: 00 88 bd e8  	pop	{r11, pc}
+
+00008e08 <put32>:
+    8e08: 00 10 80 e5  	str	r1, [r0]
+    8e0c: 1e ff 2f e1  	bx	lr
+
+00008e10 <PUT8>:
+    8e10: 00 10 c0 e5  	strb	r1, [r0]
+    8e14: 1e ff 2f e1  	bx	lr
+
+00008e18 <get32>:
+    8e18: 00 00 90 e5  	ldr	r0, [r0]
+    8e1c: 1e ff 2f e1  	bx	lr
+
+00008e20 <nop_c>:
+    8e20: 1e ff 2f e1  	bx	lr
+
+00008e24 <BRANCHTO>:
+    8e24: 10 ff 2f e1  	bx	r0
+
+00008e28 <dev_barrier_c>:
+    8e28: 02 00 00 ea  	b	#8 <dsb_c>
+
+00008e2c <dmb_c>:
+    8e2c: 00 00 a0 e3  	mov	r0, #0
+    8e30: ba 0f 07 ee  	mcr	p15, #0, r0, c7, c10, #5
+    8e34: 1e ff 2f e1  	bx	lr
+
+00008e38 <dsb_c>:
+    8e38: 9a 0f 07 ee  	mcr	p15, #0, r0, c7, c10, #4
+    8e3c: 1e ff 2f e1  	bx	lr
+
+00008e40 <gpio_set_function>:
+    8e40: 00 48 2d e9  	push	{r11, lr}
+    8e44: 38 d0 4d e2  	sub	sp, sp, #56
+    8e48: 1c 10 8d e5  	str	r1, [sp, #28]
+    8e4c: 00 20 a0 e1  	mov	r2, r0
+    8e50: 72 00 ef e6  	uxtb	r0, r2
+    8e54: 02 30 a0 e1  	mov	r3, r2
+    8e58: 20 30 8d e5  	str	r3, [sp, #32]
+    8e5c: 2b 20 cd e5  	strb	r2, [sp, #43]
+    8e60: 2c 10 8d e5  	str	r1, [sp, #44]
+    8e64: 1f 00 50 e3  	cmp	r0, #31
+    8e68: 05 00 00 8a  	bhi	#20 <gpio_set_function+0x44>
+    8e6c: ff ff ff ea  	b	#-4 <gpio_set_function+0x30>
+    8e70: 1c 10 9d e5  	ldr	r1, [sp, #28]
+    8e74: 07 00 01 e2  	and	r0, r1, #7
+    8e78: 01 00 50 e1  	cmp	r0, r1
+    8e7c: 02 00 00 0a  	beq	#8 <gpio_set_function+0x4c>
+    8e80: ff ff ff ea  	b	#-4 <gpio_set_function+0x44>
+    8e84: 38 d0 8d e2  	add	sp, sp, #56
+    8e88: 00 88 bd e8  	pop	{r11, pc}
+    8e8c: 20 00 9d e5  	ldr	r0, [sp, #32]
+    8e90: 70 10 ef e6  	uxtb	r1, r0
+    8e94: cd 20 a0 e3  	mov	r2, #205
+    8e98: 81 02 61 e1  	smulbb	r1, r1, r2
+    8e9c: a1 15 a0 e1  	lsr	r1, r1, #11
+    8ea0: 01 11 81 e0  	add	r1, r1, r1, lsl #2
+    8ea4: 81 00 40 e0  	sub	r0, r0, r1, lsl #1
+    8ea8: 80 00 80 e0  	add	r0, r0, r0, lsl #1
+    8eac: 18 00 8d e5  	str	r0, [sp, #24]
+    8eb0: 00 00 a0 e3  	mov	r0, #0
+    8eb4: 00 00 50 e3  	cmp	r0, #0
+    8eb8: 06 00 00 1a  	bne	#24 <gpio_set_function+0x98>
+    8ebc: ff ff ff ea  	b	#-4 <gpio_set_function+0x80>
+    8ec0: 18 00 9d e5  	ldr	r0, [sp, #24]
+    8ec4: e8 01 00 eb  	bl	#1952 <_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h0ee0c6488e68d545E>
+    8ec8: 00 10 a0 e1  	mov	r1, r0
+    8ecc: 14 10 8d e5  	str	r1, [sp, #20]
+    8ed0: 30 00 8d e5  	str	r0, [sp, #48]
+    8ed4: 04 00 00 ea  	b	#16 <gpio_set_function+0xac>
+    8ed8: 4c 01 9f e5  	ldr	r0, [pc, #332]
+    8edc: 50 21 9f e5  	ldr	r2, [pc, #336]
+    8ee0: 21 10 a0 e3  	mov	r1, #33
+    8ee4: 1b 04 00 eb  	bl	#4204 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    8ee8: fe de ff e7  	trap
+    8eec: 20 00 9d e5  	ldr	r0, [sp, #32]
+    8ef0: 70 00 ef e6  	uxtb	r0, r0
+    8ef4: 18 11 9f e5  	ldr	r1, [pc, #280]
+    8ef8: 90 01 81 e0  	umull	r0, r1, r0, r1
+    8efc: 7c 00 a0 e3  	mov	r0, #124
+    8f00: a1 00 00 e0  	and	r0, r0, r1, lsr #1
+    8f04: 10 00 8d e5  	str	r0, [sp, #16]
+    8f08: 00 00 a0 e3  	mov	r0, #0
+    8f0c: 00 00 50 e3  	cmp	r0, #0
+    8f10: 08 00 00 1a  	bne	#32 <gpio_set_function+0xf8>
+    8f14: ff ff ff ea  	b	#-4 <gpio_set_function+0xd8>
+    8f18: 10 10 9d e5  	ldr	r1, [sp, #16]
+    8f1c: 02 06 a0 e3  	mov	r0, #2097152
+    8f20: 02 02 80 e3  	orr	r0, r0, #536870912
+    8f24: 00 00 81 e0  	add	r0, r1, r0
+    8f28: 0c 00 8d e5  	str	r0, [sp, #12]
+    8f2c: 01 00 50 e1  	cmp	r0, r1
+    8f30: 0a 00 00 3a  	blo	#40 <gpio_set_function+0x120>
+    8f34: 04 00 00 ea  	b	#16 <gpio_set_function+0x10c>
+    8f38: ec 00 9f e5  	ldr	r0, [pc, #236]
+    8f3c: ec 20 9f e5  	ldr	r2, [pc, #236]
+    8f40: 21 10 a0 e3  	mov	r1, #33
+    8f44: 03 04 00 eb  	bl	#4108 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    8f48: fe de ff e7  	trap
+    8f4c: 0c 00 9d e5  	ldr	r0, [sp, #12]
+    8f50: 34 00 8d e5  	str	r0, [sp, #52]
+    8f54: af ff ff eb  	bl	#-324 <get32>
+    8f58: 24 00 8d e5  	str	r0, [sp, #36]
+    8f5c: 04 00 00 ea  	b	#16 <gpio_set_function+0x134>
+    8f60: bc 00 9f e5  	ldr	r0, [pc, #188]
+    8f64: bc 20 9f e5  	ldr	r2, [pc, #188]
+    8f68: 1c 10 a0 e3  	mov	r1, #28
+    8f6c: f9 03 00 eb  	bl	#4068 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    8f70: fe de ff e7  	trap
+    8f74: 14 00 9d e5  	ldr	r0, [sp, #20]
+    8f78: 1f 20 00 e2  	and	r2, r0, #31
+    8f7c: 07 10 a0 e3  	mov	r1, #7
+    8f80: 11 12 a0 e1  	lsl	r1, r1, r2
+    8f84: 08 10 8d e5  	str	r1, [sp, #8]
+    8f88: 1f 10 e0 e3  	mvn	r1, #31
+    8f8c: 01 00 10 e1  	tst	r0, r1
+    8f90: 0d 00 00 1a  	bne	#52 <gpio_set_function+0x18c>
+    8f94: ff ff ff ea  	b	#-4 <gpio_set_function+0x158>
+    8f98: 14 00 9d e5  	ldr	r0, [sp, #20]
+    8f9c: 1c 10 9d e5  	ldr	r1, [sp, #28]
+    8fa0: 08 30 9d e5  	ldr	r3, [sp, #8]
+    8fa4: 24 20 9d e5  	ldr	r2, [sp, #36]
+    8fa8: 03 20 c2 e1  	bic	r2, r2, r3
+    8fac: 24 20 8d e5  	str	r2, [sp, #36]
+    8fb0: 1f 20 00 e2  	and	r2, r0, #31
+    8fb4: 11 12 a0 e1  	lsl	r1, r1, r2
+    8fb8: 04 10 8d e5  	str	r1, [sp, #4]
+    8fbc: 1f 10 e0 e3  	mvn	r1, #31
+    8fc0: 01 00 10 e1  	tst	r0, r1
+    8fc4: 0d 00 00 1a  	bne	#52 <gpio_set_function+0x1c0>
+    8fc8: 04 00 00 ea  	b	#16 <gpio_set_function+0x1a0>
+    8fcc: 44 00 9f e5  	ldr	r0, [pc, #68]
+    8fd0: 48 20 9f e5  	ldr	r2, [pc, #72]
+    8fd4: 23 10 a0 e3  	mov	r1, #35
+    8fd8: de 03 00 eb  	bl	#3960 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    8fdc: fe de ff e7  	trap
+    8fe0: 0c 00 9d e5  	ldr	r0, [sp, #12]
+    8fe4: 04 20 9d e5  	ldr	r2, [sp, #4]
+    8fe8: 24 10 9d e5  	ldr	r1, [sp, #36]
+    8fec: 02 10 81 e1  	orr	r1, r1, r2
+    8ff0: 24 10 8d e5  	str	r1, [sp, #36]
+    8ff4: 24 10 9d e5  	ldr	r1, [sp, #36]
+    8ff8: 82 ff ff eb  	bl	#-504 <put32>
+    8ffc: a0 ff ff ea  	b	#-384 <gpio_set_function+0x44>
+    9000: 10 00 9f e5  	ldr	r0, [pc, #16]
+    9004: 10 20 9f e5  	ldr	r2, [pc, #16]
+    9008: 23 10 a0 e3  	mov	r1, #35
+    900c: d1 03 00 eb  	bl	#3908 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    9010: fe de ff e7  	trap
+
+00009014 <$d.2>:
+    9014:	cd cc cc cc	.word	0xcccccccd
+    9018:	a0 a9 00 00	.word	0x0000a9a0
+    901c:	c4 a9 00 00	.word	0x0000a9c4
+    9020:	8c a9 00 00	.word	0x0000a98c
+    9024:	70 a9 00 00	.word	0x0000a970
+    9028:	54 a9 00 00	.word	0x0000a954
+    902c:	20 a9 00 00	.word	0x0000a920
+    9030:	44 a9 00 00	.word	0x0000a944
+    9034:	0c a9 00 00	.word	0x0000a90c
+
+00009038 <gpio_set_uart_func>:
+    9038: 00 48 2d e9  	push	{r11, lr}
+    903c: 08 d0 4d e2  	sub	sp, sp, #8
+    9040: 07 00 cd e5  	strb	r0, [sp, #7]
+    9044: 02 10 a0 e3  	mov	r1, #2
+    9048: 7c ff ff eb  	bl	#-528 <gpio_set_function>
+    904c: ff ff ff ea  	b	#-4 <gpio_set_uart_func+0x18>
+    9050: 08 d0 8d e2  	add	sp, sp, #8
+    9054: 00 88 bd e8  	pop	{r11, pc}
+
+00009058 <gpio_set_output>:
+    9058: 00 48 2d e9  	push	{r11, lr}
+    905c: 08 d0 4d e2  	sub	sp, sp, #8
+    9060: 07 00 cd e5  	strb	r0, [sp, #7]
+    9064: 01 10 a0 e3  	mov	r1, #1
+    9068: 74 ff ff eb  	bl	#-560 <gpio_set_function>
+    906c: ff ff ff ea  	b	#-4 <gpio_set_output+0x18>
+    9070: 08 d0 8d e2  	add	sp, sp, #8
+    9074: 00 88 bd e8  	pop	{r11, pc}
+
+00009078 <gpio_set_on>:
+    9078: 00 48 2d e9  	push	{r11, lr}
+    907c: 10 d0 4d e2  	sub	sp, sp, #16
+    9080: 00 10 a0 e1  	mov	r1, r0
+    9084: 71 00 ef e6  	uxtb	r0, r1
+    9088: 01 20 a0 e1  	mov	r2, r1
+    908c: 08 20 8d e5  	str	r2, [sp, #8]
+    9090: 0f 10 cd e5  	strb	r1, [sp, #15]
+    9094: 1f 00 50 e3  	cmp	r0, #31
+    9098: 08 00 00 8a  	bhi	#32 <gpio_set_on+0x48>
+    909c: ff ff ff ea  	b	#-4 <gpio_set_on+0x28>
+    90a0: 08 00 9d e5  	ldr	r0, [sp, #8]
+    90a4: 1f 20 00 e2  	and	r2, r0, #31
+    90a8: 01 10 a0 e3  	mov	r1, #1
+    90ac: 11 12 a0 e1  	lsl	r1, r1, r2
+    90b0: 04 10 8d e5  	str	r1, [sp, #4]
+    90b4: e0 00 10 e3  	tst	r0, #224
+    90b8: 06 00 00 1a  	bne	#24 <gpio_set_on+0x60>
+    90bc: 01 00 00 ea  	b	#4 <gpio_set_on+0x50>
+    90c0: 10 d0 8d e2  	add	sp, sp, #16
+    90c4: 00 88 bd e8  	pop	{r11, pc}
+    90c8: 04 10 9d e5  	ldr	r1, [sp, #4]
+    90cc: 18 00 9f e5  	ldr	r0, [pc, #24]
+    90d0: 4c ff ff eb  	bl	#-720 <put32>
+    90d4: f9 ff ff ea  	b	#-28 <gpio_set_on+0x48>
+    90d8: 10 00 9f e5  	ldr	r0, [pc, #16]
+    90dc: 10 20 9f e5  	ldr	r2, [pc, #16]
+    90e0: 23 10 a0 e3  	mov	r1, #35
+    90e4: 9b 03 00 eb  	bl	#3692 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    90e8: fe de ff e7  	trap
+
+000090ec <$d.7>:
+    90ec:	1c 00 20 20	.word	0x2020001c
+    90f0:	a0 a9 00 00	.word	0x0000a9a0
+    90f4:	d4 a9 00 00	.word	0x0000a9d4
+
+000090f8 <gpio_set_off>:
+    90f8: 00 48 2d e9  	push	{r11, lr}
+    90fc: 10 d0 4d e2  	sub	sp, sp, #16
+    9100: 00 10 a0 e1  	mov	r1, r0
+    9104: 71 00 ef e6  	uxtb	r0, r1
+    9108: 01 20 a0 e1  	mov	r2, r1
+    910c: 08 20 8d e5  	str	r2, [sp, #8]
+    9110: 0f 10 cd e5  	strb	r1, [sp, #15]
+    9114: 1f 00 50 e3  	cmp	r0, #31
+    9118: 08 00 00 8a  	bhi	#32 <gpio_set_off+0x48>
+    911c: ff ff ff ea  	b	#-4 <gpio_set_off+0x28>
+    9120: 08 00 9d e5  	ldr	r0, [sp, #8]
+    9124: 1f 20 00 e2  	and	r2, r0, #31
+    9128: 01 10 a0 e3  	mov	r1, #1
+    912c: 11 12 a0 e1  	lsl	r1, r1, r2
+    9130: 04 10 8d e5  	str	r1, [sp, #4]
+    9134: e0 00 10 e3  	tst	r0, #224
+    9138: 06 00 00 1a  	bne	#24 <gpio_set_off+0x60>
+    913c: 01 00 00 ea  	b	#4 <gpio_set_off+0x50>
+    9140: 10 d0 8d e2  	add	sp, sp, #16
+    9144: 00 88 bd e8  	pop	{r11, pc}
+    9148: 04 10 9d e5  	ldr	r1, [sp, #4]
+    914c: 18 00 9f e5  	ldr	r0, [pc, #24]
+    9150: 2c ff ff eb  	bl	#-848 <put32>
+    9154: f9 ff ff ea  	b	#-28 <gpio_set_off+0x48>
+    9158: 10 00 9f e5  	ldr	r0, [pc, #16]
+    915c: 10 20 9f e5  	ldr	r2, [pc, #16]
+    9160: 23 10 a0 e3  	mov	r1, #35
+    9164: 7b 03 00 eb  	bl	#3564 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    9168: fe de ff e7  	trap
+
+0000916c <$d.9>:
+    916c:	28 00 20 20	.word	0x20200028
+    9170:	a0 a9 00 00	.word	0x0000a9a0
+    9174:	e4 a9 00 00	.word	0x0000a9e4
+
+00009178 <_ZN3nox3rpi3nop17h84e9cc52dc5bcc81E>:
+    9178: 00 48 2d e9  	push	{r11, lr}
+    917c: 27 ff ff eb  	bl	#-868 <nop_c>
+    9180: ff ff ff ea  	b	#-4 <_ZN3nox3rpi3nop17h84e9cc52dc5bcc81E+0xc>
+    9184: 00 88 bd e8  	pop	{r11, pc}
+
+00009188 <_ZN3nox3rpi11dev_barrier17h6ed8f2a19105aeb1E>:
+    9188: 00 48 2d e9  	push	{r11, lr}
+    918c: 25 ff ff eb  	bl	#-876 <dev_barrier_c>
+    9190: ff ff ff ea  	b	#-4 <_ZN3nox3rpi11dev_barrier17h6ed8f2a19105aeb1E+0xc>
+    9194: 00 88 bd e8  	pop	{r11, pc}
+
+00009198 <uart_init>:
+    9198: 00 48 2d e9  	push	{r11, lr}
+    919c: 10 d0 4d e2  	sub	sp, sp, #16
+    91a0: f8 ff ff eb  	bl	#-32 <_ZN3nox3rpi11dev_barrier17h6ed8f2a19105aeb1E>
+    91a4: ff ff ff ea  	b	#-4 <uart_init+0x10>
+    91a8: 0e 00 a0 e3  	mov	r0, #14
+    91ac: a1 ff ff eb  	bl	#-380 <gpio_set_uart_func>
+    91b0: ff ff ff ea  	b	#-4 <uart_init+0x1c>
+    91b4: 0f 00 a0 e3  	mov	r0, #15
+    91b8: 9e ff ff eb  	bl	#-392 <gpio_set_uart_func>
+    91bc: ff ff ff ea  	b	#-4 <uart_init+0x28>
+    91c0: f0 ff ff eb  	bl	#-64 <_ZN3nox3rpi11dev_barrier17h6ed8f2a19105aeb1E>
+    91c4: ff ff ff ea  	b	#-4 <uart_init+0x30>
+    91c8: cc 00 9f e5  	ldr	r0, [pc, #204]
+    91cc: 11 ff ff eb  	bl	#-956 <get32>
+    91d0: 04 00 8d e5  	str	r0, [sp, #4]
+    91d4: ff ff ff ea  	b	#-4 <uart_init+0x40>
+    91d8: 04 00 9d e5  	ldr	r0, [sp, #4]
+    91dc: 01 00 80 e3  	orr	r0, r0, #1
+    91e0: 04 00 8d e5  	str	r0, [sp, #4]
+    91e4: 04 10 9d e5  	ldr	r1, [sp, #4]
+    91e8: ac 00 9f e5  	ldr	r0, [pc, #172]
+    91ec: 05 ff ff eb  	bl	#-1004 <put32>
+    91f0: ff ff ff ea  	b	#-4 <uart_init+0x5c>
+    91f4: e3 ff ff eb  	bl	#-116 <_ZN3nox3rpi11dev_barrier17h6ed8f2a19105aeb1E>
+    91f8: ff ff ff ea  	b	#-4 <uart_init+0x64>
+    91fc: 9c 00 9f e5  	ldr	r0, [pc, #156]
+    9200: 04 ff ff eb  	bl	#-1008 <get32>
+    9204: 08 00 8d e5  	str	r0, [sp, #8]
+    9208: ff ff ff ea  	b	#-4 <uart_init+0x74>
+    920c: 08 10 9d e5  	ldr	r1, [sp, #8]
+    9210: 88 00 9f e5  	ldr	r0, [pc, #136]
+    9214: fb fe ff eb  	bl	#-1044 <put32>
+    9218: ff ff ff ea  	b	#-4 <uart_init+0x84>
+    921c: 80 00 9f e5  	ldr	r0, [pc, #128]
+    9220: 06 10 a0 e3  	mov	r1, #6
+    9224: f7 fe ff eb  	bl	#-1060 <put32>
+    9228: ff ff ff ea  	b	#-4 <uart_init+0x94>
+    922c: 70 00 9f e5  	ldr	r0, [pc, #112]
+    9230: 06 10 a0 e3  	mov	r1, #6
+    9234: f3 fe ff eb  	bl	#-1076 <put32>
+    9238: ff ff ff ea  	b	#-4 <uart_init+0xa4>
+    923c: 64 00 9f e5  	ldr	r0, [pc, #100]
+    9240: 03 10 a0 e3  	mov	r1, #3
+    9244: ef fe ff eb  	bl	#-1092 <put32>
+    9248: ff ff ff ea  	b	#-4 <uart_init+0xb4>
+    924c: 58 00 9f e5  	ldr	r0, [pc, #88]
+    9250: 0e 10 a0 e3  	mov	r1, #14
+    9254: 01 1c 81 e3  	orr	r1, r1, #256
+    9258: ea fe ff eb  	bl	#-1112 <put32>
+    925c: ff ff ff ea  	b	#-4 <uart_init+0xc8>
+    9260: 38 00 9f e5  	ldr	r0, [pc, #56]
+    9264: eb fe ff eb  	bl	#-1108 <get32>
+    9268: 0c 00 8d e5  	str	r0, [sp, #12]
+    926c: ff ff ff ea  	b	#-4 <uart_init+0xd8>
+    9270: 0c 00 9d e5  	ldr	r0, [sp, #12]
+    9274: 03 00 80 e3  	orr	r0, r0, #3
+    9278: 0c 00 8d e5  	str	r0, [sp, #12]
+    927c: 0c 10 9d e5  	ldr	r1, [sp, #12]
+    9280: 18 00 9f e5  	ldr	r0, [pc, #24]
+    9284: df fe ff eb  	bl	#-1156 <put32>
+    9288: ff ff ff ea  	b	#-4 <uart_init+0xf4>
+    928c: bd ff ff eb  	bl	#-268 <_ZN3nox3rpi11dev_barrier17h6ed8f2a19105aeb1E>
+    9290: ff ff ff ea  	b	#-4 <uart_init+0xfc>
+    9294: 10 d0 8d e2  	add	sp, sp, #16
+    9298: 00 88 bd e8  	pop	{r11, pc}
+
+0000929c <$d.18>:
+    929c:	04 50 21 20	.word	0x20215004
+    92a0:	60 50 21 20	.word	0x20215060
+    92a4:	48 50 21 20	.word	0x20215048
+    92a8:	4c 50 21 20	.word	0x2021504c
+    92ac:	68 50 21 20	.word	0x20215068
+
+000092b0 <tx_space_available>:
+    92b0: 00 48 2d e9  	push	{r11, lr}
+    92b4: 10 d0 4d e2  	sub	sp, sp, #16
+    92b8: b2 ff ff eb  	bl	#-312 <_ZN3nox3rpi11dev_barrier17h6ed8f2a19105aeb1E>
+    92bc: ff ff ff ea  	b	#-4 <tx_space_available+0x10>
+    92c0: 54 00 9f e5  	ldr	r0, [pc, #84]
+    92c4: d3 fe ff eb  	bl	#-1204 <get32>
+    92c8: 04 00 8d e5  	str	r0, [sp, #4]
+    92cc: ff ff ff ea  	b	#-4 <tx_space_available+0x20>
+    92d0: 04 00 9d e5  	ldr	r0, [sp, #4]
+    92d4: 02 00 00 e2  	and	r0, r0, #2
+    92d8: 00 00 8d e5  	str	r0, [sp]
+    92dc: 0c 00 8d e5  	str	r0, [sp, #12]
+    92e0: a8 ff ff eb  	bl	#-352 <_ZN3nox3rpi11dev_barrier17h6ed8f2a19105aeb1E>
+    92e4: ff ff ff ea  	b	#-4 <tx_space_available+0x38>
+    92e8: 00 00 9d e5  	ldr	r0, [sp]
+    92ec: 00 00 50 e3  	cmp	r0, #0
+    92f0: 03 00 00 1a  	bne	#12 <tx_space_available+0x54>
+    92f4: ff ff ff ea  	b	#-4 <tx_space_available+0x48>
+    92f8: 00 00 a0 e3  	mov	r0, #0
+    92fc: 0b 00 cd e5  	strb	r0, [sp, #11]
+    9300: 02 00 00 ea  	b	#8 <tx_space_available+0x60>
+    9304: 01 00 a0 e3  	mov	r0, #1
+    9308: 0b 00 cd e5  	strb	r0, [sp, #11]
+    930c: ff ff ff ea  	b	#-4 <tx_space_available+0x60>
+    9310: 0b 00 dd e5  	ldrb	r0, [sp, #11]
+    9314: 10 d0 8d e2  	add	sp, sp, #16
+    9318: 00 88 bd e8  	pop	{r11, pc}
+
+0000931c <$d.24>:
+    931c:	64 50 21 20	.word	0x20215064
+
+00009320 <write_byte>:
+    9320: 00 48 2d e9  	push	{r11, lr}
+    9324: 10 d0 4d e2  	sub	sp, sp, #16
+    9328: 08 00 8d e5  	str	r0, [sp, #8]
+    932c: 0c 00 8d e5  	str	r0, [sp, #12]
+    9330: 94 ff ff eb  	bl	#-432 <_ZN3nox3rpi11dev_barrier17h6ed8f2a19105aeb1E>
+    9334: ff ff ff ea  	b	#-4 <write_byte+0x18>
+    9338: dc ff ff eb  	bl	#-144 <tx_space_available>
+    933c: 04 00 8d e5  	str	r0, [sp, #4]
+    9340: ff ff ff ea  	b	#-4 <write_byte+0x24>
+    9344: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9348: 01 00 10 e3  	tst	r0, #1
+    934c: 04 00 00 0a  	beq	#16 <write_byte+0x44>
+    9350: ff ff ff ea  	b	#-4 <write_byte+0x34>
+    9354: 08 10 9d e5  	ldr	r1, [sp, #8]
+    9358: 1c 00 9f e5  	ldr	r0, [pc, #28]
+    935c: a9 fe ff eb  	bl	#-1372 <put32>
+    9360: 01 00 00 ea  	b	#4 <write_byte+0x4c>
+    9364: 83 ff ff eb  	bl	#-500 <_ZN3nox3rpi3nop17h84e9cc52dc5bcc81E>
+    9368: f2 ff ff ea  	b	#-56 <write_byte+0x18>
+    936c: 85 ff ff eb  	bl	#-492 <_ZN3nox3rpi11dev_barrier17h6ed8f2a19105aeb1E>
+    9370: ff ff ff ea  	b	#-4 <write_byte+0x54>
+    9374: 10 d0 8d e2  	add	sp, sp, #16
+    9378: 00 88 bd e8  	pop	{r11, pc}
+
+0000937c <$d.29>:
+    937c:	40 50 21 20	.word	0x20215040
+
+00009380 <_ZN3nox5timer14timer_get_usec17h48624985229694faE>:
+    9380: 00 48 2d e9  	push	{r11, lr}
+    9384: 08 d0 4d e2  	sub	sp, sp, #8
+    9388: 14 00 9f e5  	ldr	r0, [pc, #20]
+    938c: a1 fe ff eb  	bl	#-1404 <get32>
+    9390: 04 00 8d e5  	str	r0, [sp, #4]
+    9394: ff ff ff ea  	b	#-4 <_ZN3nox5timer14timer_get_usec17h48624985229694faE+0x18>
+    9398: 04 00 9d e5  	ldr	r0, [sp, #4]
+    939c: 08 d0 8d e2  	add	sp, sp, #8
+    93a0: 00 88 bd e8  	pop	{r11, pc}
+
+000093a4 <$d.33>:
+    93a4:	04 30 00 20	.word	0x20003004
+
+000093a8 <_ZN3nox5timer8delay_us17hc70fcd3180bb1708E>:
+    93a8: 00 48 2d e9  	push	{r11, lr}
+    93ac: 20 d0 4d e2  	sub	sp, sp, #32
+    93b0: 0c 00 8d e5  	str	r0, [sp, #12]
+    93b4: 18 00 8d e5  	str	r0, [sp, #24]
+    93b8: f0 ff ff eb  	bl	#-64 <_ZN3nox5timer14timer_get_usec17h48624985229694faE>
+    93bc: 00 10 a0 e1  	mov	r1, r0
+    93c0: 10 10 8d e5  	str	r1, [sp, #16]
+    93c4: 1c 00 8d e5  	str	r0, [sp, #28]
+    93c8: ff ff ff ea  	b	#-4 <_ZN3nox5timer8delay_us17hc70fcd3180bb1708E+0x24>
+    93cc: eb ff ff eb  	bl	#-84 <_ZN3nox5timer14timer_get_usec17h48624985229694faE>
+    93d0: 14 00 8d e5  	str	r0, [sp, #20]
+    93d4: ff ff ff ea  	b	#-4 <_ZN3nox5timer8delay_us17hc70fcd3180bb1708E+0x30>
+    93d8: 10 10 9d e5  	ldr	r1, [sp, #16]
+    93dc: 14 00 9d e5  	ldr	r0, [sp, #20]
+    93e0: 01 20 40 e0  	sub	r2, r0, r1
+    93e4: 08 20 8d e5  	str	r2, [sp, #8]
+    93e8: 01 00 50 e1  	cmp	r0, r1
+    93ec: 05 00 00 3a  	blo	#20 <_ZN3nox5timer8delay_us17hc70fcd3180bb1708E+0x60>
+    93f0: ff ff ff ea  	b	#-4 <_ZN3nox5timer8delay_us17hc70fcd3180bb1708E+0x4c>
+    93f4: 08 00 9d e5  	ldr	r0, [sp, #8]
+    93f8: 0c 10 9d e5  	ldr	r1, [sp, #12]
+    93fc: 01 00 50 e1  	cmp	r0, r1
+    9400: 07 00 00 3a  	blo	#28 <_ZN3nox5timer8delay_us17hc70fcd3180bb1708E+0x7c>
+    9404: 04 00 00 ea  	b	#16 <_ZN3nox5timer8delay_us17hc70fcd3180bb1708E+0x74>
+    9408: 34 00 9f e5  	ldr	r0, [pc, #52]
+    940c: 34 20 9f e5  	ldr	r2, [pc, #52]
+    9410: 21 10 a0 e3  	mov	r1, #33
+    9414: cf 02 00 eb  	bl	#2876 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    9418: fe de ff e7  	trap
+    941c: 20 d0 8d e2  	add	sp, sp, #32
+    9420: 00 88 bd e8  	pop	{r11, pc}
+    9424: 53 ff ff eb  	bl	#-692 <_ZN3nox3rpi3nop17h84e9cc52dc5bcc81E>
+    9428: ff ff ff ea  	b	#-4 <_ZN3nox5timer8delay_us17hc70fcd3180bb1708E+0x84>
+    942c: d3 ff ff eb  	bl	#-180 <_ZN3nox5timer14timer_get_usec17h48624985229694faE>
+    9430: 04 00 8d e5  	str	r0, [sp, #4]
+    9434: ff ff ff ea  	b	#-4 <_ZN3nox5timer8delay_us17hc70fcd3180bb1708E+0x90>
+    9438: 04 00 9d e5  	ldr	r0, [sp, #4]
+    943c: 14 00 8d e5  	str	r0, [sp, #20]
+    9440: e4 ff ff ea  	b	#-112 <_ZN3nox5timer8delay_us17hc70fcd3180bb1708E+0x30>
+
+00009444 <$d.35>:
+    9444:	10 aa 00 00	.word	0x0000aa10
+    9448:	00 aa 00 00	.word	0x0000aa00
+
+0000944c <_ZN3nox5timer8delay_ms17h3f3a47e31b8cccedE>:
+    944c: 00 48 2d e9  	push	{r11, lr}
+    9450: 08 d0 4d e2  	sub	sp, sp, #8
+    9454: 04 00 8d e5  	str	r0, [sp, #4]
+    9458: fa 1f a0 e3  	mov	r1, #1000
+    945c: 90 11 80 e0  	umull	r1, r0, r0, r1
+    9460: 00 10 8d e5  	str	r1, [sp]
+    9464: 00 00 50 e3  	cmp	r0, #0
+    9468: 03 00 00 1a  	bne	#12 <_ZN3nox5timer8delay_ms17h3f3a47e31b8cccedE+0x30>
+    946c: ff ff ff ea  	b	#-4 <_ZN3nox5timer8delay_ms17h3f3a47e31b8cccedE+0x24>
+    9470: 00 00 9d e5  	ldr	r0, [sp]
+    9474: cb ff ff eb  	bl	#-212 <_ZN3nox5timer8delay_us17hc70fcd3180bb1708E>
+    9478: 04 00 00 ea  	b	#16 <_ZN3nox5timer8delay_ms17h3f3a47e31b8cccedE+0x44>
+    947c: 14 00 9f e5  	ldr	r0, [pc, #20]
+    9480: 14 20 9f e5  	ldr	r2, [pc, #20]
+    9484: 21 10 a0 e3  	mov	r1, #33
+    9488: b2 02 00 eb  	bl	#2760 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    948c: fe de ff e7  	trap
+    9490: 08 d0 8d e2  	add	sp, sp, #8
+    9494: 00 88 bd e8  	pop	{r11, pc}
+
+00009498 <$d.37>:
+    9498:	20 a9 00 00	.word	0x0000a920
+    949c:	34 aa 00 00	.word	0x0000aa34
+
+000094a0 <blink>:
+    94a0: 00 48 2d e9  	push	{r11, lr}
+    94a4: 10 d0 4d e2  	sub	sp, sp, #16
+    94a8: 00 10 8d e5  	str	r1, [sp]
+    94ac: 00 20 a0 e1  	mov	r2, r0
+    94b0: 04 20 8d e5  	str	r2, [sp, #4]
+    94b4: 0b 00 cd e5  	strb	r0, [sp, #11]
+    94b8: 0c 10 8d e5  	str	r1, [sp, #12]
+    94bc: ed fe ff eb  	bl	#-1100 <gpio_set_on>
+    94c0: ff ff ff ea  	b	#-4 <blink+0x24>
+    94c4: 00 00 9d e5  	ldr	r0, [sp]
+    94c8: a0 00 a0 e1  	lsr	r0, r0, #1
+    94cc: de ff ff eb  	bl	#-136 <_ZN3nox5timer8delay_ms17h3f3a47e31b8cccedE>
+    94d0: ff ff ff ea  	b	#-4 <blink+0x34>
+    94d4: 04 00 9d e5  	ldr	r0, [sp, #4]
+    94d8: 06 ff ff eb  	bl	#-1000 <gpio_set_off>
+    94dc: ff ff ff ea  	b	#-4 <blink+0x40>
+    94e0: 00 00 9d e5  	ldr	r0, [sp]
+    94e4: a0 00 a0 e1  	lsr	r0, r0, #1
+    94e8: d7 ff ff eb  	bl	#-164 <_ZN3nox5timer8delay_ms17h3f3a47e31b8cccedE>
+    94ec: ff ff ff ea  	b	#-4 <blink+0x50>
+    94f0: 10 d0 8d e2  	add	sp, sp, #16
+    94f4: 00 88 bd e8  	pop	{r11, pc}
+
+000094f8 <reboot>:
+    94f8: 28 d0 4d e2  	sub	sp, sp, #40
+    94fc: 00 00 a0 e3  	mov	r0, #0
+    9500: 0c 00 8d e5  	str	r0, [sp, #12]
+    9504: 09 0d a0 e3  	mov	r0, #576
+    9508: 3d 09 80 e3  	orr	r0, r0, #999424
+    950c: 10 00 8d e5  	str	r0, [sp, #16]
+    9510: 0c 00 9d e5  	ldr	r0, [sp, #12]
+    9514: 10 10 9d e5  	ldr	r1, [sp, #16]
+    9518: 8f 00 00 eb  	bl	#572 <_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17hc66f4536b448012cE>
+    951c: 04 00 8d e5  	str	r0, [sp, #4]
+    9520: 08 10 8d e5  	str	r1, [sp, #8]
+    9524: ff ff ff ea  	b	#-4 <reboot+0x30>
+    9528: 08 00 9d e5  	ldr	r0, [sp, #8]
+    952c: 04 10 9d e5  	ldr	r1, [sp, #4]
+    9530: 14 10 8d e5  	str	r1, [sp, #20]
+    9534: 18 00 8d e5  	str	r0, [sp, #24]
+    9538: ff ff ff ea  	b	#-4 <reboot+0x44>
+    953c: 14 00 8d e2  	add	r0, sp, #20
+    9540: 7a 00 00 eb  	bl	#488 <_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17ha60f2c284124a342E>
+    9544: 20 10 8d e5  	str	r1, [sp, #32]
+    9548: 1c 00 8d e5  	str	r0, [sp, #28]
+    954c: ff ff ff ea  	b	#-4 <reboot+0x58>
+    9550: 1c 00 9d e5  	ldr	r0, [sp, #28]
+    9554: 00 00 50 e3  	cmp	r0, #0
+    9558: 02 00 00 0a  	beq	#8 <reboot+0x70>
+    955c: ff ff ff ea  	b	#-4 <reboot+0x68>
+    9560: 05 00 00 ea  	b	#20 <reboot+0x84>
+    9564: fe de ff e7  	trap
+    9568: 34 00 9f e5  	ldr	r0, [pc, #52]
+    956c: 01 10 a0 e3  	mov	r1, #1
+    9570: 5a 14 81 e3  	orr	r1, r1, #1509949440
+    9574: 23 fe ff eb  	bl	#-1908 <put32>
+    9578: 03 00 00 ea  	b	#12 <reboot+0x94>
+    957c: 20 00 9d e5  	ldr	r0, [sp, #32]
+    9580: 24 00 8d e5  	str	r0, [sp, #36]
+    9584: fb fe ff eb  	bl	#-1044 <_ZN3nox3rpi3nop17h84e9cc52dc5bcc81E>
+    9588: eb ff ff ea  	b	#-84 <reboot+0x44>
+    958c: 14 00 9f e5  	ldr	r0, [pc, #20]
+    9590: 20 10 a0 e3  	mov	r1, #32
+    9594: 5a 14 81 e3  	orr	r1, r1, #1509949440
+    9598: 1a fe ff eb  	bl	#-1944 <put32>
+    959c: ff ff ff ea  	b	#-4 <reboot+0xa8>
+    95a0: fe ff ff ea  	b	#-8 <reboot+0xa8>
+
+000095a4 <$d.57>:
+    95a4:	24 00 10 20	.word	0x20100024
+    95a8:	1c 00 10 20	.word	0x2010001c
+
+000095ac <_ZN4core3mem7replace17hcb6f301ff7335651E>:
+    95ac: 00 48 2d e9  	push	{r11, lr}
+    95b0: 18 d0 4d e2  	sub	sp, sp, #24
+    95b4: 00 10 8d e5  	str	r1, [sp]
+    95b8: 04 00 8d e5  	str	r0, [sp, #4]
+    95bc: 0c 00 8d e5  	str	r0, [sp, #12]
+    95c0: 10 10 8d e5  	str	r1, [sp, #16]
+    95c4: 0a 00 00 eb  	bl	#40 <_ZN4core3ptr4read17hc80a55de15de4eb1E>
+    95c8: 00 10 a0 e1  	mov	r1, r0
+    95cc: 08 10 8d e5  	str	r1, [sp, #8]
+    95d0: 14 00 8d e5  	str	r0, [sp, #20]
+    95d4: ff ff ff ea  	b	#-4 <_ZN4core3mem7replace17hcb6f301ff7335651E+0x2c>
+    95d8: 00 10 9d e5  	ldr	r1, [sp]
+    95dc: 04 00 9d e5  	ldr	r0, [sp, #4]
+    95e0: 17 00 00 eb  	bl	#92 <_ZN4core3ptr5write17haeb15f70a655f92cE>
+    95e4: ff ff ff ea  	b	#-4 <_ZN4core3mem7replace17hcb6f301ff7335651E+0x3c>
+    95e8: 08 00 9d e5  	ldr	r0, [sp, #8]
+    95ec: 18 d0 8d e2  	add	sp, sp, #24
+    95f0: 00 88 bd e8  	pop	{r11, pc}
+
+000095f4 <_ZN4core3ptr4read17hc80a55de15de4eb1E>:
+    95f4: 20 d0 4d e2  	sub	sp, sp, #32
+    95f8: 04 00 8d e5  	str	r0, [sp, #4]
+    95fc: 0c 00 8d e5  	str	r0, [sp, #12]
+    9600: 10 00 9d e5  	ldr	r0, [sp, #16]
+    9604: 08 00 8d e5  	str	r0, [sp, #8]
+    9608: ff ff ff ea  	b	#-4 <_ZN4core3ptr4read17hc80a55de15de4eb1E+0x18>
+    960c: 08 00 8d e2  	add	r0, sp, #8
+    9610: 14 00 8d e5  	str	r0, [sp, #20]
+    9614: ff ff ff ea  	b	#-4 <_ZN4core3ptr4read17hc80a55de15de4eb1E+0x24>
+    9618: 04 00 9d e5  	ldr	r0, [sp, #4]
+    961c: 00 00 90 e5  	ldr	r0, [r0]
+    9620: 08 00 8d e5  	str	r0, [sp, #8]
+    9624: 08 00 9d e5  	ldr	r0, [sp, #8]
+    9628: 00 00 8d e5  	str	r0, [sp]
+    962c: 18 00 8d e5  	str	r0, [sp, #24]
+    9630: 1c 00 8d e5  	str	r0, [sp, #28]
+    9634: ff ff ff ea  	b	#-4 <_ZN4core3ptr4read17hc80a55de15de4eb1E+0x44>
+    9638: 00 00 9d e5  	ldr	r0, [sp]
+    963c: 20 d0 8d e2  	add	sp, sp, #32
+    9640: 1e ff 2f e1  	bx	lr
+
+00009644 <_ZN4core3ptr5write17haeb15f70a655f92cE>:
+    9644: 0c d0 4d e2  	sub	sp, sp, #12
+    9648: 00 10 8d e5  	str	r1, [sp]
+    964c: 00 10 a0 e1  	mov	r1, r0
+    9650: 00 00 9d e5  	ldr	r0, [sp]
+    9654: 04 00 8d e5  	str	r0, [sp, #4]
+    9658: 08 10 8d e5  	str	r1, [sp, #8]
+    965c: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9660: 00 00 81 e5  	str	r0, [r1]
+    9664: 0c d0 8d e2  	add	sp, sp, #12
+    9668: 1e ff 2f e1  	bx	lr
+
+0000966c <_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h0ee0c6488e68d545E>:
+    966c: 00 48 2d e9  	push	{r11, lr}
+    9670: 08 d0 4d e2  	sub	sp, sp, #8
+    9674: 07 00 cd e5  	strb	r0, [sp, #7]
+    9678: 4e 00 00 eb  	bl	#312 <_ZN4core7convert3num63_$LT$impl$u20$core..convert..From$LT$u8$GT$$u20$for$u20$u32$GT$4from17h39c53f6e3d39df0fE>
+    967c: 00 00 8d e5  	str	r0, [sp]
+    9680: ff ff ff ea  	b	#-4 <_ZN50_$LT$T$u20$as$u20$core..convert..Into$LT$U$GT$$GT$4into17h0ee0c6488e68d545E+0x18>
+    9684: 00 00 9d e5  	ldr	r0, [sp]
+    9688: 08 d0 8d e2  	add	sp, sp, #8
+    968c: 00 88 bd e8  	pop	{r11, pc}
+
+00009690 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17h99a56a944c53de11E>:
+    9690: 00 48 2d e9  	push	{r11, lr}
+    9694: 28 d0 4d e2  	sub	sp, sp, #40
+    9698: 10 00 8d e5  	str	r0, [sp, #16]
+    969c: 20 00 8d e5  	str	r0, [sp, #32]
+    96a0: 04 10 80 e2  	add	r1, r0, #4
+    96a4: 36 00 00 eb  	bl	#216 <_ZN4core3cmp5impls55_$LT$impl$u20$core..cmp..PartialOrd$u20$for$u20$i32$GT$2lt17hf58561fc2890df1eE>
+    96a8: 14 00 8d e5  	str	r0, [sp, #20]
+    96ac: ff ff ff ea  	b	#-4 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17h99a56a944c53de11E+0x20>
+    96b0: 14 00 9d e5  	ldr	r0, [sp, #20]
+    96b4: 01 00 10 e3  	tst	r0, #1
+    96b8: 03 00 00 1a  	bne	#12 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17h99a56a944c53de11E+0x3c>
+    96bc: ff ff ff ea  	b	#-4 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17h99a56a944c53de11E+0x30>
+    96c0: 00 00 a0 e3  	mov	r0, #0
+    96c4: 18 00 8d e5  	str	r0, [sp, #24]
+    96c8: 14 00 00 ea  	b	#80 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17h99a56a944c53de11E+0x90>
+    96cc: 10 00 9d e5  	ldr	r0, [sp, #16]
+    96d0: 26 00 00 eb  	bl	#152 <_ZN4core5clone5impls52_$LT$impl$u20$core..clone..Clone$u20$for$u20$i32$GT$5clone17h76d8c34b42c29bd7E>
+    96d4: 0c 00 8d e5  	str	r0, [sp, #12]
+    96d8: ff ff ff ea  	b	#-4 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17h99a56a944c53de11E+0x4c>
+    96dc: 0c 00 9d e5  	ldr	r0, [sp, #12]
+    96e0: 01 10 a0 e3  	mov	r1, #1
+    96e4: 38 00 00 eb  	bl	#224 <_ZN47_$LT$i32$u20$as$u20$core..iter..range..Step$GT$17forward_unchecked17h5f3cab02d0a19d97E>
+    96e8: 00 10 a0 e1  	mov	r1, r0
+    96ec: 08 10 8d e5  	str	r1, [sp, #8]
+    96f0: 24 00 8d e5  	str	r0, [sp, #36]
+    96f4: ff ff ff ea  	b	#-4 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17h99a56a944c53de11E+0x68>
+    96f8: 08 10 9d e5  	ldr	r1, [sp, #8]
+    96fc: 10 00 9d e5  	ldr	r0, [sp, #16]
+    9700: a9 ff ff eb  	bl	#-348 <_ZN4core3mem7replace17hcb6f301ff7335651E>
+    9704: 04 00 8d e5  	str	r0, [sp, #4]
+    9708: ff ff ff ea  	b	#-4 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17h99a56a944c53de11E+0x7c>
+    970c: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9710: 1c 00 8d e5  	str	r0, [sp, #28]
+    9714: 01 00 a0 e3  	mov	r0, #1
+    9718: 18 00 8d e5  	str	r0, [sp, #24]
+    971c: ff ff ff ea  	b	#-4 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17h99a56a944c53de11E+0x90>
+    9720: 18 00 9d e5  	ldr	r0, [sp, #24]
+    9724: 1c 10 9d e5  	ldr	r1, [sp, #28]
+    9728: 28 d0 8d e2  	add	sp, sp, #40
+    972c: 00 88 bd e8  	pop	{r11, pc}
+
+00009730 <_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17ha60f2c284124a342E>:
+    9730: 00 48 2d e9  	push	{r11, lr}
+    9734: 10 d0 4d e2  	sub	sp, sp, #16
+    9738: 0c 00 8d e5  	str	r0, [sp, #12]
+    973c: d3 ff ff eb  	bl	#-180 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17h99a56a944c53de11E>
+    9740: 04 00 8d e5  	str	r0, [sp, #4]
+    9744: 08 10 8d e5  	str	r1, [sp, #8]
+    9748: ff ff ff ea  	b	#-4 <_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17ha60f2c284124a342E+0x1c>
+    974c: 08 10 9d e5  	ldr	r1, [sp, #8]
+    9750: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9754: 10 d0 8d e2  	add	sp, sp, #16
+    9758: 00 88 bd e8  	pop	{r11, pc}
+
+0000975c <_ZN63_$LT$I$u20$as$u20$core..iter..traits..collect..IntoIterator$GT$9into_iter17hc66f4536b448012cE>:
+    975c: 08 d0 4d e2  	sub	sp, sp, #8
+    9760: 00 00 8d e5  	str	r0, [sp]
+    9764: 04 10 8d e5  	str	r1, [sp, #4]
+    9768: 08 d0 8d e2  	add	sp, sp, #8
+    976c: 1e ff 2f e1  	bx	lr
+
+00009770 <_ZN4core5clone5impls52_$LT$impl$u20$core..clone..Clone$u20$for$u20$i32$GT$5clone17h76d8c34b42c29bd7E>:
+    9770: 04 d0 4d e2  	sub	sp, sp, #4
+    9774: 00 00 8d e5  	str	r0, [sp]
+    9778: 00 00 90 e5  	ldr	r0, [r0]
+    977c: 04 d0 8d e2  	add	sp, sp, #4
+    9780: 1e ff 2f e1  	bx	lr
+
+00009784 <_ZN4core3cmp5impls55_$LT$impl$u20$core..cmp..PartialOrd$u20$for$u20$i32$GT$2lt17hf58561fc2890df1eE>:
+    9784: 0c d0 4d e2  	sub	sp, sp, #12
+    9788: 00 10 8d e5  	str	r1, [sp]
+    978c: 00 10 a0 e1  	mov	r1, r0
+    9790: 00 00 9d e5  	ldr	r0, [sp]
+    9794: 04 10 8d e5  	str	r1, [sp, #4]
+    9798: 08 00 8d e5  	str	r0, [sp, #8]
+    979c: 00 10 91 e5  	ldr	r1, [r1]
+    97a0: 00 20 90 e5  	ldr	r2, [r0]
+    97a4: 00 00 a0 e3  	mov	r0, #0
+    97a8: 02 00 51 e1  	cmp	r1, r2
+    97ac: 01 00 a0 b3  	movlt	r0, #1
+    97b0: 0c d0 8d e2  	add	sp, sp, #12
+    97b4: 1e ff 2f e1  	bx	lr
+
+000097b8 <_ZN4core7convert3num63_$LT$impl$u20$core..convert..From$LT$u8$GT$$u20$for$u20$u32$GT$4from17h39c53f6e3d39df0fE>:
+    97b8: 04 d0 4d e2  	sub	sp, sp, #4
+    97bc: 03 00 cd e5  	strb	r0, [sp, #3]
+    97c0: 70 00 ef e6  	uxtb	r0, r0
+    97c4: 04 d0 8d e2  	add	sp, sp, #4
+    97c8: 1e ff 2f e1  	bx	lr
+
+000097cc <_ZN47_$LT$i32$u20$as$u20$core..iter..range..Step$GT$17forward_unchecked17h5f3cab02d0a19d97E>:
+    97cc: 18 d0 4d e2  	sub	sp, sp, #24
+    97d0: 04 00 8d e5  	str	r0, [sp, #4]
+    97d4: 08 10 8d e5  	str	r1, [sp, #8]
+    97d8: 0c 00 8d e5  	str	r0, [sp, #12]
+    97dc: 10 10 8d e5  	str	r1, [sp, #16]
+    97e0: 01 00 80 e0  	add	r0, r0, r1
+    97e4: 14 00 8d e5  	str	r0, [sp, #20]
+    97e8: 14 00 9d e5  	ldr	r0, [sp, #20]
+    97ec: 00 00 8d e5  	str	r0, [sp]
+    97f0: ff ff ff ea  	b	#-4 <_ZN47_$LT$i32$u20$as$u20$core..iter..range..Step$GT$17forward_unchecked17h5f3cab02d0a19d97E+0x28>
+    97f4: 00 00 9d e5  	ldr	r0, [sp]
+    97f8: 18 d0 8d e2  	add	sp, sp, #24
+    97fc: 1e ff 2f e1  	bx	lr
+
+00009800 <_ZN4core3ops8function6FnOnce9call_once17hcb2108d8ccae3b82E>:
+    9800: 00 48 2d e9  	push	{r11, lr}
+    9804: 10 d0 4d e2  	sub	sp, sp, #16
+    9808: 00 00 8d e5  	str	r0, [sp]
+    980c: 04 10 8d e5  	str	r1, [sp, #4]
+    9810: 08 20 8d e5  	str	r2, [sp, #8]
+    9814: 00 00 9d e5  	ldr	r0, [sp]
+    9818: 04 10 9d e5  	ldr	r1, [sp, #4]
+    981c: 08 20 9d e5  	ldr	r2, [sp, #8]
+    9820: 84 00 00 eb  	bl	#528 <_ZN4core10intrinsics19copy_nonoverlapping13runtime_check17h0e4bbe6e3408bf5cE>
+    9824: ff ff ff ea  	b	#-4 <_ZN4core3ops8function6FnOnce9call_once17hcb2108d8ccae3b82E+0x28>
+    9828: 10 d0 8d e2  	add	sp, sp, #16
+    982c: 00 88 bd e8  	pop	{r11, pc}
+
+00009830 <_ZN4core3ptr88drop_in_place$LT$core..panic..panic_info..PanicInfo..internal_constructor..NoPayload$GT$17hce3a26c5e03de5e5E>:
+    9830: 04 d0 4d e2  	sub	sp, sp, #4
+    9834: 00 00 8d e5  	str	r0, [sp]
+    9838: 04 d0 8d e2  	add	sp, sp, #4
+    983c: 1e ff 2f e1  	bx	lr
+
+00009840 <_ZN4core10intrinsics23is_aligned_and_not_null17h7d700bce30f9a8e7E>:
+    9840: 00 48 2d e9  	push	{r11, lr}
+    9844: 10 d0 4d e2  	sub	sp, sp, #16
+    9848: 00 00 8d e5  	str	r0, [sp]
+    984c: 0c 00 8d e5  	str	r0, [sp, #12]
+    9850: dd 00 00 eb  	bl	#884 <_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17h030dab3c173b12b0E>
+    9854: 04 00 8d e5  	str	r0, [sp, #4]
+    9858: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics23is_aligned_and_not_null17h7d700bce30f9a8e7E+0x1c>
+    985c: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9860: 01 00 10 e3  	tst	r0, #1
+    9864: 03 00 00 0a  	beq	#12 <_ZN4core10intrinsics23is_aligned_and_not_null17h7d700bce30f9a8e7E+0x38>
+    9868: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics23is_aligned_and_not_null17h7d700bce30f9a8e7E+0x2c>
+    986c: 00 00 a0 e3  	mov	r0, #0
+    9870: 0b 00 cd e5  	strb	r0, [sp, #11]
+    9874: 0d 00 00 ea  	b	#52 <_ZN4core10intrinsics23is_aligned_and_not_null17h7d700bce30f9a8e7E+0x70>
+    9878: 00 00 9d e5  	ldr	r0, [sp]
+    987c: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics23is_aligned_and_not_null17h7d700bce30f9a8e7E+0x40>
+    9880: 00 00 a0 e3  	mov	r0, #0
+    9884: 00 00 50 e3  	cmp	r0, #0
+    9888: 03 00 00 1a  	bne	#12 <_ZN4core10intrinsics23is_aligned_and_not_null17h7d700bce30f9a8e7E+0x5c>
+    988c: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics23is_aligned_and_not_null17h7d700bce30f9a8e7E+0x50>
+    9890: 01 00 a0 e3  	mov	r0, #1
+    9894: 0b 00 cd e5  	strb	r0, [sp, #11]
+    9898: 04 00 00 ea  	b	#16 <_ZN4core10intrinsics23is_aligned_and_not_null17h7d700bce30f9a8e7E+0x70>
+    989c: 18 00 9f e5  	ldr	r0, [pc, #24]
+    98a0: 18 20 9f e5  	ldr	r2, [pc, #24]
+    98a4: 39 10 a0 e3  	mov	r1, #57
+    98a8: aa 01 00 eb  	bl	#1704 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    98ac: fe de ff e7  	trap
+    98b0: 0b 00 dd e5  	ldrb	r0, [sp, #11]
+    98b4: 10 d0 8d e2  	add	sp, sp, #16
+    98b8: 00 88 bd e8  	pop	{r11, pc}
+
+000098bc <$d.401>:
+    98bc:	a0 aa 00 00	.word	0x0000aaa0
+    98c0:	54 ab 00 00	.word	0x0000ab54
+
+000098c4 <_ZN4core10intrinsics17is_nonoverlapping17hc492c763ac6f4db0E>:
+    98c4: 00 48 2d e9  	push	{r11, lr}
+    98c8: 40 d0 4d e2  	sub	sp, sp, #64
+    98cc: 18 20 8d e5  	str	r2, [sp, #24]
+    98d0: 28 00 8d e5  	str	r0, [sp, #40]
+    98d4: 2c 10 8d e5  	str	r1, [sp, #44]
+    98d8: 30 20 8d e5  	str	r2, [sp, #48]
+    98dc: 00 20 a0 e1  	mov	r2, r0
+    98e0: 1c 20 8d e5  	str	r2, [sp, #28]
+    98e4: 34 00 8d e5  	str	r0, [sp, #52]
+    98e8: 01 00 a0 e1  	mov	r0, r1
+    98ec: 20 00 8d e5  	str	r0, [sp, #32]
+    98f0: 38 10 8d e5  	str	r1, [sp, #56]
+    98f4: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics17is_nonoverlapping17hc492c763ac6f4db0E+0x34>
+    98f8: 18 10 9d e5  	ldr	r1, [sp, #24]
+    98fc: 01 00 a0 e3  	mov	r0, #1
+    9900: 35 02 00 eb  	bl	#2260 <_ZN4core3num23_$LT$impl$u20$usize$GT$11checked_mul17h30f1fcee6e9c95a0E>
+    9904: 10 00 8d e5  	str	r0, [sp, #16]
+    9908: 14 10 8d e5  	str	r1, [sp, #20]
+    990c: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics17is_nonoverlapping17hc492c763ac6f4db0E+0x4c>
+    9910: 14 10 9d e5  	ldr	r1, [sp, #20]
+    9914: 10 00 9d e5  	ldr	r0, [sp, #16]
+    9918: b8 20 9f e5  	ldr	r2, [pc, #184]
+    991c: 62 01 00 eb  	bl	#1416 <_ZN4core6option15Option$LT$T$GT$6unwrap17h6481b6d2cb445704E>
+    9920: 00 10 a0 e1  	mov	r1, r0
+    9924: 0c 10 8d e5  	str	r1, [sp, #12]
+    9928: 3c 00 8d e5  	str	r0, [sp, #60]
+    992c: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics17is_nonoverlapping17hc492c763ac6f4db0E+0x6c>
+    9930: 1c 00 9d e5  	ldr	r0, [sp, #28]
+    9934: 20 10 9d e5  	ldr	r1, [sp, #32]
+    9938: 01 00 50 e1  	cmp	r0, r1
+    993c: 07 00 00 8a  	bhi	#28 <_ZN4core10intrinsics17is_nonoverlapping17hc492c763ac6f4db0E+0x9c>
+    9940: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics17is_nonoverlapping17hc492c763ac6f4db0E+0x80>
+    9944: 20 00 9d e5  	ldr	r0, [sp, #32]
+    9948: 1c 10 9d e5  	ldr	r1, [sp, #28]
+    994c: 01 20 40 e0  	sub	r2, r0, r1
+    9950: 08 20 8d e5  	str	r2, [sp, #8]
+    9954: 01 00 50 e1  	cmp	r0, r1
+    9958: 19 00 00 3a  	blo	#100 <_ZN4core10intrinsics17is_nonoverlapping17hc492c763ac6f4db0E+0x100>
+    995c: 15 00 00 ea  	b	#84 <_ZN4core10intrinsics17is_nonoverlapping17hc492c763ac6f4db0E+0xf4>
+    9960: 1c 00 9d e5  	ldr	r0, [sp, #28]
+    9964: 20 10 9d e5  	ldr	r1, [sp, #32]
+    9968: 01 20 40 e0  	sub	r2, r0, r1
+    996c: 04 20 8d e5  	str	r2, [sp, #4]
+    9970: 01 00 50 e1  	cmp	r0, r1
+    9974: 03 00 00 3a  	blo	#12 <_ZN4core10intrinsics17is_nonoverlapping17hc492c763ac6f4db0E+0xc4>
+    9978: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics17is_nonoverlapping17hc492c763ac6f4db0E+0xb8>
+    997c: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9980: 24 00 8d e5  	str	r0, [sp, #36]
+    9984: 04 00 00 ea  	b	#16 <_ZN4core10intrinsics17is_nonoverlapping17hc492c763ac6f4db0E+0xd8>
+    9988: 4c 00 9f e5  	ldr	r0, [pc, #76]
+    998c: 50 20 9f e5  	ldr	r2, [pc, #80]
+    9990: 21 10 a0 e3  	mov	r1, #33
+    9994: 6f 01 00 eb  	bl	#1468 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    9998: fe de ff e7  	trap
+    999c: 0c 20 9d e5  	ldr	r2, [sp, #12]
+    99a0: 24 10 9d e5  	ldr	r1, [sp, #36]
+    99a4: 00 00 a0 e3  	mov	r0, #0
+    99a8: 02 00 51 e1  	cmp	r1, r2
+    99ac: 01 00 a0 23  	movhs	r0, #1
+    99b0: 40 d0 8d e2  	add	sp, sp, #64
+    99b4: 00 88 bd e8  	pop	{r11, pc}
+    99b8: 08 00 9d e5  	ldr	r0, [sp, #8]
+    99bc: 24 00 8d e5  	str	r0, [sp, #36]
+    99c0: f5 ff ff ea  	b	#-44 <_ZN4core10intrinsics17is_nonoverlapping17hc492c763ac6f4db0E+0xd8>
+    99c4: 10 00 9f e5  	ldr	r0, [pc, #16]
+    99c8: 10 20 9f e5  	ldr	r2, [pc, #16]
+    99cc: 21 10 a0 e3  	mov	r1, #33
+    99d0: 60 01 00 eb  	bl	#1408 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    99d4: fe de ff e7  	trap
+
+000099d8 <$d.407>:
+    99d8:	64 ab 00 00	.word	0x0000ab64
+    99dc:	50 aa 00 00	.word	0x0000aa50
+    99e0:	84 ab 00 00	.word	0x0000ab84
+    99e4:	74 ab 00 00	.word	0x0000ab74
+
+000099e8 <_ZN4core10intrinsics19copy_nonoverlapping17h09302005f622a709E>:
+    99e8: 00 48 2d e9  	push	{r11, lr}
+    99ec: 28 d0 4d e2  	sub	sp, sp, #40
+    99f0: 04 20 8d e5  	str	r2, [sp, #4]
+    99f4: 08 10 8d e5  	str	r1, [sp, #8]
+    99f8: 0c 00 8d e5  	str	r0, [sp, #12]
+    99fc: 1c 00 8d e5  	str	r0, [sp, #28]
+    9a00: 20 10 8d e5  	str	r1, [sp, #32]
+    9a04: 24 20 8d e5  	str	r2, [sp, #36]
+    9a08: 10 00 8d e5  	str	r0, [sp, #16]
+    9a0c: 14 10 8d e5  	str	r1, [sp, #20]
+    9a10: 18 20 8d e5  	str	r2, [sp, #24]
+    9a14: 10 00 8d e2  	add	r0, sp, #16
+    9a18: 3b 00 00 eb  	bl	#236 <_ZN4core10intrinsics17const_eval_select17hfcf1e0b1c424f313E>
+    9a1c: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics19copy_nonoverlapping17h09302005f622a709E+0x38>
+    9a20: 04 20 9d e5  	ldr	r2, [sp, #4]
+    9a24: 0c 10 9d e5  	ldr	r1, [sp, #12]
+    9a28: 08 00 9d e5  	ldr	r0, [sp, #8]
+    9a2c: aa 03 00 eb  	bl	#3752 <__aeabi_memcpy>
+    9a30: 28 d0 8d e2  	add	sp, sp, #40
+    9a34: 00 88 bd e8  	pop	{r11, pc}
+
+00009a38 <_ZN4core10intrinsics19copy_nonoverlapping13runtime_check17h0e4bbe6e3408bf5cE>:
+    9a38: 00 48 2d e9  	push	{r11, lr}
+    9a3c: 28 d0 4d e2  	sub	sp, sp, #40
+    9a40: 08 20 8d e5  	str	r2, [sp, #8]
+    9a44: 0c 10 8d e5  	str	r1, [sp, #12]
+    9a48: 10 00 8d e5  	str	r0, [sp, #16]
+    9a4c: 1c 00 8d e5  	str	r0, [sp, #28]
+    9a50: 20 10 8d e5  	str	r1, [sp, #32]
+    9a54: 24 20 8d e5  	str	r2, [sp, #36]
+    9a58: 78 ff ff eb  	bl	#-544 <_ZN4core10intrinsics23is_aligned_and_not_null17h7d700bce30f9a8e7E>
+    9a5c: 14 00 8d e5  	str	r0, [sp, #20]
+    9a60: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics19copy_nonoverlapping13runtime_check17h0e4bbe6e3408bf5cE+0x2c>
+    9a64: 14 00 9d e5  	ldr	r0, [sp, #20]
+    9a68: 01 00 10 e3  	tst	r0, #1
+    9a6c: 04 00 00 0a  	beq	#16 <_ZN4core10intrinsics19copy_nonoverlapping13runtime_check17h0e4bbe6e3408bf5cE+0x4c>
+    9a70: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics19copy_nonoverlapping13runtime_check17h0e4bbe6e3408bf5cE+0x3c>
+    9a74: 0c 00 9d e5  	ldr	r0, [sp, #12]
+    9a78: 70 ff ff eb  	bl	#-576 <_ZN4core10intrinsics23is_aligned_and_not_null17h7d700bce30f9a8e7E>
+    9a7c: 04 00 8d e5  	str	r0, [sp, #4]
+    9a80: 06 00 00 ea  	b	#24 <_ZN4core10intrinsics19copy_nonoverlapping13runtime_check17h0e4bbe6e3408bf5cE+0x68>
+    9a84: 01 00 a0 e3  	mov	r0, #1
+    9a88: 1b 00 cd e5  	strb	r0, [sp, #27]
+    9a8c: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics19copy_nonoverlapping13runtime_check17h0e4bbe6e3408bf5cE+0x58>
+    9a90: 1b 00 dd e5  	ldrb	r0, [sp, #27]
+    9a94: 01 00 10 e3  	tst	r0, #1
+    9a98: 0b 00 00 1a  	bne	#44 <_ZN4core10intrinsics19copy_nonoverlapping13runtime_check17h0e4bbe6e3408bf5cE+0x94>
+    9a9c: 04 00 00 ea  	b	#16 <_ZN4core10intrinsics19copy_nonoverlapping13runtime_check17h0e4bbe6e3408bf5cE+0x7c>
+    9aa0: 04 10 9d e5  	ldr	r1, [sp, #4]
+    9aa4: 01 00 a0 e3  	mov	r0, #1
+    9aa8: 01 00 c0 e1  	bic	r0, r0, r1
+    9aac: 1b 00 cd e5  	strb	r0, [sp, #27]
+    9ab0: f6 ff ff ea  	b	#-40 <_ZN4core10intrinsics19copy_nonoverlapping13runtime_check17h0e4bbe6e3408bf5cE+0x58>
+    9ab4: 08 20 9d e5  	ldr	r2, [sp, #8]
+    9ab8: 0c 10 9d e5  	ldr	r1, [sp, #12]
+    9abc: 10 00 9d e5  	ldr	r0, [sp, #16]
+    9ac0: 7f ff ff eb  	bl	#-516 <_ZN4core10intrinsics17is_nonoverlapping17hc492c763ac6f4db0E>
+    9ac4: 00 00 8d e5  	str	r0, [sp]
+    9ac8: 06 00 00 ea  	b	#24 <_ZN4core10intrinsics19copy_nonoverlapping13runtime_check17h0e4bbe6e3408bf5cE+0xb0>
+    9acc: 01 00 a0 e3  	mov	r0, #1
+    9ad0: 1a 00 cd e5  	strb	r0, [sp, #26]
+    9ad4: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics19copy_nonoverlapping13runtime_check17h0e4bbe6e3408bf5cE+0xa0>
+    9ad8: 1a 00 dd e5  	ldrb	r0, [sp, #26]
+    9adc: 01 00 10 e3  	tst	r0, #1
+    9ae0: 07 00 00 1a  	bne	#28 <_ZN4core10intrinsics19copy_nonoverlapping13runtime_check17h0e4bbe6e3408bf5cE+0xcc>
+    9ae4: 04 00 00 ea  	b	#16 <_ZN4core10intrinsics19copy_nonoverlapping13runtime_check17h0e4bbe6e3408bf5cE+0xc4>
+    9ae8: 00 10 9d e5  	ldr	r1, [sp]
+    9aec: 01 00 a0 e3  	mov	r0, #1
+    9af0: 01 00 c0 e1  	bic	r0, r0, r1
+    9af4: 1a 00 cd e5  	strb	r0, [sp, #26]
+    9af8: f6 ff ff ea  	b	#-40 <_ZN4core10intrinsics19copy_nonoverlapping13runtime_check17h0e4bbe6e3408bf5cE+0xa0>
+    9afc: 28 d0 8d e2  	add	sp, sp, #40
+    9b00: 00 88 bd e8  	pop	{r11, pc}
+    9b04: fe de ff e7  	trap
+    9b08: fe de ff e7  	trap
+
+00009b0c <_ZN4core10intrinsics17const_eval_select17hfcf1e0b1c424f313E>:
+    9b0c: 00 48 2d e9  	push	{r11, lr}
+    9b10: 18 d0 4d e2  	sub	sp, sp, #24
+    9b14: 00 20 a0 e1  	mov	r2, r0
+    9b18: 00 00 92 e5  	ldr	r0, [r2]
+    9b1c: 04 10 92 e5  	ldr	r1, [r2, #4]
+    9b20: 08 20 92 e5  	ldr	r2, [r2, #8]
+    9b24: 0c 20 8d e5  	str	r2, [sp, #12]
+    9b28: 08 10 8d e5  	str	r1, [sp, #8]
+    9b2c: 04 00 8d e5  	str	r0, [sp, #4]
+    9b30: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9b34: 08 10 9d e5  	ldr	r1, [sp, #8]
+    9b38: 0c 20 9d e5  	ldr	r2, [sp, #12]
+    9b3c: 2f ff ff eb  	bl	#-836 <_ZN4core3ops8function6FnOnce9call_once17hcb2108d8ccae3b82E>
+    9b40: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics17const_eval_select17hfcf1e0b1c424f313E+0x38>
+    9b44: ff ff ff ea  	b	#-4 <_ZN4core10intrinsics17const_eval_select17hfcf1e0b1c424f313E+0x3c>
+    9b48: 18 d0 8d e2  	add	sp, sp, #24
+    9b4c: 00 88 bd e8  	pop	{r11, pc}
+
+00009b50 <_ZN4core3mem7replace17h496e701dff401789E>:
+    9b50: 00 48 2d e9  	push	{r11, lr}
+    9b54: 18 d0 4d e2  	sub	sp, sp, #24
+    9b58: 00 10 8d e5  	str	r1, [sp]
+    9b5c: 04 00 8d e5  	str	r0, [sp, #4]
+    9b60: 0c 00 8d e5  	str	r0, [sp, #12]
+    9b64: 10 10 8d e5  	str	r1, [sp, #16]
+    9b68: 5f 00 00 eb  	bl	#380 <_ZN4core3ptr4read17ha28b70deaece7ac8E>
+    9b6c: 00 10 a0 e1  	mov	r1, r0
+    9b70: 08 10 8d e5  	str	r1, [sp, #8]
+    9b74: 14 00 8d e5  	str	r0, [sp, #20]
+    9b78: ff ff ff ea  	b	#-4 <_ZN4core3mem7replace17h496e701dff401789E+0x2c>
+    9b7c: 00 10 9d e5  	ldr	r1, [sp]
+    9b80: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9b84: 6c 00 00 eb  	bl	#432 <_ZN4core3ptr5write17hbbc25dad16f873b4E>
+    9b88: ff ff ff ea  	b	#-4 <_ZN4core3mem7replace17h496e701dff401789E+0x3c>
+    9b8c: 08 00 9d e5  	ldr	r0, [sp, #8]
+    9b90: 18 d0 8d e2  	add	sp, sp, #24
+    9b94: 00 88 bd e8  	pop	{r11, pc}
+
+00009b98 <_ZN4core3ptr8metadata18from_raw_parts_mut17h9ceb8198d064b984E>:
+    9b98: 18 d0 4d e2  	sub	sp, sp, #24
+    9b9c: 10 00 8d e5  	str	r0, [sp, #16]
+    9ba0: 14 10 8d e5  	str	r1, [sp, #20]
+    9ba4: 08 00 8d e5  	str	r0, [sp, #8]
+    9ba8: 0c 10 8d e5  	str	r1, [sp, #12]
+    9bac: 08 10 9d e5  	ldr	r1, [sp, #8]
+    9bb0: 0c 00 9d e5  	ldr	r0, [sp, #12]
+    9bb4: 00 10 8d e5  	str	r1, [sp]
+    9bb8: 04 00 8d e5  	str	r0, [sp, #4]
+    9bbc: 00 00 9d e5  	ldr	r0, [sp]
+    9bc0: 04 10 9d e5  	ldr	r1, [sp, #4]
+    9bc4: 18 d0 8d e2  	add	sp, sp, #24
+    9bc8: 1e ff 2f e1  	bx	lr
+
+00009bcc <_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17h030dab3c173b12b0E>:
+    9bcc: 00 48 2d e9  	push	{r11, lr}
+    9bd0: 10 d0 4d e2  	sub	sp, sp, #16
+    9bd4: 08 00 8d e5  	str	r0, [sp, #8]
+    9bd8: 0c 00 8d e5  	str	r0, [sp, #12]
+    9bdc: ff ff ff ea  	b	#-4 <_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17h030dab3c173b12b0E+0x14>
+    9be0: 08 00 9d e5  	ldr	r0, [sp, #8]
+    9be4: 00 10 a0 e3  	mov	r1, #0
+    9be8: 05 00 00 eb  	bl	#20 <_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13guaranteed_eq17h5adafb50b0078859E>
+    9bec: 04 00 8d e5  	str	r0, [sp, #4]
+    9bf0: ff ff ff ea  	b	#-4 <_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$7is_null17h030dab3c173b12b0E+0x28>
+    9bf4: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9bf8: 01 00 00 e2  	and	r0, r0, #1
+    9bfc: 10 d0 8d e2  	add	sp, sp, #16
+    9c00: 00 88 bd e8  	pop	{r11, pc}
+
+00009c04 <_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13guaranteed_eq17h5adafb50b0078859E>:
+    9c04: 10 d0 4d e2  	sub	sp, sp, #16
+    9c08: 04 00 8d e5  	str	r0, [sp, #4]
+    9c0c: 08 10 8d e5  	str	r1, [sp, #8]
+    9c10: 01 00 40 e0  	sub	r0, r0, r1
+    9c14: 10 0f 6f e1  	clz	r0, r0
+    9c18: a0 02 a0 e1  	lsr	r0, r0, #5
+    9c1c: 0f 00 cd e5  	strb	r0, [sp, #15]
+    9c20: 0f 00 dd e5  	ldrb	r0, [sp, #15]
+    9c24: 00 00 8d e5  	str	r0, [sp]
+    9c28: ff ff ff ea  	b	#-4 <_ZN4core3ptr9const_ptr33_$LT$impl$u20$$BP$const$u20$T$GT$13guaranteed_eq17h5adafb50b0078859E+0x28>
+    9c2c: 00 00 9d e5  	ldr	r0, [sp]
+    9c30: 01 00 00 e2  	and	r0, r0, #1
+    9c34: 10 d0 8d e2  	add	sp, sp, #16
+    9c38: 1e ff 2f e1  	bx	lr
+
+00009c3c <_ZN4core3ptr9const_ptr43_$LT$impl$u20$$BP$const$u20$$u5b$T$u5d$$GT$6as_ptr17h5d4162422173c74aE>:
+    9c3c: 08 d0 4d e2  	sub	sp, sp, #8
+    9c40: 00 00 8d e5  	str	r0, [sp]
+    9c44: 04 10 8d e5  	str	r1, [sp, #4]
+    9c48: 08 d0 8d e2  	add	sp, sp, #8
+    9c4c: 1e ff 2f e1  	bx	lr
+
+00009c50 <_ZN4core3ptr24slice_from_raw_parts_mut17h00b0f9c4cda01380E>:
+    9c50: 00 48 2d e9  	push	{r11, lr}
+    9c54: 20 d0 4d e2  	sub	sp, sp, #32
+    9c58: 0c 10 8d e5  	str	r1, [sp, #12]
+    9c5c: 14 00 8d e5  	str	r0, [sp, #20]
+    9c60: 18 10 8d e5  	str	r1, [sp, #24]
+    9c64: 1c 00 8d e5  	str	r0, [sp, #28]
+    9c68: 10 00 8d e5  	str	r0, [sp, #16]
+    9c6c: ff ff ff ea  	b	#-4 <_ZN4core3ptr24slice_from_raw_parts_mut17h00b0f9c4cda01380E+0x20>
+    9c70: 0c 10 9d e5  	ldr	r1, [sp, #12]
+    9c74: 10 00 9d e5  	ldr	r0, [sp, #16]
+    9c78: c6 ff ff eb  	bl	#-232 <_ZN4core3ptr8metadata18from_raw_parts_mut17h9ceb8198d064b984E>
+    9c7c: 04 00 8d e5  	str	r0, [sp, #4]
+    9c80: 08 10 8d e5  	str	r1, [sp, #8]
+    9c84: ff ff ff ea  	b	#-4 <_ZN4core3ptr24slice_from_raw_parts_mut17h00b0f9c4cda01380E+0x38>
+    9c88: 08 10 9d e5  	ldr	r1, [sp, #8]
+    9c8c: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9c90: 20 d0 8d e2  	add	sp, sp, #32
+    9c94: 00 88 bd e8  	pop	{r11, pc}
+
+00009c98 <_ZN4core3ptr4read17h5ae3eeb13a4f9974E>:
+    9c98: 1c d0 4d e2  	sub	sp, sp, #28
+    9c9c: 04 00 8d e5  	str	r0, [sp, #4]
+    9ca0: 0c 00 8d e5  	str	r0, [sp, #12]
+    9ca4: 13 00 dd e5  	ldrb	r0, [sp, #19]
+    9ca8: 0b 00 cd e5  	strb	r0, [sp, #11]
+    9cac: ff ff ff ea  	b	#-4 <_ZN4core3ptr4read17h5ae3eeb13a4f9974E+0x18>
+    9cb0: 0b 00 8d e2  	add	r0, sp, #11
+    9cb4: 14 00 8d e5  	str	r0, [sp, #20]
+    9cb8: ff ff ff ea  	b	#-4 <_ZN4core3ptr4read17h5ae3eeb13a4f9974E+0x24>
+    9cbc: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9cc0: 00 00 d0 e5  	ldrb	r0, [r0]
+    9cc4: 0b 00 cd e5  	strb	r0, [sp, #11]
+    9cc8: 0b 00 dd e5  	ldrb	r0, [sp, #11]
+    9ccc: 00 10 a0 e1  	mov	r1, r0
+    9cd0: 00 10 8d e5  	str	r1, [sp]
+    9cd4: 1a 00 cd e5  	strb	r0, [sp, #26]
+    9cd8: 1b 00 cd e5  	strb	r0, [sp, #27]
+    9cdc: ff ff ff ea  	b	#-4 <_ZN4core3ptr4read17h5ae3eeb13a4f9974E+0x48>
+    9ce0: 00 00 9d e5  	ldr	r0, [sp]
+    9ce4: 1c d0 8d e2  	add	sp, sp, #28
+    9ce8: 1e ff 2f e1  	bx	lr
+
+00009cec <_ZN4core3ptr4read17ha28b70deaece7ac8E>:
+    9cec: 20 d0 4d e2  	sub	sp, sp, #32
+    9cf0: 04 00 8d e5  	str	r0, [sp, #4]
+    9cf4: 0c 00 8d e5  	str	r0, [sp, #12]
+    9cf8: 10 00 9d e5  	ldr	r0, [sp, #16]
+    9cfc: 08 00 8d e5  	str	r0, [sp, #8]
+    9d00: ff ff ff ea  	b	#-4 <_ZN4core3ptr4read17ha28b70deaece7ac8E+0x18>
+    9d04: 08 00 8d e2  	add	r0, sp, #8
+    9d08: 14 00 8d e5  	str	r0, [sp, #20]
+    9d0c: ff ff ff ea  	b	#-4 <_ZN4core3ptr4read17ha28b70deaece7ac8E+0x24>
+    9d10: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9d14: 00 00 90 e5  	ldr	r0, [r0]
+    9d18: 08 00 8d e5  	str	r0, [sp, #8]
+    9d1c: 08 00 9d e5  	ldr	r0, [sp, #8]
+    9d20: 00 00 8d e5  	str	r0, [sp]
+    9d24: 18 00 8d e5  	str	r0, [sp, #24]
+    9d28: 1c 00 8d e5  	str	r0, [sp, #28]
+    9d2c: ff ff ff ea  	b	#-4 <_ZN4core3ptr4read17ha28b70deaece7ac8E+0x44>
+    9d30: 00 00 9d e5  	ldr	r0, [sp]
+    9d34: 20 d0 8d e2  	add	sp, sp, #32
+    9d38: 1e ff 2f e1  	bx	lr
+
+00009d3c <_ZN4core3ptr5write17hbbc25dad16f873b4E>:
+    9d3c: 0c d0 4d e2  	sub	sp, sp, #12
+    9d40: 00 10 8d e5  	str	r1, [sp]
+    9d44: 00 10 a0 e1  	mov	r1, r0
+    9d48: 00 00 9d e5  	ldr	r0, [sp]
+    9d4c: 04 00 8d e5  	str	r0, [sp, #4]
+    9d50: 08 10 8d e5  	str	r1, [sp, #8]
+    9d54: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9d58: 00 00 81 e5  	str	r0, [r1]
+    9d5c: 0c d0 8d e2  	add	sp, sp, #12
+    9d60: 1e ff 2f e1  	bx	lr
+
+00009d64 <_ZN36_$LT$T$u20$as$u20$core..any..Any$GT$7type_id17hc3b2ba529e433432E>:
+    9d64: 00 48 2d e9  	push	{r11, lr}
+    9d68: 10 d0 4d e2  	sub	sp, sp, #16
+    9d6c: 0c 00 8d e5  	str	r0, [sp, #12]
+    9d70: 06 00 00 eb  	bl	#24 <_ZN4core3any6TypeId2of17hbf2b608d8c4e8a23E>
+    9d74: 04 10 8d e5  	str	r1, [sp, #4]
+    9d78: 08 00 8d e5  	str	r0, [sp, #8]
+    9d7c: ff ff ff ea  	b	#-4 <_ZN36_$LT$T$u20$as$u20$core..any..Any$GT$7type_id17hc3b2ba529e433432E+0x1c>
+    9d80: 04 10 9d e5  	ldr	r1, [sp, #4]
+    9d84: 08 00 9d e5  	ldr	r0, [sp, #8]
+    9d88: 10 d0 8d e2  	add	sp, sp, #16
+    9d8c: 00 88 bd e8  	pop	{r11, pc}
+
+00009d90 <_ZN4core3any6TypeId2of17hbf2b608d8c4e8a23E>:
+    9d90: 18 d0 4d e2  	sub	sp, sp, #24
+    9d94: 3c 00 9f e5  	ldr	r0, [pc, #60]
+    9d98: 14 00 8d e5  	str	r0, [sp, #20]
+    9d9c: 38 00 9f e5  	ldr	r0, [pc, #56]
+    9da0: 10 00 8d e5  	str	r0, [sp, #16]
+    9da4: 10 00 9d e5  	ldr	r0, [sp, #16]
+    9da8: 00 00 8d e5  	str	r0, [sp]
+    9dac: 14 00 9d e5  	ldr	r0, [sp, #20]
+    9db0: 04 00 8d e5  	str	r0, [sp, #4]
+    9db4: ff ff ff ea  	b	#-4 <_ZN4core3any6TypeId2of17hbf2b608d8c4e8a23E+0x28>
+    9db8: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9dbc: 00 10 9d e5  	ldr	r1, [sp]
+    9dc0: 08 10 8d e5  	str	r1, [sp, #8]
+    9dc4: 0c 00 8d e5  	str	r0, [sp, #12]
+    9dc8: 08 00 9d e5  	ldr	r0, [sp, #8]
+    9dcc: 0c 10 9d e5  	ldr	r1, [sp, #12]
+    9dd0: 18 d0 8d e2  	add	sp, sp, #24
+    9dd4: 1e ff 2f e1  	bx	lr
+
+00009dd8 <$d.614>:
+    9dd8:	ca 95 62 a6	.word	0xa66295ca
+    9ddc:	ae 74 5e 28	.word	0x285e74ae
+
+00009de0 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17hbb5ed7f9aad4dc3aE>:
+    9de0: 00 48 2d e9  	push	{r11, lr}
+    9de4: 28 d0 4d e2  	sub	sp, sp, #40
+    9de8: 10 00 8d e5  	str	r0, [sp, #16]
+    9dec: 20 00 8d e5  	str	r0, [sp, #32]
+    9df0: 04 10 80 e2  	add	r1, r0, #4
+    9df4: 2b 01 00 eb  	bl	#1196 <_ZN4core3cmp5impls57_$LT$impl$u20$core..cmp..PartialOrd$u20$for$u20$usize$GT$2lt17haa789a3f6943c933E>
+    9df8: 14 00 8d e5  	str	r0, [sp, #20]
+    9dfc: ff ff ff ea  	b	#-4 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17hbb5ed7f9aad4dc3aE+0x20>
+    9e00: 14 00 9d e5  	ldr	r0, [sp, #20]
+    9e04: 01 00 10 e3  	tst	r0, #1
+    9e08: 03 00 00 1a  	bne	#12 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17hbb5ed7f9aad4dc3aE+0x3c>
+    9e0c: ff ff ff ea  	b	#-4 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17hbb5ed7f9aad4dc3aE+0x30>
+    9e10: 00 00 a0 e3  	mov	r0, #0
+    9e14: 18 00 8d e5  	str	r0, [sp, #24]
+    9e18: 14 00 00 ea  	b	#80 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17hbb5ed7f9aad4dc3aE+0x90>
+    9e1c: 10 00 9d e5  	ldr	r0, [sp, #16]
+    9e20: 1b 01 00 eb  	bl	#1132 <_ZN4core5clone5impls54_$LT$impl$u20$core..clone..Clone$u20$for$u20$usize$GT$5clone17hefceb05a8430ffdbE>
+    9e24: 0c 00 8d e5  	str	r0, [sp, #12]
+    9e28: ff ff ff ea  	b	#-4 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17hbb5ed7f9aad4dc3aE+0x4c>
+    9e2c: 0c 00 9d e5  	ldr	r0, [sp, #12]
+    9e30: 01 10 a0 e3  	mov	r1, #1
+    9e34: 28 01 00 eb  	bl	#1184 <_ZN49_$LT$usize$u20$as$u20$core..iter..range..Step$GT$17forward_unchecked17h2bd36fac37807902E>
+    9e38: 00 10 a0 e1  	mov	r1, r0
+    9e3c: 08 10 8d e5  	str	r1, [sp, #8]
+    9e40: 24 00 8d e5  	str	r0, [sp, #36]
+    9e44: ff ff ff ea  	b	#-4 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17hbb5ed7f9aad4dc3aE+0x68>
+    9e48: 08 10 9d e5  	ldr	r1, [sp, #8]
+    9e4c: 10 00 9d e5  	ldr	r0, [sp, #16]
+    9e50: 3e ff ff eb  	bl	#-776 <_ZN4core3mem7replace17h496e701dff401789E>
+    9e54: 04 00 8d e5  	str	r0, [sp, #4]
+    9e58: ff ff ff ea  	b	#-4 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17hbb5ed7f9aad4dc3aE+0x7c>
+    9e5c: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9e60: 1c 00 8d e5  	str	r0, [sp, #28]
+    9e64: 01 00 a0 e3  	mov	r0, #1
+    9e68: 18 00 8d e5  	str	r0, [sp, #24]
+    9e6c: ff ff ff ea  	b	#-4 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17hbb5ed7f9aad4dc3aE+0x90>
+    9e70: 18 00 9d e5  	ldr	r0, [sp, #24]
+    9e74: 1c 10 9d e5  	ldr	r1, [sp, #28]
+    9e78: 28 d0 8d e2  	add	sp, sp, #40
+    9e7c: 00 88 bd e8  	pop	{r11, pc}
+
+00009e80 <_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h284af6683574996dE>:
+    9e80: 00 48 2d e9  	push	{r11, lr}
+    9e84: 10 d0 4d e2  	sub	sp, sp, #16
+    9e88: 0c 00 8d e5  	str	r0, [sp, #12]
+    9e8c: d3 ff ff eb  	bl	#-180 <_ZN89_$LT$core..ops..range..Range$LT$T$GT$$u20$as$u20$core..iter..range..RangeIteratorImpl$GT$9spec_next17hbb5ed7f9aad4dc3aE>
+    9e90: 04 00 8d e5  	str	r0, [sp, #4]
+    9e94: 08 10 8d e5  	str	r1, [sp, #8]
+    9e98: ff ff ff ea  	b	#-4 <_ZN4core4iter5range101_$LT$impl$u20$core..iter..traits..iterator..Iterator$u20$for$u20$core..ops..range..Range$LT$A$GT$$GT$4next17h284af6683574996dE+0x1c>
+    9e9c: 08 10 9d e5  	ldr	r1, [sp, #8]
+    9ea0: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9ea4: 10 d0 8d e2  	add	sp, sp, #16
+    9ea8: 00 88 bd e8  	pop	{r11, pc}
+
+00009eac <_ZN4core6option15Option$LT$T$GT$6unwrap17h6481b6d2cb445704E>:
+    9eac: 10 d0 4d e2  	sub	sp, sp, #16
+    9eb0: 00 20 8d e5  	str	r2, [sp]
+    9eb4: 04 00 8d e5  	str	r0, [sp, #4]
+    9eb8: 08 10 8d e5  	str	r1, [sp, #8]
+    9ebc: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9ec0: 00 00 50 e3  	cmp	r0, #0
+    9ec4: 02 00 00 0a  	beq	#8 <_ZN4core6option15Option$LT$T$GT$6unwrap17h6481b6d2cb445704E+0x28>
+    9ec8: ff ff ff ea  	b	#-4 <_ZN4core6option15Option$LT$T$GT$6unwrap17h6481b6d2cb445704E+0x20>
+    9ecc: 05 00 00 ea  	b	#20 <_ZN4core6option15Option$LT$T$GT$6unwrap17h6481b6d2cb445704E+0x3c>
+    9ed0: fe de ff e7  	trap
+    9ed4: 00 20 9d e5  	ldr	r2, [sp]
+    9ed8: 18 00 9f e5  	ldr	r0, [pc, #24]
+    9edc: 2b 10 a0 e3  	mov	r1, #43
+    9ee0: 1c 00 00 eb  	bl	#112 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    9ee4: fe de ff e7  	trap
+    9ee8: 08 00 9d e5  	ldr	r0, [sp, #8]
+    9eec: 0c 00 8d e5  	str	r0, [sp, #12]
+    9ef0: 10 d0 8d e2  	add	sp, sp, #16
+    9ef4: 1e ff 2f e1  	bx	lr
+
+00009ef8 <$d.1056>:
+    9ef8:	94 ab 00 00	.word	0x0000ab94
+
+00009efc <_ZN4core5panic8location8Location6caller17h6f077db2e40c4485E>:
+    9efc: 08 d0 4d e2  	sub	sp, sp, #8
+    9f00: 04 00 8d e5  	str	r0, [sp, #4]
+    9f04: 04 00 9d e5  	ldr	r0, [sp, #4]
+    9f08: 00 00 8d e5  	str	r0, [sp]
+    9f0c: ff ff ff ea  	b	#-4 <_ZN4core5panic8location8Location6caller17h6f077db2e40c4485E+0x14>
+    9f10: 00 00 9d e5  	ldr	r0, [sp]
+    9f14: 08 d0 8d e2  	add	sp, sp, #8
+    9f18: 1e ff 2f e1  	bx	lr
+
+00009f1c <_ZN4core5panic10panic_info9PanicInfo20internal_constructor17hcc8bf6316f49208fE>:
+    9f1c: 0c d0 4d e2  	sub	sp, sp, #12
+    9f20: 00 10 8d e5  	str	r1, [sp]
+    9f24: 04 20 8d e5  	str	r2, [sp, #4]
+    9f28: 0b 30 cd e5  	strb	r3, [sp, #11]
+    9f2c: 1c c0 9f e5  	ldr	r12, [pc, #28]
+    9f30: 00 c0 80 e5  	str	r12, [r0]
+    9f34: 18 c0 9f e5  	ldr	r12, [pc, #24]
+    9f38: 04 c0 80 e5  	str	r12, [r0, #4]
+    9f3c: 08 10 80 e5  	str	r1, [r0, #8]
+    9f40: 0c 20 80 e5  	str	r2, [r0, #12]
+    9f44: 10 30 c0 e5  	strb	r3, [r0, #16]
+    9f48: 0c d0 8d e2  	add	sp, sp, #12
+    9f4c: 1e ff 2f e1  	bx	lr
+
+00009f50 <$d.1152>:
+    9f50:	dc aa 00 00	.word	0x0000aadc
+    9f54:	c0 ab 00 00	.word	0x0000abc0
+
+00009f58 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>:
+    9f58: 30 d0 4d e2  	sub	sp, sp, #48
+    9f5c: 04 20 8d e5  	str	r2, [sp, #4]
+    9f60: 28 00 8d e5  	str	r0, [sp, #40]
+    9f64: 2c 10 8d e5  	str	r1, [sp, #44]
+    9f68: 20 00 8d e5  	str	r0, [sp, #32]
+    9f6c: 24 10 8d e5  	str	r1, [sp, #36]
+    9f70: 0d 10 a0 e1  	mov	r1, sp
+    9f74: 00 00 a0 e3  	mov	r0, #0
+    9f78: 00 00 81 e5  	str	r0, [r1]
+    9f7c: 20 30 9f e5  	ldr	r3, [pc, #32]
+    9f80: 08 00 8d e2  	add	r0, sp, #8
+    9f84: 20 10 8d e2  	add	r1, sp, #32
+    9f88: 01 20 a0 e3  	mov	r2, #1
+    9f8c: 16 00 00 eb  	bl	#88 <_ZN4core3fmt9Arguments6new_v117h73926cead14968a1E>
+    9f90: ff ff ff ea  	b	#-4 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E+0x3c>
+    9f94: 04 10 9d e5  	ldr	r1, [sp, #4]
+    9f98: 08 00 8d e2  	add	r0, sp, #8
+    9f9c: 01 00 00 eb  	bl	#4 <_ZN4core9panicking9panic_fmt17h951b85a3d26b6857E>
+    9fa0: fe de ff e7  	trap
+
+00009fa4 <$d.1160>:
+    9fa4:	dc aa 00 00	.word	0x0000aadc
+
+00009fa8 <_ZN4core9panicking9panic_fmt17h951b85a3d26b6857E>:
+    9fa8: 20 d0 4d e2  	sub	sp, sp, #32
+    9fac: 00 10 8d e5  	str	r1, [sp]
+    9fb0: 00 10 a0 e1  	mov	r1, r0
+    9fb4: 00 00 9d e5  	ldr	r0, [sp]
+    9fb8: 1c 10 8d e5  	str	r1, [sp, #28]
+    9fbc: ce ff ff eb  	bl	#-200 <_ZN4core5panic8location8Location6caller17h6f077db2e40c4485E>
+    9fc0: 04 00 8d e5  	str	r0, [sp, #4]
+    9fc4: ff ff ff ea  	b	#-4 <_ZN4core9panicking9panic_fmt17h951b85a3d26b6857E+0x20>
+    9fc8: 04 20 9d e5  	ldr	r2, [sp, #4]
+    9fcc: 1c 10 9d e5  	ldr	r1, [sp, #28]
+    9fd0: 08 00 8d e2  	add	r0, sp, #8
+    9fd4: 01 30 a0 e3  	mov	r3, #1
+    9fd8: cf ff ff eb  	bl	#-196 <_ZN4core5panic10panic_info9PanicInfo20internal_constructor17hcc8bf6316f49208fE>
+    9fdc: ff ff ff ea  	b	#-4 <_ZN4core9panicking9panic_fmt17h951b85a3d26b6857E+0x38>
+    9fe0: 08 00 8d e2  	add	r0, sp, #8
+    9fe4: 13 f8 ff eb  	bl	#-8116 <rust_begin_unwind>
+    9fe8: fe de ff e7  	trap
+
+00009fec <_ZN4core3fmt9Arguments6new_v117h73926cead14968a1E>:
+    9fec: 00 48 2d e9  	push	{r11, lr}
+    9ff0: 50 d0 4d e2  	sub	sp, sp, #80
+    9ff4: 08 30 8d e5  	str	r3, [sp, #8]
+    9ff8: 0c 20 8d e5  	str	r2, [sp, #12]
+    9ffc: 10 10 8d e5  	str	r1, [sp, #16]
+    a000: 14 00 8d e5  	str	r0, [sp, #20]
+    a004: 58 00 9d e5  	ldr	r0, [sp, #88]
+    a008: 18 00 8d e5  	str	r0, [sp, #24]
+    a00c: 40 10 8d e5  	str	r1, [sp, #64]
+    a010: 44 20 8d e5  	str	r2, [sp, #68]
+    a014: 48 30 8d e5  	str	r3, [sp, #72]
+    a018: 4c 00 8d e5  	str	r0, [sp, #76]
+    a01c: 00 00 52 e1  	cmp	r2, r0
+    a020: 06 00 00 3a  	blo	#24 <_ZN4core3fmt9Arguments6new_v117h73926cead14968a1E+0x54>
+    a024: ff ff ff ea  	b	#-4 <_ZN4core3fmt9Arguments6new_v117h73926cead14968a1E+0x3c>
+    a028: 18 10 9d e5  	ldr	r1, [sp, #24]
+    a02c: 01 00 81 e2  	add	r0, r1, #1
+    a030: 04 00 8d e5  	str	r0, [sp, #4]
+    a034: 01 00 50 e1  	cmp	r0, r1
+    a038: 0e 00 00 3a  	blo	#56 <_ZN4core3fmt9Arguments6new_v117h73926cead14968a1E+0x8c>
+    a03c: 06 00 00 ea  	b	#24 <_ZN4core3fmt9Arguments6new_v117h73926cead14968a1E+0x70>
+    a040: 01 00 a0 e3  	mov	r0, #1
+    a044: 1f 00 cd e5  	strb	r0, [sp, #31]
+    a048: ff ff ff ea  	b	#-4 <_ZN4core3fmt9Arguments6new_v117h73926cead14968a1E+0x60>
+    a04c: 1f 00 dd e5  	ldrb	r0, [sp, #31]
+    a050: 01 00 10 e3  	tst	r0, #1
+    a054: 1f 00 00 1a  	bne	#124 <_ZN4core3fmt9Arguments6new_v117h73926cead14968a1E+0xec>
+    a058: 0b 00 00 ea  	b	#44 <_ZN4core3fmt9Arguments6new_v117h73926cead14968a1E+0xa0>
+    a05c: 0c 10 9d e5  	ldr	r1, [sp, #12]
+    a060: 04 20 9d e5  	ldr	r2, [sp, #4]
+    a064: 00 00 a0 e3  	mov	r0, #0
+    a068: 02 00 51 e1  	cmp	r1, r2
+    a06c: 01 00 a0 83  	movhi	r0, #1
+    a070: 1f 00 cd e5  	strb	r0, [sp, #31]
+    a074: f4 ff ff ea  	b	#-48 <_ZN4core3fmt9Arguments6new_v117h73926cead14968a1E+0x60>
+    a078: 8c 00 9f e5  	ldr	r0, [pc, #140]
+    a07c: 8c 20 9f e5  	ldr	r2, [pc, #140]
+    a080: 1c 10 a0 e3  	mov	r1, #28
+    a084: b3 ff ff eb  	bl	#-308 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    a088: fe de ff e7  	trap
+    a08c: 18 00 9d e5  	ldr	r0, [sp, #24]
+    a090: 14 10 9d e5  	ldr	r1, [sp, #20]
+    a094: 08 20 9d e5  	ldr	r2, [sp, #8]
+    a098: 0c 30 9d e5  	ldr	r3, [sp, #12]
+    a09c: 10 c0 9d e5  	ldr	r12, [sp, #16]
+    a0a0: 00 e0 a0 e3  	mov	lr, #0
+    a0a4: 3c e0 8d e5  	str	lr, [sp, #60]
+    a0a8: 38 e0 8d e5  	str	lr, [sp, #56]
+    a0ac: 38 e0 8d e5  	str	lr, [sp, #56]
+    a0b0: 00 c0 81 e5  	str	r12, [r1]
+    a0b4: 04 30 81 e5  	str	r3, [r1, #4]
+    a0b8: 38 c0 9d e5  	ldr	r12, [sp, #56]
+    a0bc: 3c 30 9d e5  	ldr	r3, [sp, #60]
+    a0c0: 08 c0 81 e5  	str	r12, [r1, #8]
+    a0c4: 0c 30 81 e5  	str	r3, [r1, #12]
+    a0c8: 10 20 81 e5  	str	r2, [r1, #16]
+    a0cc: 14 00 81 e5  	str	r0, [r1, #20]
+    a0d0: 50 d0 8d e2  	add	sp, sp, #80
+    a0d4: 00 88 bd e8  	pop	{r11, pc}
+    a0d8: 0d 10 a0 e1  	mov	r1, sp
+    a0dc: 00 00 a0 e3  	mov	r0, #0
+    a0e0: 00 00 81 e5  	str	r0, [r1]
+    a0e4: 28 10 9f e5  	ldr	r1, [pc, #40]
+    a0e8: 28 30 9f e5  	ldr	r3, [pc, #40]
+    a0ec: 20 00 8d e2  	add	r0, sp, #32
+    a0f0: 01 20 a0 e3  	mov	r2, #1
+    a0f4: bc ff ff eb  	bl	#-272 <_ZN4core3fmt9Arguments6new_v117h73926cead14968a1E>
+    a0f8: ff ff ff ea  	b	#-4 <_ZN4core3fmt9Arguments6new_v117h73926cead14968a1E+0x110>
+    a0fc: 18 10 9f e5  	ldr	r1, [pc, #24]
+    a100: 20 00 8d e2  	add	r0, sp, #32
+    a104: a7 ff ff eb  	bl	#-356 <_ZN4core9panicking9panic_fmt17h951b85a3d26b6857E>
+    a108: fe de ff e7  	trap
+
+0000a10c <$d.1432>:
+    a10c:	80 aa 00 00	.word	0x0000aa80
+    a110:	48 ac 00 00	.word	0x0000ac48
+    a114:	64 ac 00 00	.word	0x0000ac64
+    a118:	dc aa 00 00	.word	0x0000aadc
+    a11c:	6c ac 00 00	.word	0x0000ac6c
+
+0000a120 <_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h8c956cd257ce1a29E>:
+    a120: 00 48 2d e9  	push	{r11, lr}
+    a124: 48 d0 4d e2  	sub	sp, sp, #72
+    a128: 10 10 8d e5  	str	r1, [sp, #16]
+    a12c: 14 00 8d e5  	str	r0, [sp, #20]
+    a130: 1c 00 8d e5  	str	r0, [sp, #28]
+    a134: 20 10 8d e5  	str	r1, [sp, #32]
+    a138: 24 20 8d e5  	str	r2, [sp, #36]
+    a13c: 28 30 8d e5  	str	r3, [sp, #40]
+    a140: 40 20 8d e5  	str	r2, [sp, #64]
+    a144: 44 30 8d e5  	str	r3, [sp, #68]
+    a148: 18 20 8d e5  	str	r2, [sp, #24]
+    a14c: ff ff ff ea  	b	#-4 <_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h8c956cd257ce1a29E+0x30>
+    a150: 18 00 9d e5  	ldr	r0, [sp, #24]
+    a154: 14 10 9d e5  	ldr	r1, [sp, #20]
+    a158: 2c 00 8d e5  	str	r0, [sp, #44]
+    a15c: 30 10 8d e5  	str	r1, [sp, #48]
+    a160: 34 00 8d e5  	str	r0, [sp, #52]
+    a164: 38 10 8d e5  	str	r1, [sp, #56]
+    a168: 01 00 80 e0  	add	r0, r0, r1
+    a16c: 3c 00 8d e5  	str	r0, [sp, #60]
+    a170: 3c 00 9d e5  	ldr	r0, [sp, #60]
+    a174: 0c 00 8d e5  	str	r0, [sp, #12]
+    a178: ff ff ff ea  	b	#-4 <_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h8c956cd257ce1a29E+0x5c>
+    a17c: 10 00 9d e5  	ldr	r0, [sp, #16]
+    a180: 14 10 9d e5  	ldr	r1, [sp, #20]
+    a184: 01 20 40 e0  	sub	r2, r0, r1
+    a188: 08 20 8d e5  	str	r2, [sp, #8]
+    a18c: 01 00 50 e1  	cmp	r0, r1
+    a190: 06 00 00 3a  	blo	#24 <_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h8c956cd257ce1a29E+0x90>
+    a194: ff ff ff ea  	b	#-4 <_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h8c956cd257ce1a29E+0x78>
+    a198: 08 10 9d e5  	ldr	r1, [sp, #8]
+    a19c: 0c 00 9d e5  	ldr	r0, [sp, #12]
+    a1a0: aa fe ff eb  	bl	#-1368 <_ZN4core3ptr24slice_from_raw_parts_mut17h00b0f9c4cda01380E>
+    a1a4: 00 00 8d e5  	str	r0, [sp]
+    a1a8: 04 10 8d e5  	str	r1, [sp, #4]
+    a1ac: 04 00 00 ea  	b	#16 <_ZN106_$LT$core..ops..range..Range$LT$usize$GT$$u20$as$u20$core..slice..index..SliceIndex$LT$$u5b$T$u5d$$GT$$GT$17get_unchecked_mut17h8c956cd257ce1a29E+0xa4>
+    a1b0: 1c 00 9f e5  	ldr	r0, [pc, #28]
+    a1b4: 1c 20 9f e5  	ldr	r2, [pc, #28]
+    a1b8: 21 10 a0 e3  	mov	r1, #33
+    a1bc: 65 ff ff eb  	bl	#-620 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    a1c0: fe de ff e7  	trap
+    a1c4: 04 10 9d e5  	ldr	r1, [sp, #4]
+    a1c8: 00 00 9d e5  	ldr	r0, [sp]
+    a1cc: 48 d0 8d e2  	add	sp, sp, #72
+    a1d0: 00 88 bd e8  	pop	{r11, pc}
+
+0000a1d4 <$d.1599>:
+    a1d4:	50 aa 00 00	.word	0x0000aa50
+    a1d8:	f8 ac 00 00	.word	0x0000acf8
+
+0000a1dc <_ZN4core3num23_$LT$impl$u20$usize$GT$11checked_mul17h30f1fcee6e9c95a0E>:
+    a1dc: 44 d0 4d e2  	sub	sp, sp, #68
+    a1e0: 14 00 8d e5  	str	r0, [sp, #20]
+    a1e4: 18 10 8d e5  	str	r1, [sp, #24]
+    a1e8: 2c 00 8d e5  	str	r0, [sp, #44]
+    a1ec: 30 10 8d e5  	str	r1, [sp, #48]
+    a1f0: 90 11 80 e0  	umull	r1, r0, r0, r1
+    a1f4: 00 00 50 e3  	cmp	r0, #0
+    a1f8: 01 00 a0 13  	movne	r0, #1
+    a1fc: 34 10 8d e5  	str	r1, [sp, #52]
+    a200: 38 00 cd e5  	strb	r0, [sp, #56]
+    a204: 34 10 9d e5  	ldr	r1, [sp, #52]
+    a208: 38 00 dd e5  	ldrb	r0, [sp, #56]
+    a20c: 3c 10 8d e5  	str	r1, [sp, #60]
+    a210: 43 00 cd e5  	strb	r0, [sp, #67]
+    a214: 24 10 8d e5  	str	r1, [sp, #36]
+    a218: 28 00 cd e5  	strb	r0, [sp, #40]
+    a21c: 24 00 9d e5  	ldr	r0, [sp, #36]
+    a220: 04 00 8d e5  	str	r0, [sp, #4]
+    a224: 28 00 dd e5  	ldrb	r0, [sp, #40]
+    a228: 08 00 8d e5  	str	r0, [sp, #8]
+    a22c: ff ff ff ea  	b	#-4 <_ZN4core3num23_$LT$impl$u20$usize$GT$11checked_mul17h30f1fcee6e9c95a0E+0x54>
+    a230: 08 00 9d e5  	ldr	r0, [sp, #8]
+    a234: 04 10 9d e5  	ldr	r1, [sp, #4]
+    a238: 1c 10 8d e5  	str	r1, [sp, #28]
+    a23c: 01 00 00 e2  	and	r0, r0, #1
+    a240: 22 00 cd e5  	strb	r0, [sp, #34]
+    a244: 23 00 cd e5  	strb	r0, [sp, #35]
+    a248: 23 00 dd e5  	ldrb	r0, [sp, #35]
+    a24c: 00 00 8d e5  	str	r0, [sp]
+    a250: ff ff ff ea  	b	#-4 <_ZN4core3num23_$LT$impl$u20$usize$GT$11checked_mul17h30f1fcee6e9c95a0E+0x78>
+    a254: 00 00 9d e5  	ldr	r0, [sp]
+    a258: 01 00 10 e3  	tst	r0, #1
+    a25c: 05 00 00 1a  	bne	#20 <_ZN4core3num23_$LT$impl$u20$usize$GT$11checked_mul17h30f1fcee6e9c95a0E+0x9c>
+    a260: ff ff ff ea  	b	#-4 <_ZN4core3num23_$LT$impl$u20$usize$GT$11checked_mul17h30f1fcee6e9c95a0E+0x88>
+    a264: 04 00 9d e5  	ldr	r0, [sp, #4]
+    a268: 10 00 8d e5  	str	r0, [sp, #16]
+    a26c: 01 00 a0 e3  	mov	r0, #1
+    a270: 0c 00 8d e5  	str	r0, [sp, #12]
+    a274: 02 00 00 ea  	b	#8 <_ZN4core3num23_$LT$impl$u20$usize$GT$11checked_mul17h30f1fcee6e9c95a0E+0xa8>
+    a278: 00 00 a0 e3  	mov	r0, #0
+    a27c: 0c 00 8d e5  	str	r0, [sp, #12]
+    a280: ff ff ff ea  	b	#-4 <_ZN4core3num23_$LT$impl$u20$usize$GT$11checked_mul17h30f1fcee6e9c95a0E+0xa8>
+    a284: 0c 00 9d e5  	ldr	r0, [sp, #12]
+    a288: 10 10 9d e5  	ldr	r1, [sp, #16]
+    a28c: 44 d0 8d e2  	add	sp, sp, #68
+    a290: 1e ff 2f e1  	bx	lr
+
+0000a294 <_ZN4core5clone5impls54_$LT$impl$u20$core..clone..Clone$u20$for$u20$usize$GT$5clone17hefceb05a8430ffdbE>:
+    a294: 04 d0 4d e2  	sub	sp, sp, #4
+    a298: 00 00 8d e5  	str	r0, [sp]
+    a29c: 00 00 90 e5  	ldr	r0, [r0]
+    a2a0: 04 d0 8d e2  	add	sp, sp, #4
+    a2a4: 1e ff 2f e1  	bx	lr
+
+0000a2a8 <_ZN4core3cmp5impls57_$LT$impl$u20$core..cmp..PartialOrd$u20$for$u20$usize$GT$2lt17haa789a3f6943c933E>:
+    a2a8: 0c d0 4d e2  	sub	sp, sp, #12
+    a2ac: 00 10 8d e5  	str	r1, [sp]
+    a2b0: 00 10 a0 e1  	mov	r1, r0
+    a2b4: 00 00 9d e5  	ldr	r0, [sp]
+    a2b8: 04 10 8d e5  	str	r1, [sp, #4]
+    a2bc: 08 00 8d e5  	str	r0, [sp, #8]
+    a2c0: 00 10 91 e5  	ldr	r1, [r1]
+    a2c4: 00 20 90 e5  	ldr	r2, [r0]
+    a2c8: 00 00 a0 e3  	mov	r0, #0
+    a2cc: 02 00 51 e1  	cmp	r1, r2
+    a2d0: 01 00 a0 33  	movlo	r0, #1
+    a2d4: 0c d0 8d e2  	add	sp, sp, #12
+    a2d8: 1e ff 2f e1  	bx	lr
+
+0000a2dc <_ZN49_$LT$usize$u20$as$u20$core..iter..range..Step$GT$17forward_unchecked17h2bd36fac37807902E>:
+    a2dc: 18 d0 4d e2  	sub	sp, sp, #24
+    a2e0: 04 00 8d e5  	str	r0, [sp, #4]
+    a2e4: 08 10 8d e5  	str	r1, [sp, #8]
+    a2e8: 0c 00 8d e5  	str	r0, [sp, #12]
+    a2ec: 10 10 8d e5  	str	r1, [sp, #16]
+    a2f0: 01 00 80 e0  	add	r0, r0, r1
+    a2f4: 14 00 8d e5  	str	r0, [sp, #20]
+    a2f8: 14 00 9d e5  	ldr	r0, [sp, #20]
+    a2fc: 00 00 8d e5  	str	r0, [sp]
+    a300: ff ff ff ea  	b	#-4 <_ZN49_$LT$usize$u20$as$u20$core..iter..range..Step$GT$17forward_unchecked17h2bd36fac37807902E+0x28>
+    a304: 00 00 9d e5  	ldr	r0, [sp]
+    a308: 18 d0 8d e2  	add	sp, sp, #24
+    a30c: 1e ff 2f e1  	bx	lr
+
+0000a310 <memcpy>:
+    a310: 86 df 4d e2  	sub	sp, sp, #536
+    a314: 3c 00 8d e5  	str	r0, [sp, #60]
+    a318: 40 00 8d e5  	str	r0, [sp, #64]
+    a31c: 44 10 8d e5  	str	r1, [sp, #68]
+    a320: 48 20 8d e5  	str	r2, [sp, #72]
+    a324: 4c 00 8d e5  	str	r0, [sp, #76]
+    a328: 50 10 8d e5  	str	r1, [sp, #80]
+    a32c: 54 20 8d e5  	str	r2, [sp, #84]
+    a330: 54 00 9d e5  	ldr	r0, [sp, #84]
+    a334: 10 00 50 e3  	cmp	r0, #16
+    a338: 2b 01 00 3a  	blo	#1196 <memcpy+0x4dc>
+    a33c: ff ff ff ea  	b	#-4 <memcpy+0x30>
+    a340: 4c 00 9d e5  	ldr	r0, [sp, #76]
+    a344: 0c 02 8d e5  	str	r0, [sp, #524]
+    a348: 00 10 a0 e3  	mov	r1, #0
+    a34c: 10 12 8d e5  	str	r1, [sp, #528]
+    a350: 14 02 8d e5  	str	r0, [sp, #532]
+    a354: 00 00 60 e2  	rsb	r0, r0, #0
+    a358: 03 10 00 e2  	and	r1, r0, #3
+    a35c: 34 10 8d e5  	str	r1, [sp, #52]
+    a360: 58 10 8d e5  	str	r1, [sp, #88]
+    a364: 4c 20 9d e5  	ldr	r2, [sp, #76]
+    a368: 50 00 9d e5  	ldr	r0, [sp, #80]
+    a36c: 68 20 8d e5  	str	r2, [sp, #104]
+    a370: 6c 00 8d e5  	str	r0, [sp, #108]
+    a374: 70 10 8d e5  	str	r1, [sp, #112]
+    a378: 68 00 9d e5  	ldr	r0, [sp, #104]
+    a37c: d0 01 8d e5  	str	r0, [sp, #464]
+    a380: d4 11 8d e5  	str	r1, [sp, #468]
+    a384: d8 01 8d e5  	str	r0, [sp, #472]
+    a388: dc 11 8d e5  	str	r1, [sp, #476]
+    a38c: 01 00 80 e0  	add	r0, r0, r1
+    a390: e0 01 8d e5  	str	r0, [sp, #480]
+    a394: e0 01 9d e5  	ldr	r0, [sp, #480]
+    a398: 38 00 8d e5  	str	r0, [sp, #56]
+    a39c: 74 00 8d e5  	str	r0, [sp, #116]
+    a3a0: ff ff ff ea  	b	#-4 <memcpy+0x94>
+    a3a4: 38 10 9d e5  	ldr	r1, [sp, #56]
+    a3a8: 68 00 9d e5  	ldr	r0, [sp, #104]
+    a3ac: 01 00 50 e1  	cmp	r0, r1
+    a3b0: 18 00 00 2a  	bhs	#96 <memcpy+0x108>
+    a3b4: ff ff ff ea  	b	#-4 <memcpy+0xa8>
+    a3b8: 6c 00 9d e5  	ldr	r0, [sp, #108]
+    a3bc: 00 00 d0 e5  	ldrb	r0, [r0]
+    a3c0: 68 10 9d e5  	ldr	r1, [sp, #104]
+    a3c4: 00 00 c1 e5  	strb	r0, [r1]
+    a3c8: 68 00 9d e5  	ldr	r0, [sp, #104]
+    a3cc: bc 01 8d e5  	str	r0, [sp, #444]
+    a3d0: 01 10 a0 e3  	mov	r1, #1
+    a3d4: c0 11 8d e5  	str	r1, [sp, #448]
+    a3d8: c4 01 8d e5  	str	r0, [sp, #452]
+    a3dc: c8 11 8d e5  	str	r1, [sp, #456]
+    a3e0: 01 00 80 e2  	add	r0, r0, #1
+    a3e4: cc 01 8d e5  	str	r0, [sp, #460]
+    a3e8: cc 01 9d e5  	ldr	r0, [sp, #460]
+    a3ec: 68 00 8d e5  	str	r0, [sp, #104]
+    a3f0: 6c 00 9d e5  	ldr	r0, [sp, #108]
+    a3f4: e0 00 8d e5  	str	r0, [sp, #224]
+    a3f8: e4 10 8d e5  	str	r1, [sp, #228]
+    a3fc: e8 00 8d e5  	str	r0, [sp, #232]
+    a400: ec 10 8d e5  	str	r1, [sp, #236]
+    a404: 01 00 80 e2  	add	r0, r0, #1
+    a408: f0 00 8d e5  	str	r0, [sp, #240]
+    a40c: f0 00 9d e5  	ldr	r0, [sp, #240]
+    a410: 6c 00 8d e5  	str	r0, [sp, #108]
+    a414: e2 ff ff ea  	b	#-120 <memcpy+0x94>
+    a418: 34 10 9d e5  	ldr	r1, [sp, #52]
+    a41c: 4c 00 9d e5  	ldr	r0, [sp, #76]
+    a420: f8 01 8d e5  	str	r0, [sp, #504]
+    a424: fc 11 8d e5  	str	r1, [sp, #508]
+    a428: 00 02 8d e5  	str	r0, [sp, #512]
+    a42c: 04 12 8d e5  	str	r1, [sp, #516]
+    a430: 01 00 80 e0  	add	r0, r0, r1
+    a434: 08 02 8d e5  	str	r0, [sp, #520]
+    a438: 08 02 9d e5  	ldr	r0, [sp, #520]
+    a43c: 4c 00 8d e5  	str	r0, [sp, #76]
+    a440: 50 00 9d e5  	ldr	r0, [sp, #80]
+    a444: 08 01 8d e5  	str	r0, [sp, #264]
+    a448: 0c 11 8d e5  	str	r1, [sp, #268]
+    a44c: 10 01 8d e5  	str	r0, [sp, #272]
+    a450: 14 11 8d e5  	str	r1, [sp, #276]
+    a454: 01 00 80 e0  	add	r0, r0, r1
+    a458: 18 01 8d e5  	str	r0, [sp, #280]
+    a45c: 18 01 9d e5  	ldr	r0, [sp, #280]
+    a460: 50 00 8d e5  	str	r0, [sp, #80]
+    a464: 54 00 9d e5  	ldr	r0, [sp, #84]
+    a468: 01 20 40 e0  	sub	r2, r0, r1
+    a46c: 30 20 8d e5  	str	r2, [sp, #48]
+    a470: 01 00 50 e1  	cmp	r0, r1
+    a474: 10 00 00 3a  	blo	#64 <memcpy+0x1ac>
+    a478: ff ff ff ea  	b	#-4 <memcpy+0x16c>
+    a47c: 30 00 9d e5  	ldr	r0, [sp, #48]
+    a480: 54 00 8d e5  	str	r0, [sp, #84]
+    a484: 54 00 9d e5  	ldr	r0, [sp, #84]
+    a488: 03 00 c0 e3  	bic	r0, r0, #3
+    a48c: 2c 00 8d e5  	str	r0, [sp, #44]
+    a490: 5c 00 8d e5  	str	r0, [sp, #92]
+    a494: 50 00 9d e5  	ldr	r0, [sp, #80]
+    a498: 03 00 00 e2  	and	r0, r0, #3
+    a49c: 60 00 8d e5  	str	r0, [sp, #96]
+    a4a0: 10 0f 6f e1  	clz	r0, r0
+    a4a4: a0 02 a0 e1  	lsr	r0, r0, #5
+    a4a8: 67 00 cd e5  	strb	r0, [sp, #103]
+    a4ac: 67 00 dd e5  	ldrb	r0, [sp, #103]
+    a4b0: 01 00 10 e3  	tst	r0, #1
+    a4b4: 7b 00 00 1a  	bne	#492 <memcpy+0x398>
+    a4b8: 04 00 00 ea  	b	#16 <memcpy+0x1c0>
+    a4bc: f8 03 9f e5  	ldr	r0, [pc, #1016]
+    a4c0: 10 24 9f e5  	ldr	r2, [pc, #1040]
+    a4c4: 21 10 a0 e3  	mov	r1, #33
+    a4c8: a2 fe ff eb  	bl	#-1400 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    a4cc: fe de ff e7  	trap
+    a4d0: 2c 20 9d e5  	ldr	r2, [sp, #44]
+    a4d4: 4c 10 9d e5  	ldr	r1, [sp, #76]
+    a4d8: 50 00 9d e5  	ldr	r0, [sp, #80]
+    a4dc: 20 00 8d e5  	str	r0, [sp, #32]
+    a4e0: ac 10 8d e5  	str	r1, [sp, #172]
+    a4e4: b0 00 8d e5  	str	r0, [sp, #176]
+    a4e8: b4 20 8d e5  	str	r2, [sp, #180]
+    a4ec: a0 10 8d e5  	str	r1, [sp, #160]
+    a4f0: 6c 11 8d e5  	str	r1, [sp, #364]
+    a4f4: 70 21 8d e5  	str	r2, [sp, #368]
+    a4f8: 74 11 8d e5  	str	r1, [sp, #372]
+    a4fc: 78 21 8d e5  	str	r2, [sp, #376]
+    a500: 02 10 81 e0  	add	r1, r1, r2
+    a504: 7c 11 8d e5  	str	r1, [sp, #380]
+    a508: 7c 11 9d e5  	ldr	r1, [sp, #380]
+    a50c: 24 10 8d e5  	str	r1, [sp, #36]
+    a510: b8 10 8d e5  	str	r1, [sp, #184]
+    a514: 03 00 00 e2  	and	r0, r0, #3
+    a518: bc 00 8d e5  	str	r0, [sp, #188]
+    a51c: 80 01 a0 e1  	lsl	r0, r0, #3
+    a520: 28 00 8d e5  	str	r0, [sp, #40]
+    a524: 00 00 a0 e3  	mov	r0, #0
+    a528: 00 00 50 e3  	cmp	r0, #0
+    a52c: 09 00 00 1a  	bne	#36 <memcpy+0x248>
+    a530: ff ff ff ea  	b	#-4 <memcpy+0x224>
+    a534: 20 00 9d e5  	ldr	r0, [sp, #32]
+    a538: 28 10 9d e5  	ldr	r1, [sp, #40]
+    a53c: c0 10 8d e5  	str	r1, [sp, #192]
+    a540: 03 00 c0 e3  	bic	r0, r0, #3
+    a544: a4 00 8d e5  	str	r0, [sp, #164]
+    a548: a4 00 9d e5  	ldr	r0, [sp, #164]
+    a54c: 00 00 90 e5  	ldr	r0, [r0]
+    a550: a8 00 8d e5  	str	r0, [sp, #168]
+    a554: 04 00 00 ea  	b	#16 <memcpy+0x25c>
+    a558: 6c 03 9f e5  	ldr	r0, [pc, #876]
+    a55c: 6c 23 9f e5  	ldr	r2, [pc, #876]
+    a560: 21 10 a0 e3  	mov	r1, #33
+    a564: 7b fe ff eb  	bl	#-1556 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    a568: fe de ff e7  	trap
+    a56c: 24 10 9d e5  	ldr	r1, [sp, #36]
+    a570: a0 00 9d e5  	ldr	r0, [sp, #160]
+    a574: 01 00 50 e1  	cmp	r0, r1
+    a578: 49 00 00 2a  	bhs	#292 <memcpy+0x394>
+    a57c: ff ff ff ea  	b	#-4 <memcpy+0x270>
+    a580: 28 00 9d e5  	ldr	r0, [sp, #40]
+    a584: a4 10 9d e5  	ldr	r1, [sp, #164]
+    a588: 30 11 8d e5  	str	r1, [sp, #304]
+    a58c: 01 20 a0 e3  	mov	r2, #1
+    a590: 34 21 8d e5  	str	r2, [sp, #308]
+    a594: 38 11 8d e5  	str	r1, [sp, #312]
+    a598: 3c 21 8d e5  	str	r2, [sp, #316]
+    a59c: 04 10 81 e2  	add	r1, r1, #4
+    a5a0: 40 11 8d e5  	str	r1, [sp, #320]
+    a5a4: 40 11 9d e5  	ldr	r1, [sp, #320]
+    a5a8: a4 10 8d e5  	str	r1, [sp, #164]
+    a5ac: a4 10 9d e5  	ldr	r1, [sp, #164]
+    a5b0: 00 10 91 e5  	ldr	r1, [r1]
+    a5b4: 18 10 8d e5  	str	r1, [sp, #24]
+    a5b8: c4 10 8d e5  	str	r1, [sp, #196]
+    a5bc: a8 10 9d e5  	ldr	r1, [sp, #168]
+    a5c0: 1f 20 00 e2  	and	r2, r0, #31
+    a5c4: 31 12 a0 e1  	lsr	r1, r1, r2
+    a5c8: 1c 10 8d e5  	str	r1, [sp, #28]
+    a5cc: 1f 10 e0 e3  	mvn	r1, #31
+    a5d0: 01 00 10 e1  	tst	r0, r1
+    a5d4: 07 00 00 1a  	bne	#28 <memcpy+0x2e8>
+    a5d8: ff ff ff ea  	b	#-4 <memcpy+0x2cc>
+    a5dc: 28 10 9d e5  	ldr	r1, [sp, #40]
+    a5e0: 20 00 61 e2  	rsb	r0, r1, #32
+    a5e4: 14 00 8d e5  	str	r0, [sp, #20]
+    a5e8: 20 00 a0 e3  	mov	r0, #32
+    a5ec: 01 00 50 e1  	cmp	r0, r1
+    a5f0: 0e 00 00 3a  	blo	#56 <memcpy+0x320>
+    a5f4: 04 00 00 ea  	b	#16 <memcpy+0x2fc>
+    a5f8: c4 02 9f e5  	ldr	r0, [pc, #708]
+    a5fc: c4 22 9f e5  	ldr	r2, [pc, #708]
+    a600: 24 10 a0 e3  	mov	r1, #36
+    a604: 53 fe ff eb  	bl	#-1716 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    a608: fe de ff e7  	trap
+    a60c: 14 00 9d e5  	ldr	r0, [sp, #20]
+    a610: 18 10 9d e5  	ldr	r1, [sp, #24]
+    a614: 1f 20 00 e2  	and	r2, r0, #31
+    a618: 11 12 a0 e1  	lsl	r1, r1, r2
+    a61c: 10 10 8d e5  	str	r1, [sp, #16]
+    a620: 1f 10 e0 e3  	mvn	r1, #31
+    a624: 01 00 10 e1  	tst	r0, r1
+    a628: 18 00 00 1a  	bne	#96 <memcpy+0x380>
+    a62c: 04 00 00 ea  	b	#16 <memcpy+0x334>
+    a630: 84 02 9f e5  	ldr	r0, [pc, #644]
+    a634: 84 22 9f e5  	ldr	r2, [pc, #644]
+    a638: 21 10 a0 e3  	mov	r1, #33
+    a63c: 45 fe ff eb  	bl	#-1772 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    a640: fe de ff e7  	trap
+    a644: 18 10 9d e5  	ldr	r1, [sp, #24]
+    a648: 1c 00 9d e5  	ldr	r0, [sp, #28]
+    a64c: 10 20 9d e5  	ldr	r2, [sp, #16]
+    a650: 02 00 80 e1  	orr	r0, r0, r2
+    a654: c8 00 8d e5  	str	r0, [sp, #200]
+    a658: a8 10 8d e5  	str	r1, [sp, #168]
+    a65c: a0 10 9d e5  	ldr	r1, [sp, #160]
+    a660: 00 00 81 e5  	str	r0, [r1]
+    a664: a0 00 9d e5  	ldr	r0, [sp, #160]
+    a668: 1c 01 8d e5  	str	r0, [sp, #284]
+    a66c: 01 10 a0 e3  	mov	r1, #1
+    a670: 20 11 8d e5  	str	r1, [sp, #288]
+    a674: 24 01 8d e5  	str	r0, [sp, #292]
+    a678: 28 11 8d e5  	str	r1, [sp, #296]
+    a67c: 04 00 80 e2  	add	r0, r0, #4
+    a680: 2c 01 8d e5  	str	r0, [sp, #300]
+    a684: 2c 01 9d e5  	ldr	r0, [sp, #300]
+    a688: a0 00 8d e5  	str	r0, [sp, #160]
+    a68c: b6 ff ff ea  	b	#-296 <memcpy+0x25c>
+    a690: 1c 02 9f e5  	ldr	r0, [pc, #540]
+    a694: 1c 22 9f e5  	ldr	r2, [pc, #540]
+    a698: 23 10 a0 e3  	mov	r1, #35
+    a69c: 2d fe ff eb  	bl	#-1868 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    a6a0: fe de ff e7  	trap
+    a6a4: 2f 00 00 ea  	b	#188 <memcpy+0x458>
+    a6a8: 2c 10 9d e5  	ldr	r1, [sp, #44]
+    a6ac: 4c 00 9d e5  	ldr	r0, [sp, #76]
+    a6b0: 50 20 9d e5  	ldr	r2, [sp, #80]
+    a6b4: 90 00 8d e5  	str	r0, [sp, #144]
+    a6b8: 94 20 8d e5  	str	r2, [sp, #148]
+    a6bc: 98 10 8d e5  	str	r1, [sp, #152]
+    a6c0: 88 00 8d e5  	str	r0, [sp, #136]
+    a6c4: 8c 20 8d e5  	str	r2, [sp, #140]
+    a6c8: 80 01 8d e5  	str	r0, [sp, #384]
+    a6cc: 84 11 8d e5  	str	r1, [sp, #388]
+    a6d0: 88 01 8d e5  	str	r0, [sp, #392]
+    a6d4: 8c 11 8d e5  	str	r1, [sp, #396]
+    a6d8: 01 00 80 e0  	add	r0, r0, r1
+    a6dc: 90 01 8d e5  	str	r0, [sp, #400]
+    a6e0: 90 01 9d e5  	ldr	r0, [sp, #400]
+    a6e4: 0c 00 8d e5  	str	r0, [sp, #12]
+    a6e8: 9c 00 8d e5  	str	r0, [sp, #156]
+    a6ec: ff ff ff ea  	b	#-4 <memcpy+0x3e0>
+    a6f0: 0c 10 9d e5  	ldr	r1, [sp, #12]
+    a6f4: 88 00 9d e5  	ldr	r0, [sp, #136]
+    a6f8: 01 00 50 e1  	cmp	r0, r1
+    a6fc: 18 00 00 2a  	bhs	#96 <memcpy+0x454>
+    a700: ff ff ff ea  	b	#-4 <memcpy+0x3f4>
+    a704: 8c 00 9d e5  	ldr	r0, [sp, #140]
+    a708: 00 00 90 e5  	ldr	r0, [r0]
+    a70c: 88 10 9d e5  	ldr	r1, [sp, #136]
+    a710: 00 00 81 e5  	str	r0, [r1]
+    a714: 88 00 9d e5  	ldr	r0, [sp, #136]
+    a718: 58 01 8d e5  	str	r0, [sp, #344]
+    a71c: 01 10 a0 e3  	mov	r1, #1
+    a720: 5c 11 8d e5  	str	r1, [sp, #348]
+    a724: 60 01 8d e5  	str	r0, [sp, #352]
+    a728: 64 11 8d e5  	str	r1, [sp, #356]
+    a72c: 04 00 80 e2  	add	r0, r0, #4
+    a730: 68 01 8d e5  	str	r0, [sp, #360]
+    a734: 68 01 9d e5  	ldr	r0, [sp, #360]
+    a738: 88 00 8d e5  	str	r0, [sp, #136]
+    a73c: 8c 00 9d e5  	ldr	r0, [sp, #140]
+    a740: 44 01 8d e5  	str	r0, [sp, #324]
+    a744: 48 11 8d e5  	str	r1, [sp, #328]
+    a748: 4c 01 8d e5  	str	r0, [sp, #332]
+    a74c: 50 11 8d e5  	str	r1, [sp, #336]
+    a750: 04 00 80 e2  	add	r0, r0, #4
+    a754: 54 01 8d e5  	str	r0, [sp, #340]
+    a758: 54 01 9d e5  	ldr	r0, [sp, #340]
+    a75c: 8c 00 8d e5  	str	r0, [sp, #140]
+    a760: e2 ff ff ea  	b	#-120 <memcpy+0x3e0>
+    a764: ff ff ff ea  	b	#-4 <memcpy+0x458>
+    a768: 2c 10 9d e5  	ldr	r1, [sp, #44]
+    a76c: 4c 00 9d e5  	ldr	r0, [sp, #76]
+    a770: e4 01 8d e5  	str	r0, [sp, #484]
+    a774: e8 11 8d e5  	str	r1, [sp, #488]
+    a778: ec 01 8d e5  	str	r0, [sp, #492]
+    a77c: f0 11 8d e5  	str	r1, [sp, #496]
+    a780: 01 00 80 e0  	add	r0, r0, r1
+    a784: f4 01 8d e5  	str	r0, [sp, #500]
+    a788: f4 01 9d e5  	ldr	r0, [sp, #500]
+    a78c: 4c 00 8d e5  	str	r0, [sp, #76]
+    a790: 50 00 9d e5  	ldr	r0, [sp, #80]
+    a794: f4 00 8d e5  	str	r0, [sp, #244]
+    a798: f8 10 8d e5  	str	r1, [sp, #248]
+    a79c: fc 00 8d e5  	str	r0, [sp, #252]
+    a7a0: 00 11 8d e5  	str	r1, [sp, #256]
+    a7a4: 01 00 80 e0  	add	r0, r0, r1
+    a7a8: 04 01 8d e5  	str	r0, [sp, #260]
+    a7ac: 04 01 9d e5  	ldr	r0, [sp, #260]
+    a7b0: 50 00 8d e5  	str	r0, [sp, #80]
+    a7b4: 54 00 9d e5  	ldr	r0, [sp, #84]
+    a7b8: 01 20 40 e0  	sub	r2, r0, r1
+    a7bc: 08 20 8d e5  	str	r2, [sp, #8]
+    a7c0: 01 00 50 e1  	cmp	r0, r1
+    a7c4: 03 00 00 3a  	blo	#12 <memcpy+0x4c8>
+    a7c8: ff ff ff ea  	b	#-4 <memcpy+0x4bc>
+    a7cc: 08 00 9d e5  	ldr	r0, [sp, #8]
+    a7d0: 54 00 8d e5  	str	r0, [sp, #84]
+    a7d4: 04 00 00 ea  	b	#16 <memcpy+0x4dc>
+    a7d8: dc 00 9f e5  	ldr	r0, [pc, #220]
+    a7dc: f0 20 9f e5  	ldr	r2, [pc, #240]
+    a7e0: 21 10 a0 e3  	mov	r1, #33
+    a7e4: db fd ff eb  	bl	#-2196 <_ZN4core9panicking5panic17hdadd56bb1673b9a3E>
+    a7e8: fe de ff e7  	trap
+    a7ec: 4c 20 9d e5  	ldr	r2, [sp, #76]
+    a7f0: 50 00 9d e5  	ldr	r0, [sp, #80]
+    a7f4: 54 10 9d e5  	ldr	r1, [sp, #84]
+    a7f8: 78 20 8d e5  	str	r2, [sp, #120]
+    a7fc: 7c 00 8d e5  	str	r0, [sp, #124]
+    a800: 80 10 8d e5  	str	r1, [sp, #128]
+    a804: 78 00 9d e5  	ldr	r0, [sp, #120]
+    a808: a8 01 8d e5  	str	r0, [sp, #424]
+    a80c: ac 11 8d e5  	str	r1, [sp, #428]
+    a810: b0 01 8d e5  	str	r0, [sp, #432]
+    a814: b4 11 8d e5  	str	r1, [sp, #436]
+    a818: 01 00 80 e0  	add	r0, r0, r1
+    a81c: b8 01 8d e5  	str	r0, [sp, #440]
+    a820: b8 01 9d e5  	ldr	r0, [sp, #440]
+    a824: 04 00 8d e5  	str	r0, [sp, #4]
+    a828: 84 00 8d e5  	str	r0, [sp, #132]
+    a82c: ff ff ff ea  	b	#-4 <memcpy+0x520>
+    a830: 04 10 9d e5  	ldr	r1, [sp, #4]
+    a834: 78 00 9d e5  	ldr	r0, [sp, #120]
+    a838: 01 00 50 e1  	cmp	r0, r1
+    a83c: 18 00 00 2a  	bhs	#96 <memcpy+0x594>
+    a840: ff ff ff ea  	b	#-4 <memcpy+0x534>
+    a844: 7c 00 9d e5  	ldr	r0, [sp, #124]
+    a848: 00 00 d0 e5  	ldrb	r0, [r0]
+    a84c: 78 10 9d e5  	ldr	r1, [sp, #120]
+    a850: 00 00 c1 e5  	strb	r0, [r1]
+    a854: 78 00 9d e5  	ldr	r0, [sp, #120]
+    a858: 94 01 8d e5  	str	r0, [sp, #404]
+    a85c: 01 10 a0 e3  	mov	r1, #1
+    a860: 98 11 8d e5  	str	r1, [sp, #408]
+    a864: 9c 01 8d e5  	str	r0, [sp, #412]
+    a868: a0 11 8d e5  	str	r1, [sp, #416]
+    a86c: 01 00 80 e2  	add	r0, r0, #1
+    a870: a4 01 8d e5  	str	r0, [sp, #420]
+    a874: a4 01 9d e5  	ldr	r0, [sp, #420]
+    a878: 78 00 8d e5  	str	r0, [sp, #120]
+    a87c: 7c 00 9d e5  	ldr	r0, [sp, #124]
+    a880: cc 00 8d e5  	str	r0, [sp, #204]
+    a884: d0 10 8d e5  	str	r1, [sp, #208]
+    a888: d4 00 8d e5  	str	r0, [sp, #212]
+    a88c: d8 10 8d e5  	str	r1, [sp, #216]
+    a890: 01 00 80 e2  	add	r0, r0, #1
+    a894: dc 00 8d e5  	str	r0, [sp, #220]
+    a898: dc 00 9d e5  	ldr	r0, [sp, #220]
+    a89c: 7c 00 8d e5  	str	r0, [sp, #124]
+    a8a0: e2 ff ff ea  	b	#-120 <memcpy+0x520>
+    a8a4: ff ff ff ea  	b	#-4 <memcpy+0x598>
+    a8a8: 3c 00 9d e5  	ldr	r0, [sp, #60]
+    a8ac: 86 df 8d e2  	add	sp, sp, #536
+    a8b0: 1e ff 2f e1  	bx	lr
+
+0000a8b4 <$d.125>:
+    a8b4:	70 ad 00 00	.word	0x0000ad70
+    a8b8:	84 ae 00 00	.word	0x0000ae84
+    a8bc:	10 ad 00 00	.word	0x0000ad10
+    a8c0:	74 ae 00 00	.word	0x0000ae74
+    a8c4:	a0 ad 00 00	.word	0x0000ada0
+    a8c8:	64 ae 00 00	.word	0x0000ae64
+    a8cc:	40 ad 00 00	.word	0x0000ad40
+    a8d0:	54 ae 00 00	.word	0x0000ae54
+    a8d4:	44 ae 00 00	.word	0x0000ae44
+    a8d8:	34 ae 00 00	.word	0x0000ae34
+
+0000a8dc <__aeabi_memcpy>:
+    a8dc: 00 48 2d e9  	push	{r11, lr}
+    a8e0: 10 d0 4d e2  	sub	sp, sp, #16
+    a8e4: 04 00 8d e5  	str	r0, [sp, #4]
+    a8e8: 08 10 8d e5  	str	r1, [sp, #8]
+    a8ec: 0c 20 8d e5  	str	r2, [sp, #12]
+    a8f0: 86 fe ff eb  	bl	#-1512 <memcpy>
+    a8f4: ff ff ff ea  	b	#-4 <__aeabi_memcpy+0x1c>
+    a8f8: 10 d0 8d e2  	add	sp, sp, #16
+    a8fc: 00 88 bd e8  	pop	{r11, pc}

@@ -2,11 +2,11 @@
 #![no_std]
 #![no_main]
 
-use core::panic::PanicInfo;
 use core::arch::global_asm;
-use nox::{rpi, gpio};
+use core::panic::PanicInfo;
+use nox::{gpio, rpi, uart, timer};
 
-global_asm!(include_str!(r#"start.S"#));
+global_asm!(include_str!(r#"./asm/start.S"#));
 
 #[panic_handler]
 #[no_mangle]
@@ -14,31 +14,56 @@ fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }
 
+// #[no_mangle]
+// pub fn _bootmain() -> ! {
+// 	unsafe {
+// 		rpi::dev_barrier();
+//    		rpi::PUT32(0x20215004, 0);
+// 		rpi::dev_barrier();
+
+// 		let err_pin = 21;
+// 		let succ_pin = 20;
+// 		gpio::gpio_set_output(err_pin);
+// 		gpio::gpio_set_output(succ_pin);
+// 		nox::blink(err_pin, 3000);
+// 		nox::blink(succ_pin, 3000);
+
+// 		uart::uart_init();
+// 		let code = nox::get_code(err_pin, succ_pin);
+// 		match code {
+// 			Ok(code)  => rpi::BRANCHTO(code),
+// 			Err(boot_err) => nox::reboot()
+// 		}
+// 	}
+//     loop {}
+// }
+
 #[no_mangle]
-pub extern "C" fn _rmain() -> ! {
-	let led = 20;
-	gpio::gpio_set_output(led);
+pub fn _rmain() -> ! {
+	unsafe {
+		rpi::dev_barrier();
+   		rpi::PUT32(0x20215004, 0);
+		rpi::dev_barrier();
 
-	for i in 0..9 {
-		gpio::gpio_set_on(led);
-		let mut ticks1 = 1000000;
-		while ticks1 > 0 {
-			unsafe {
-				rpi::nop();
-			}
-			ticks1 -= 1;
+		let pin = 20;
+		gpio::gpio_set_output(pin);
+
+		uart::uart_init();
+		rpi::dev_barrier();
+		timer::delay_ms(200);
+		uart::write_byte(0xab);
+		uart::write_byte(0xab);
+		let hello: [u8; 7] = [104, 101, 108, 108, 111, 111, 10];
+		for byte in hello {
+			nox::blink(pin, 500);
+			uart::write_byte(byte as u32);
 		}
 
-		gpio::gpio_set_off(led);
-		//delay
-		let mut ticks2 = 1000000;
-		while ticks2 > 0 {
-			unsafe {
-				rpi::nop();
-			}
-			ticks2 -= 1;
+		for byte in hello {
+			nox::blink(pin, 500);
+			uart::write_byte(byte as u32);
 		}
-	};
-
-	loop {}
+		nox::reboot();
+	}
+    loop {}
 }

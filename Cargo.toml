@@ -9,6 +9,7 @@ edition = "2021"
 [profile.dev]
 panic = 'abort'
 
+
 [profile.release]
 opt-level = 'z'     # Optimize for size.
 lto = true          # Enable Link Time Optimization
@@ -17,3 +18,8 @@ panic = 'abort'     # Abort on panic
 strip = true        # Strip symbols from binary*
 
 [dependencies]
+
+
+[dependencies.lazy_static]
+version = "1.4.0"
+features = ["spin_no_std"]
