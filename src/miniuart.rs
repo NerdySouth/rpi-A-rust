@@ -1,4 +1,4 @@
-pub struct MiniUartInternal<'a> {
+pub struct MiniUartInternal<'static> {
 	tx_pin: &'a u8,
 	rx_pin:  u8,
 	aux_enables: &'static usize,
@@ -15,8 +15,8 @@ pub struct MiniUartInternal<'a> {
 
 
 
-impl<'a> Default for MiniUartInternal<'a> {
-	fn default() -> MiniUartInternal<'a> {
+impl<'static> Default for MiniUartInternal<'static> {
+	fn default() -> MiniUartInternal<'static> {
 		MiniUartInternal {
 			tx_pin: 14,
 			rx_pin: 15,
@@ -34,8 +34,8 @@ impl<'a> Default for MiniUartInternal<'a> {
 	}
 }
 
-impl<'a> MiniUartInternal<'a> {
-	pub const fn new() -> MiniUartInternal<'a> {
+impl<'static> MiniUartInternal<'static> {
+	pub const fn new() -> MiniUartInternal<'static> {
 		MiniUartInternal::default()
 	}
 }

@@ -21,13 +21,14 @@ extern "C" {
     pub fn BRANCHTO(addr: u32);
 }
 
-
 extern "C" {
     fn dmb_c();
 }
 
 pub fn dmb() {
-	unsafe { dmb_c(); }
+    unsafe {
+        dmb_c();
+    }
 }
 
 extern "C" {
@@ -35,7 +36,9 @@ extern "C" {
 }
 
 pub fn dsb() {
-	unsafe { dsb_c(); }
+    unsafe {
+        dsb_c();
+    }
 }
 
 /// NOP instr
@@ -44,7 +47,9 @@ extern "C" {
 }
 
 pub fn nop() {
-	unsafe { nop_c(); }
+    unsafe {
+        nop_c();
+    }
 }
 
 /// Memory barriers
@@ -55,4 +60,3 @@ extern "C" {
 pub fn dev_barrier() {
     unsafe { dev_barrier_c() };
 }
-

@@ -1,10 +1,11 @@
 // trick to stick contents of start.S here inline
 #![no_std]
 #![no_main]
+#![crate_type = "staticlib"]
 
-use core::arch::global_asm;
 use core::panic::PanicInfo;
-use nox::{gpio, rpi, uart, timer};
+use core::{arch::global_asm, ptr};
+use nox::{gpio, rpi, timer, uart};
 
 global_asm!(include_str!(r#"./asm/start.S"#));
 
@@ -14,56 +15,45 @@ fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }
 
-// #[no_mangle]
-// pub fn _bootmain() -> ! {
-// 	unsafe {
-// 		rpi::dev_barrier();
-//    		rpi::PUT32(0x20215004, 0);
-// 		rpi::dev_barrier();
-
-// 		let err_pin = 21;
-// 		let succ_pin = 20;
-// 		gpio::gpio_set_output(err_pin);
-// 		gpio::gpio_set_output(succ_pin);
-// 		nox::blink(err_pin, 3000);
-// 		nox::blink(succ_pin, 3000);
-
-// 		uart::uart_init();
-// 		let code = nox::get_code(err_pin, succ_pin);
-// 		match code {
-// 			Ok(code)  => rpi::BRANCHTO(code),
-// 			Err(boot_err) => nox::reboot()
-// 		}
-// 	}
-//     loop {}
-// }
+pub fn println(msg: &[u8]) {
+    let len = msg.len();
+    for i in 0..len {
+        unsafe {
+            nox::boot_put32(msg[i] as u32);
+        }
+    }
+}
 
 #[no_mangle]
 pub fn _rmain() -> ! {
-	unsafe {
-		rpi::dev_barrier();
-   		rpi::PUT32(0x20215004, 0);
-		rpi::dev_barrier();
+    unsafe {
+        rpi::dev_barrier();
+        rpi::PUT32(0x20215004, 0);
+        rpi::dev_barrier();
 
-		let pin = 20;
-		gpio::gpio_set_output(pin);
+        //zero __bss_start__
 
-		uart::uart_init();
-		rpi::dev_barrier();
-		timer::delay_ms(200);
-		uart::write_byte(0xab);
-		uart::write_byte(0xab);
-		let hello: [u8; 7] = [104, 101, 108, 108, 111, 111, 10];
-		for byte in hello {
-			nox::blink(pin, 500);
-			uart::write_byte(byte as u32);
-		}
+        uart::uart_init();
+        let pin = 21;
+        gpio::gpio_set_output(pin);
+        nox::blink_n(pin, 500, 3);
+        //let code = nox::get_code();
 
-		for byte in hello {
-			nox::blink(pin, 500);
-			uart::write_byte(byte as u32);
-		}
-		nox::reboot();
-	}
-    loop {}
+        timer::delay_ms(500);
+        //match code {
+        //Ok(code) => {
+        //rpi::BRANCHTO(code);
+        //  nox::reboot();
+        //}
+        //  Err(boot_err) => nox::reboot(),
+        //}
+        //
+        let hello: [u8; 6] = [104, 101, 108, 108, 111, 16];
+        for i in 0..6 {
+            nox::boot_put32(hello[i] as u32);
+        }
+        let st = b"peeeeeeeeeee";
+        println(b"pe");
+        nox::reboot()
+    }
 }

@@ -6,35 +6,14 @@
 @ at 0x8000).
 .globl _start
 _start:
-
     @ force the mode to be SUPER.
     mov r1,  #19 @super mode
     orr r1,r1, #(1<<7)    @ disable interrupts.
     msr cpsr, r1
+    mov r0, #0
+    mcr p15, 0, r0, c15, c12, 0 // init cycle counter
     mcr p15, 0, r2, c7, c5, 4   // Prefetch flush
 
     mov sp, 0x8000000			@ initialize stack pointer
     mov fp, #0          @ clear frame pointer reg.  don't think needed.
 	bl _rmain
-
-@ based on dwelch's start for bootloader.
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@@ FOR KERNEL @@@@@@@@@@@@@@
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-@ .globl _start
-@ _start:
-@ 	b skip
-@ .space 0x200000-0x8004,0
-@ skip:
-@ 	mov sp,#0x08000000
-@ 	bl _bootmain
-
-
-@ cannot overwrite this code or anything after it --- make sure
-@ sure you check  that the code sent to the bootloader
-@ does not collide with the address of <BRANCHTO>
-@ .globl BRANCHTO
-@ BRANCHTO:
-@     bx r0
