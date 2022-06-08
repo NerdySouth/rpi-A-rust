@@ -1,4 +1,4 @@
-@ linker hack so this will be linked to at start of  .text
+ @ linker hack so this will be linked to at start of  .text
 .section ".text.boot"
 
 @ this is where we start.  if you look in any '.list' file, you 

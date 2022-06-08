@@ -17,9 +17,4 @@ opt-level = 'z'     # Optimize for size.
 panic = 'abort'     # Abort on panic
 strip = true        # Strip symbols from binary*
 
-[dependencies]
 
-
-[dependencies.lazy_static]
-version = "1.4.0"
-features = ["spin_no_std"]

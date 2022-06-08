@@ -41,8 +41,8 @@ GET32:
 
 
 @ do nothing: put the call here so the compiler cannot optimize.
-.globl nop_c
-nop_c:
+.globl _nop
+_nop:
     bx lr
 	
 @ jump to the address in r0.  we don't mess w/ link register

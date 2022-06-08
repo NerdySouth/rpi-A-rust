@@ -22,41 +22,41 @@ extern "C" {
 }
 
 extern "C" {
-    fn dmb_c();
+    fn _dmb();
 }
 
 pub fn dmb() {
     unsafe {
-        dmb_c();
+        _dmb();
     }
 }
 
 extern "C" {
-    fn dsb_c();
+    fn _dsb();
 }
 
 pub fn dsb() {
     unsafe {
-        dsb_c();
+        _dsb();
     }
 }
 
 /// NOP instr
 extern "C" {
-    fn nop_c();
+    fn _nop();
 }
 
 pub fn nop() {
     unsafe {
-        nop_c();
+        _nop();
     }
 }
 
 /// Memory barriers
 extern "C" {
-    fn dev_barrier_c();
+    fn _dev_barrier();
 }
 
 pub fn dev_barrier() {
-    unsafe { dev_barrier_c() };
+    unsafe { _dev_barrier() };
 }

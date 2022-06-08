@@ -5,7 +5,7 @@
 
 use core::panic::PanicInfo;
 use core::{arch::global_asm, ptr};
-use nox::{gpio, rpi, timer, uart};
+use nox::{gpio, rpi, timer, uart, bootloader};
 
 global_asm!(include_str!(r#"./asm/start.S"#));
 
@@ -15,14 +15,17 @@ fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }
 
-pub fn println(msg: &[u8]) {
-    let len = msg.len();
+pub fn println(msg: &'static str) {
+	let len = msg.len();
+	let bytes = msg.as_bytes();
     for i in 0..len {
         unsafe {
-            nox::boot_put32(msg[i] as u32);
+            bootloader::boot_put32(bytes[i] as u32);
         }
     }
 }
+
+
 
 #[no_mangle]
 pub fn _rmain() -> ! {
@@ -32,11 +35,24 @@ pub fn _rmain() -> ! {
         rpi::dev_barrier();
 
         //zero __bss_start__
+        extern "C" {
+            static mut __bss_start: u8;
+            static mut __bss_end: u8;
+            static mut __data_start: u8;
+            static mut __data_end: u8;
+            static mut _sidata: u8;
+        }
+
+        let count = &__bss_end as *const u8 as usize - &__bss_start as *const u8 as usize;
+        ptr::write_bytes(&mut __bss_start as *mut u8, 0, count);
+
+        let count = &__data_end as *const u8 as usize - &__data_start as *const u8 as usize;
+        ptr::copy_nonoverlapping(&_sidata as *const u8, &mut __data_start as *mut u8, count);
 
         uart::uart_init();
         let pin = 21;
         gpio::gpio_set_output(pin);
-        nox::blink_n(pin, 500, 3);
+        gpio::blink_n(pin, 500, 3);
         //let code = nox::get_code();
 
         timer::delay_ms(500);
@@ -50,10 +66,11 @@ pub fn _rmain() -> ! {
         //
         let hello: [u8; 6] = [104, 101, 108, 108, 111, 16];
         for i in 0..6 {
-            nox::boot_put32(hello[i] as u32);
+            bootloader::boot_put32(hello[i] as u32);
         }
-        let st = b"peeeeeeeeeee";
-        println(b"pe");
+		#[used]
+		static string: &'static str = "pee";
+		println(string);
         nox::reboot()
     }
 }

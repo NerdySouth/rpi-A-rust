@@ -1,4 +1,5 @@
 use crate::rpi;
+use crate::timer;
 
 // constants for GPIO memory IO addresses
 static GPIO_BASE: usize = 0x20200000;
@@ -108,4 +109,19 @@ pub fn gpio_read(pin: u8) -> u8 {
     ret >>= offset;
     ret &= 1;
     ret as u8
+}
+
+
+#[no_mangle]
+pub fn blink(pin: u8, dur: u32) {
+    gpio_set_on(pin);
+    timer::delay_ms(dur / 2);
+    gpio_set_off(pin);
+    timer::delay_ms(dur / 2);
+}
+
+pub fn blink_n(pin: u8, dur: u32, n: u32) {
+    for i in 0..n {
+        blink(pin, dur);
+    }
 }
