@@ -16,7 +16,7 @@
 
 ---
 
-<p align="center"> Nox is memory safe OS for the Rpi Zero/A+ written in Rust.
+<p align="center"> Experiment for the Rpi Zero/A+ written in Rust.
     <br> 
 </p>
 
@@ -33,6 +33,9 @@
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
+
+DEPRECATED!!!! NOX is no longer developing for the RPI Zero/A+ platform. This POC was fun, but ultimately not where i wanted to go with it. Check out the 
+new Nox repo, where I am developing on a much newer platform, the RockPro64!
 
 Nox is a playground for OS concepts and design in Rust. Initially, we are starting with the Rpi Zero/A+ platform which is a 32bit armv6 platform. The idea is to build a fast, safe OS for doing cool things on a pi. A lot of the initial features will likely come from the work done by Dawson Engler for CS140E at Stanford. I took this class as an undergrad, and want to expand on what we worked on there and push it further with Rust.
 
